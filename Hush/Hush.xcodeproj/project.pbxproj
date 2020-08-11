@@ -9,11 +9,16 @@
 /* Begin PBXBuildFile section */
 		2361752C24E329460052AB01 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2361752B24E329460052AB01 /* AppDelegate.swift */; };
 		2361752E24E329460052AB01 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2361752D24E329460052AB01 /* SceneDelegate.swift */; };
-		2361753024E329460052AB01 /* BreathViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2361752F24E329460052AB01 /* BreathViewController.swift */; };
 		2361753524E329470052AB01 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2361753424E329470052AB01 /* Assets.xcassets */; };
 		2361753824E329470052AB01 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2361753624E329470052AB01 /* LaunchScreen.storyboard */; };
 		2361754324E329470052AB01 /* HushTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2361754224E329470052AB01 /* HushTests.swift */; };
 		2361755224E32B550052AB01 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2361755124E32B550052AB01 /* NavigationController.swift */; };
+		2361755824E32F670052AB01 /* BreathViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2361755624E32F670052AB01 /* BreathViewController.swift */; };
+		2361755924E32F670052AB01 /* BreathViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2361755724E32F670052AB01 /* BreathViewController.xib */; };
+		2361755C24E32F790052AB01 /* BreathViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2361755B24E32F790052AB01 /* BreathViewModel.swift */; };
+		2361755F24E3300B0052AB01 /* BreathRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2361755E24E3300B0052AB01 /* BreathRouter.swift */; };
+		236175A024E336560052AB01 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2361759F24E336560052AB01 /* Router.swift */; };
+		236175A224E336830052AB01 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236175A124E336830052AB01 /* AppRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,13 +35,18 @@
 		2361752824E329460052AB01 /* Hush.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hush.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2361752B24E329460052AB01 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2361752D24E329460052AB01 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2361752F24E329460052AB01 /* BreathViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathViewController.swift; sourceTree = "<group>"; };
 		2361753424E329470052AB01 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2361753724E329470052AB01 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2361753924E329470052AB01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2361753E24E329470052AB01 /* HushTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HushTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2361754224E329470052AB01 /* HushTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HushTests.swift; sourceTree = "<group>"; };
 		2361755124E32B550052AB01 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		2361755624E32F670052AB01 /* BreathViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathViewController.swift; sourceTree = "<group>"; };
+		2361755724E32F670052AB01 /* BreathViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BreathViewController.xib; sourceTree = "<group>"; };
+		2361755B24E32F790052AB01 /* BreathViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathViewModel.swift; sourceTree = "<group>"; };
+		2361755E24E3300B0052AB01 /* BreathRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathRouter.swift; sourceTree = "<group>"; };
+		2361759F24E336560052AB01 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		236175A124E336830052AB01 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +124,7 @@
 		2361754F24E32AF70052AB01 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				2361759E24E3364D0052AB01 /* Routing */,
 				2361755124E32B550052AB01 /* NavigationController.swift */,
 				2361752B24E329460052AB01 /* AppDelegate.swift */,
 				2361752D24E329460052AB01 /* SceneDelegate.swift */,
@@ -132,8 +143,9 @@
 		2361755424E32BB00052AB01 /* Breath */ = {
 			isa = PBXGroup;
 			children = (
+				2361755D24E32FFE0052AB01 /* Router */,
+				2361755A24E32F6B0052AB01 /* ViewModel */,
 				2361755524E32BEA0052AB01 /* ViewController */,
-				2361752F24E329460052AB01 /* BreathViewController.swift */,
 			);
 			path = Breath;
 			sourceTree = "<group>";
@@ -141,8 +153,35 @@
 		2361755524E32BEA0052AB01 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				2361755624E32F670052AB01 /* BreathViewController.swift */,
+				2361755724E32F670052AB01 /* BreathViewController.xib */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		2361755A24E32F6B0052AB01 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2361755B24E32F790052AB01 /* BreathViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2361755D24E32FFE0052AB01 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				2361755E24E3300B0052AB01 /* BreathRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		2361759E24E3364D0052AB01 /* Routing */ = {
+			isa = PBXGroup;
+			children = (
+				2361759F24E336560052AB01 /* Router.swift */,
+				236175A124E336830052AB01 /* AppRouter.swift */,
+			);
+			path = Routing;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -226,6 +265,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2361755924E32F670052AB01 /* BreathViewController.xib in Resources */,
 				2361753824E329470052AB01 /* LaunchScreen.storyboard in Resources */,
 				2361753524E329470052AB01 /* Assets.xcassets in Resources */,
 			);
@@ -245,10 +285,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2361753024E329460052AB01 /* BreathViewController.swift in Sources */,
 				2361755224E32B550052AB01 /* NavigationController.swift in Sources */,
 				2361752C24E329460052AB01 /* AppDelegate.swift in Sources */,
+				2361755824E32F670052AB01 /* BreathViewController.swift in Sources */,
+				236175A024E336560052AB01 /* Router.swift in Sources */,
+				236175A224E336830052AB01 /* AppRouter.swift in Sources */,
 				2361752E24E329460052AB01 /* SceneDelegate.swift in Sources */,
+				2361755F24E3300B0052AB01 /* BreathRouter.swift in Sources */,
+				2361755C24E32F790052AB01 /* BreathViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
