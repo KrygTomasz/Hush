@@ -10,6 +10,7 @@ import UIKit
 
 final class BreathViewController: UIViewController {
 
+    @IBOutlet weak var pulsatoryView: PulsatoryView!
     let viewModel: BreathViewModel
     
     init(viewModel: BreathViewModel) {
