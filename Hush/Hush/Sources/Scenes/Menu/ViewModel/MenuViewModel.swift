@@ -10,4 +10,25 @@ import Foundation
 
 final class MenuViewModel {
     
+    struct Input {
+        
+    }
+    
+    struct Output {
+        let viewData: [MenuViewData]
+    }
+    
+    var output: Output!
+    
+    init() {
+        
+    }
+    
+    func transform(input: Input) {
+        output = Output(viewData: [
+            MenuViewData(title: "1st button"),
+            MenuViewData(title: "2nd button"),
+            MenuViewData(title: "3rd button")
+        ])
+    }
 }

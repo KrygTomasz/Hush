@@ -10,10 +10,14 @@ import UIKit
 
 final class MenuViewController: UIViewController {
 
+    @IBOutlet private weak var tableView: UITableView!
+    
     let viewModel: MenuViewModel
+    var tableAdapter: MenuTableViewAdapter!
     
     init(viewModel: MenuViewModel) {
         self.viewModel = viewModel
+        viewModel.transform(input: .init())
         super.init(nibName: String(describing: MenuViewController.self), bundle: Bundle(for: MenuViewController.self))
     }
     
@@ -23,7 +27,20 @@ final class MenuViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupView()
+        setupTableView()
+    }
+    
+    private func setupView() {
         view.backgroundColor = .blue
+    }
+    
+    private func setupTableView() {
+        self.tableAdapter = MenuTableViewAdapter(tableView: tableView, viewModel: viewModel)
+        self.tableView.delegate = tableAdapter
+        self.tableView.dataSource = tableAdapter
+        tableView.backgroundColor = .clear
+        tableView.separatorStyle = .none
     }
     
 }

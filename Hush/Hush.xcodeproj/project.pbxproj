@@ -27,6 +27,13 @@
 		2399635624E469F5008A6768 /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2399635424E469F5008A6768 /* MenuViewController.xib */; };
 		2399635824E46A0D008A6768 /* MenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2399635724E46A0D008A6768 /* MenuViewModel.swift */; };
 		2399635A24E46A18008A6768 /* MenuRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2399635924E46A18008A6768 /* MenuRouter.swift */; };
+		2399635F24E46FE3008A6768 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2399635D24E46FE3008A6768 /* MenuTableViewCell.swift */; };
+		2399636024E46FE3008A6768 /* MenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2399635E24E46FE3008A6768 /* MenuTableViewCell.xib */; };
+		2399636324E4705E008A6768 /* UITableViewCellProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2399636224E4705E008A6768 /* UITableViewCellProvider.swift */; };
+		2399636524E47093008A6768 /* UITableView+Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2399636424E47093008A6768 /* UITableView+Register.swift */; };
+		2399636724E471B3008A6768 /* MenuCellProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2399636624E471B3008A6768 /* MenuCellProvider.swift */; };
+		2399636A24E4721C008A6768 /* MenuTableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2399636924E4721C008A6768 /* MenuTableViewAdapter.swift */; };
+		2399636D24E472EC008A6768 /* MenuViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2399636C24E472EC008A6768 /* MenuViewData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +70,13 @@
 		2399635424E469F5008A6768 /* MenuViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuViewController.xib; sourceTree = "<group>"; };
 		2399635724E46A0D008A6768 /* MenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewModel.swift; sourceTree = "<group>"; };
 		2399635924E46A18008A6768 /* MenuRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuRouter.swift; sourceTree = "<group>"; };
+		2399635D24E46FE3008A6768 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
+		2399635E24E46FE3008A6768 /* MenuTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuTableViewCell.xib; sourceTree = "<group>"; };
+		2399636224E4705E008A6768 /* UITableViewCellProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCellProvider.swift; sourceTree = "<group>"; };
+		2399636424E47093008A6768 /* UITableView+Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Register.swift"; sourceTree = "<group>"; };
+		2399636624E471B3008A6768 /* MenuCellProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCellProvider.swift; sourceTree = "<group>"; };
+		2399636924E4721C008A6768 /* MenuTableViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewAdapter.swift; sourceTree = "<group>"; };
+		2399636C24E472EC008A6768 /* MenuViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +155,7 @@
 		2361754F24E32AF70052AB01 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				2399636124E47043008A6768 /* CellProviders */,
 				2399630B24E467C1008A6768 /* Margins */,
 				2361759E24E3364D0052AB01 /* Routing */,
 				2361755124E32B550052AB01 /* NavigationController.swift */,
@@ -242,6 +257,7 @@
 		2399635024E469DA008A6768 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				2399636824E4720C008A6768 /* TableView */,
 				2399635324E469F5008A6768 /* MenuViewController.swift */,
 				2399635424E469F5008A6768 /* MenuViewController.xib */,
 			);
@@ -251,6 +267,7 @@
 		2399635124E469DF008A6768 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				2399636B24E472E0008A6768 /* ViewData */,
 				2399635724E46A0D008A6768 /* MenuViewModel.swift */,
 			);
 			path = ViewModel;
@@ -262,6 +279,42 @@
 				2399635924E46A18008A6768 /* MenuRouter.swift */,
 			);
 			path = Router;
+			sourceTree = "<group>";
+		};
+		2399635B24E46FBA008A6768 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				2399635D24E46FE3008A6768 /* MenuTableViewCell.swift */,
+				2399635E24E46FE3008A6768 /* MenuTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		2399636124E47043008A6768 /* CellProviders */ = {
+			isa = PBXGroup;
+			children = (
+				2399636224E4705E008A6768 /* UITableViewCellProvider.swift */,
+				2399636424E47093008A6768 /* UITableView+Register.swift */,
+			);
+			path = CellProviders;
+			sourceTree = "<group>";
+		};
+		2399636824E4720C008A6768 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				2399636624E471B3008A6768 /* MenuCellProvider.swift */,
+				2399635B24E46FBA008A6768 /* Cells */,
+				2399636924E4721C008A6768 /* MenuTableViewAdapter.swift */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		2399636B24E472E0008A6768 /* ViewData */ = {
+			isa = PBXGroup;
+			children = (
+				2399636C24E472EC008A6768 /* MenuViewData.swift */,
+			);
+			path = ViewData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -348,6 +401,7 @@
 				2361755924E32F670052AB01 /* BreathViewController.xib in Resources */,
 				2361753824E329470052AB01 /* LaunchScreen.storyboard in Resources */,
 				2361753524E329470052AB01 /* Assets.xcassets in Resources */,
+				2399636024E46FE3008A6768 /* MenuTableViewCell.xib in Resources */,
 				2399635624E469F5008A6768 /* MenuViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -366,6 +420,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2399636524E47093008A6768 /* UITableView+Register.swift in Sources */,
+				2399636724E471B3008A6768 /* MenuCellProvider.swift in Sources */,
+				2399636D24E472EC008A6768 /* MenuViewData.swift in Sources */,
 				2361755224E32B550052AB01 /* NavigationController.swift in Sources */,
 				2399635824E46A0D008A6768 /* MenuViewModel.swift in Sources */,
 				2399631024E468A5008A6768 /* UIView+AutoLayout.swift in Sources */,
@@ -376,10 +433,13 @@
 				236175A724E349540052AB01 /* Circle.swift in Sources */,
 				2399635A24E46A18008A6768 /* MenuRouter.swift in Sources */,
 				2399635524E469F5008A6768 /* MenuViewController.swift in Sources */,
+				2399635F24E46FE3008A6768 /* MenuTableViewCell.swift in Sources */,
 				236175A224E336830052AB01 /* AppRouter.swift in Sources */,
+				2399636324E4705E008A6768 /* UITableViewCellProvider.swift in Sources */,
 				2361752E24E329460052AB01 /* SceneDelegate.swift in Sources */,
 				2361755F24E3300B0052AB01 /* BreathRouter.swift in Sources */,
 				2361755C24E32F790052AB01 /* BreathViewModel.swift in Sources */,
+				2399636A24E4721C008A6768 /* MenuTableViewAdapter.swift in Sources */,
 				2399630D24E467D0008A6768 /* Margin.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
