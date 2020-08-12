@@ -12,6 +12,7 @@ final class BreathRouter: Router {
     var routingViewController: UIViewController { return viewController }
     private let viewController: BreathViewController
     private let viewModel: BreathViewModel
+    
     init() {
         self.viewModel = BreathViewModel()
         self.viewController = BreathViewController(viewModel: viewModel)
