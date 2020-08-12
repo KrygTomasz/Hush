@@ -21,6 +21,8 @@
 		236175A224E336830052AB01 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236175A124E336830052AB01 /* AppRouter.swift */; };
 		236175A524E3383D0052AB01 /* PulsatoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236175A424E3383D0052AB01 /* PulsatoryView.swift */; };
 		236175A724E349540052AB01 /* Circle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236175A624E349540052AB01 /* Circle.swift */; };
+		2399630D24E467D0008A6768 /* Margin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2399630C24E467D0008A6768 /* Margin.swift */; };
+		2399631024E468A5008A6768 /* UIView+AutoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2399630F24E468A5008A6768 /* UIView+AutoLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		236175A124E336830052AB01 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
 		236175A424E3383D0052AB01 /* PulsatoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulsatoryView.swift; sourceTree = "<group>"; };
 		236175A624E349540052AB01 /* Circle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Circle.swift; sourceTree = "<group>"; };
+		2399630C24E467D0008A6768 /* Margin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Margin.swift; sourceTree = "<group>"; };
+		2399630F24E468A5008A6768 /* UIView+AutoLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+AutoLayout.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +133,7 @@
 		2361754F24E32AF70052AB01 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				2399630B24E467C1008A6768 /* Margins */,
 				2361759E24E3364D0052AB01 /* Routing */,
 				2361755124E32B550052AB01 /* NavigationController.swift */,
 				2361752B24E329460052AB01 /* AppDelegate.swift */,
@@ -192,10 +197,27 @@
 		236175A324E337630052AB01 /* ViewComponents */ = {
 			isa = PBXGroup;
 			children = (
+				2399630E24E4688D008A6768 /* Extensions */,
 				236175A424E3383D0052AB01 /* PulsatoryView.swift */,
 				236175A624E349540052AB01 /* Circle.swift */,
 			);
 			path = ViewComponents;
+			sourceTree = "<group>";
+		};
+		2399630B24E467C1008A6768 /* Margins */ = {
+			isa = PBXGroup;
+			children = (
+				2399630C24E467D0008A6768 /* Margin.swift */,
+			);
+			path = Margins;
+			sourceTree = "<group>";
+		};
+		2399630E24E4688D008A6768 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2399630F24E468A5008A6768 /* UIView+AutoLayout.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -300,6 +322,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2361755224E32B550052AB01 /* NavigationController.swift in Sources */,
+				2399631024E468A5008A6768 /* UIView+AutoLayout.swift in Sources */,
 				2361752C24E329460052AB01 /* AppDelegate.swift in Sources */,
 				2361755824E32F670052AB01 /* BreathViewController.swift in Sources */,
 				236175A524E3383D0052AB01 /* PulsatoryView.swift in Sources */,
@@ -309,6 +332,7 @@
 				2361752E24E329460052AB01 /* SceneDelegate.swift in Sources */,
 				2361755F24E3300B0052AB01 /* BreathRouter.swift in Sources */,
 				2361755C24E32F790052AB01 /* BreathViewModel.swift in Sources */,
+				2399630D24E467D0008A6768 /* Margin.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
