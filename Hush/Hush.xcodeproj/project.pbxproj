@@ -34,6 +34,7 @@
 		2399636724E471B3008A6768 /* MenuCellProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2399636624E471B3008A6768 /* MenuCellProvider.swift */; };
 		2399636A24E4721C008A6768 /* MenuTableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2399636924E4721C008A6768 /* MenuTableViewAdapter.swift */; };
 		2399636D24E472EC008A6768 /* MenuViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2399636C24E472EC008A6768 /* MenuViewData.swift */; };
+		23A69DD724E8250D00B205CC /* Collection+Safe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A69DD624E8250D00B205CC /* Collection+Safe.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		2399636624E471B3008A6768 /* MenuCellProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCellProvider.swift; sourceTree = "<group>"; };
 		2399636924E4721C008A6768 /* MenuTableViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewAdapter.swift; sourceTree = "<group>"; };
 		2399636C24E472EC008A6768 /* MenuViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewData.swift; sourceTree = "<group>"; };
+		23A69DD624E8250D00B205CC /* Collection+Safe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Safe.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +157,7 @@
 		2361754F24E32AF70052AB01 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				23A69DD524E8250000B205CC /* Tools */,
 				2399636124E47043008A6768 /* CellProviders */,
 				2399630B24E467C1008A6768 /* Margins */,
 				2361759E24E3364D0052AB01 /* Routing */,
@@ -317,6 +320,14 @@
 			path = ViewData;
 			sourceTree = "<group>";
 		};
+		23A69DD524E8250000B205CC /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				23A69DD624E8250D00B205CC /* Collection+Safe.swift */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -423,6 +434,7 @@
 				2399636524E47093008A6768 /* UITableView+Register.swift in Sources */,
 				2399636724E471B3008A6768 /* MenuCellProvider.swift in Sources */,
 				2399636D24E472EC008A6768 /* MenuViewData.swift in Sources */,
+				23A69DD724E8250D00B205CC /* Collection+Safe.swift in Sources */,
 				2361755224E32B550052AB01 /* NavigationController.swift in Sources */,
 				2399635824E46A0D008A6768 /* MenuViewModel.swift in Sources */,
 				2399631024E468A5008A6768 /* UIView+AutoLayout.swift in Sources */,
