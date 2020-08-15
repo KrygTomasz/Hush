@@ -17,6 +17,7 @@
 		2322815124E86F8C00F28378 /* BoardSetupFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2322815024E86F8C00F28378 /* BoardSetupFactoryTests.swift */; };
 		2322815424E8724400F28378 /* SpyBoardEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2322815224E8723C00F28378 /* SpyBoardEngine.swift */; };
 		2322815724E872C000F28378 /* BoardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2322815624E872C000F28378 /* BoardTests.swift */; };
+		2322815B24E8781B00F28378 /* MarginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2322815A24E8781B00F28378 /* MarginTests.swift */; };
 		2361752C24E329460052AB01 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2361752B24E329460052AB01 /* AppDelegate.swift */; };
 		2361752E24E329460052AB01 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2361752D24E329460052AB01 /* SceneDelegate.swift */; };
 		2361753524E329470052AB01 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2361753424E329470052AB01 /* Assets.xcassets */; };
@@ -77,6 +78,7 @@
 		2322815024E86F8C00F28378 /* BoardSetupFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardSetupFactoryTests.swift; sourceTree = "<group>"; };
 		2322815224E8723C00F28378 /* SpyBoardEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpyBoardEngine.swift; sourceTree = "<group>"; };
 		2322815624E872C000F28378 /* BoardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardTests.swift; sourceTree = "<group>"; };
+		2322815A24E8781B00F28378 /* MarginTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarginTests.swift; sourceTree = "<group>"; };
 		2361752824E329460052AB01 /* Hush.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hush.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2361752B24E329460052AB01 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2361752D24E329460052AB01 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 		232280E724E85E3000F28378 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				2322815824E8780800F28378 /* Core */,
 				232280E824E85E4E00F28378 /* Scenes */,
 			);
 			path = Sources;
@@ -210,6 +213,22 @@
 				2322815624E872C000F28378 /* BoardTests.swift */,
 			);
 			path = API;
+			sourceTree = "<group>";
+		};
+		2322815824E8780800F28378 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				2322815924E8781000F28378 /* Margins */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		2322815924E8781000F28378 /* Margins */ = {
+			isa = PBXGroup;
+			children = (
+				2322815A24E8781B00F28378 /* MarginTests.swift */,
+			);
+			path = Margins;
 			sourceTree = "<group>";
 		};
 		2361751F24E329460052AB01 = {
@@ -602,6 +621,7 @@
 				2322815124E86F8C00F28378 /* BoardSetupFactoryTests.swift in Sources */,
 				2322814824E8621A00F28378 /* BoardSetupTests.swift in Sources */,
 				2322814F24E8670800F28378 /* DefaultBoardEngineTests.swift in Sources */,
+				2322815B24E8781B00F28378 /* MarginTests.swift in Sources */,
 				2322815724E872C000F28378 /* BoardTests.swift in Sources */,
 				2322814424E8614700F28378 /* LightStateReducerTests.swift in Sources */,
 			);
