@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		232280E224E8598500F28378 /* BoardBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232280E124E8598500F28378 /* BoardBuilder.swift */; };
+		232280E424E8599F00F28378 /* BoardSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232280E324E8599F00F28378 /* BoardSize.swift */; };
+		232280E624E85CA800F28378 /* BoardSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232280E524E85CA800F28378 /* BoardSetup.swift */; };
 		2361752C24E329460052AB01 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2361752B24E329460052AB01 /* AppDelegate.swift */; };
 		2361752E24E329460052AB01 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2361752D24E329460052AB01 /* SceneDelegate.swift */; };
 		2361753524E329470052AB01 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2361753424E329470052AB01 /* Assets.xcassets */; };
@@ -34,7 +37,15 @@
 		2399636724E471B3008A6768 /* MenuCellProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2399636624E471B3008A6768 /* MenuCellProvider.swift */; };
 		2399636A24E4721C008A6768 /* MenuTableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2399636924E4721C008A6768 /* MenuTableViewAdapter.swift */; };
 		2399636D24E472EC008A6768 /* MenuViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2399636C24E472EC008A6768 /* MenuViewData.swift */; };
+		23A69DD424E817F000B205CC /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A69DD324E817F000B205CC /* Board.swift */; };
 		23A69DD724E8250D00B205CC /* Collection+Safe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A69DD624E8250D00B205CC /* Collection+Safe.swift */; };
+		23A69DDA24E8273400B205CC /* BoardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A69DD924E8273400B205CC /* BoardItem.swift */; };
+		23A69DDC24E8278B00B205CC /* BoardRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A69DDB24E8278B00B205CC /* BoardRow.swift */; };
+		23A69E5E24E82A1E00B205CC /* BoardSetupFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A69E5D24E82A1E00B205CC /* BoardSetupFactory.swift */; };
+		23A69E6024E82B4D00B205CC /* DefaultBoardEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A69E5F24E82B4D00B205CC /* DefaultBoardEngine.swift */; };
+		23A69E6424E82CB300B205CC /* LightState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A69E6324E82CB300B205CC /* LightState.swift */; };
+		23A69E6624E82EB100B205CC /* LightStateReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A69E6524E82EB100B205CC /* LightStateReducer.swift */; };
+		23A69E6A24E8356800B205CC /* BoardEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A69E6924E8356800B205CC /* BoardEngine.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +59,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		232280E124E8598500F28378 /* BoardBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardBuilder.swift; sourceTree = "<group>"; };
+		232280E324E8599F00F28378 /* BoardSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardSize.swift; sourceTree = "<group>"; };
+		232280E524E85CA800F28378 /* BoardSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardSetup.swift; sourceTree = "<group>"; };
 		2361752824E329460052AB01 /* Hush.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hush.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2361752B24E329460052AB01 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2361752D24E329460052AB01 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,7 +92,15 @@
 		2399636624E471B3008A6768 /* MenuCellProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCellProvider.swift; sourceTree = "<group>"; };
 		2399636924E4721C008A6768 /* MenuTableViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewAdapter.swift; sourceTree = "<group>"; };
 		2399636C24E472EC008A6768 /* MenuViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewData.swift; sourceTree = "<group>"; };
+		23A69DD324E817F000B205CC /* Board.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
 		23A69DD624E8250D00B205CC /* Collection+Safe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Safe.swift"; sourceTree = "<group>"; };
+		23A69DD924E8273400B205CC /* BoardItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardItem.swift; sourceTree = "<group>"; };
+		23A69DDB24E8278B00B205CC /* BoardRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardRow.swift; sourceTree = "<group>"; };
+		23A69E5D24E82A1E00B205CC /* BoardSetupFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardSetupFactory.swift; sourceTree = "<group>"; };
+		23A69E5F24E82B4D00B205CC /* DefaultBoardEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultBoardEngine.swift; sourceTree = "<group>"; };
+		23A69E6324E82CB300B205CC /* LightState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightState.swift; sourceTree = "<group>"; };
+		23A69E6524E82EB100B205CC /* LightStateReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightStateReducer.swift; sourceTree = "<group>"; };
+		23A69E6924E8356800B205CC /* BoardEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardEngine.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +193,7 @@
 		2361755324E32BA60052AB01 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				23A69DD224E817E200B205CC /* LightsOut */,
 				2399634F24E469D4008A6768 /* Menu */,
 				2361755424E32BB00052AB01 /* Breath */,
 			);
@@ -320,12 +343,70 @@
 			path = ViewData;
 			sourceTree = "<group>";
 		};
+		23A69DD224E817E200B205CC /* LightsOut */ = {
+			isa = PBXGroup;
+			children = (
+				23A69E5B24E829FD00B205CC /* API */,
+				23A69E5C24E82A0300B205CC /* Infrastructure */,
+				23A69DD824E8272300B205CC /* Domain */,
+			);
+			path = LightsOut;
+			sourceTree = "<group>";
+		};
 		23A69DD524E8250000B205CC /* Tools */ = {
 			isa = PBXGroup;
 			children = (
 				23A69DD624E8250D00B205CC /* Collection+Safe.swift */,
 			);
 			path = Tools;
+			sourceTree = "<group>";
+		};
+		23A69DD824E8272300B205CC /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				23A69E6824E82EDB00B205CC /* Board */,
+				23A69E6724E82ED200B205CC /* State */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		23A69E5B24E829FD00B205CC /* API */ = {
+			isa = PBXGroup;
+			children = (
+				23A69DD324E817F000B205CC /* Board.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		23A69E5C24E82A0300B205CC /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				23A69E5D24E82A1E00B205CC /* BoardSetupFactory.swift */,
+				23A69E5F24E82B4D00B205CC /* DefaultBoardEngine.swift */,
+				232280E124E8598500F28378 /* BoardBuilder.swift */,
+				232280E524E85CA800F28378 /* BoardSetup.swift */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		23A69E6724E82ED200B205CC /* State */ = {
+			isa = PBXGroup;
+			children = (
+				23A69E6324E82CB300B205CC /* LightState.swift */,
+				23A69E6524E82EB100B205CC /* LightStateReducer.swift */,
+			);
+			path = State;
+			sourceTree = "<group>";
+		};
+		23A69E6824E82EDB00B205CC /* Board */ = {
+			isa = PBXGroup;
+			children = (
+				23A69DD924E8273400B205CC /* BoardItem.swift */,
+				23A69DDB24E8278B00B205CC /* BoardRow.swift */,
+				23A69E6924E8356800B205CC /* BoardEngine.swift */,
+				232280E324E8599F00F28378 /* BoardSize.swift */,
+			);
+			path = Board;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -433,24 +514,35 @@
 			files = (
 				2399636524E47093008A6768 /* UITableView+Register.swift in Sources */,
 				2399636724E471B3008A6768 /* MenuCellProvider.swift in Sources */,
+				23A69E6024E82B4D00B205CC /* DefaultBoardEngine.swift in Sources */,
 				2399636D24E472EC008A6768 /* MenuViewData.swift in Sources */,
+				23A69DDC24E8278B00B205CC /* BoardRow.swift in Sources */,
 				23A69DD724E8250D00B205CC /* Collection+Safe.swift in Sources */,
 				2361755224E32B550052AB01 /* NavigationController.swift in Sources */,
+				23A69DD424E817F000B205CC /* Board.swift in Sources */,
 				2399635824E46A0D008A6768 /* MenuViewModel.swift in Sources */,
 				2399631024E468A5008A6768 /* UIView+AutoLayout.swift in Sources */,
 				2361752C24E329460052AB01 /* AppDelegate.swift in Sources */,
 				2361755824E32F670052AB01 /* BreathViewController.swift in Sources */,
 				236175A524E3383D0052AB01 /* PulsatoryView.swift in Sources */,
+				232280E424E8599F00F28378 /* BoardSize.swift in Sources */,
 				236175A024E336560052AB01 /* Router.swift in Sources */,
+				23A69E6A24E8356800B205CC /* BoardEngine.swift in Sources */,
 				236175A724E349540052AB01 /* Circle.swift in Sources */,
 				2399635A24E46A18008A6768 /* MenuRouter.swift in Sources */,
+				23A69E5E24E82A1E00B205CC /* BoardSetupFactory.swift in Sources */,
+				232280E224E8598500F28378 /* BoardBuilder.swift in Sources */,
 				2399635524E469F5008A6768 /* MenuViewController.swift in Sources */,
 				2399635F24E46FE3008A6768 /* MenuTableViewCell.swift in Sources */,
 				236175A224E336830052AB01 /* AppRouter.swift in Sources */,
+				23A69E6424E82CB300B205CC /* LightState.swift in Sources */,
+				23A69DDA24E8273400B205CC /* BoardItem.swift in Sources */,
 				2399636324E4705E008A6768 /* UITableViewCellProvider.swift in Sources */,
 				2361752E24E329460052AB01 /* SceneDelegate.swift in Sources */,
 				2361755F24E3300B0052AB01 /* BreathRouter.swift in Sources */,
 				2361755C24E32F790052AB01 /* BreathViewModel.swift in Sources */,
+				232280E624E85CA800F28378 /* BoardSetup.swift in Sources */,
+				23A69E6624E82EB100B205CC /* LightStateReducer.swift in Sources */,
 				2399636A24E4721C008A6768 /* MenuTableViewAdapter.swift in Sources */,
 				2399630D24E467D0008A6768 /* Margin.swift in Sources */,
 			);
