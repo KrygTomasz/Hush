@@ -15,7 +15,13 @@ class BoardCollectionViewCell: UICollectionViewCell {
     }
     
     func configure(with viewData: BoardViewData) {
-        backgroundColor = viewData.color
+        self.backgroundColor = viewData.color
+    }
+    
+    func refresh(with viewData: BoardViewData) {
+        UIView.animate(withDuration: 0.3) {
+            self.configure(with: viewData)
+        }
     }
 
 }

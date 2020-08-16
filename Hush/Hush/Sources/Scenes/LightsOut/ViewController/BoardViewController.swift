@@ -49,7 +49,14 @@ final class BoardViewController: UIViewController {
     private func bind() {
         viewModel.transform(input: .init(click: collectionView.rx.itemSelected.asSignal()))
         viewModel.output.reload
-            .drive(onNext: collectionView.reloadItems)
+            .drive(onNext: { [weak self] (indexPaths) in
+                guard let self = self else { return }
+                indexPaths.forEach {
+                    let cell = self.collectionView.cellForItem(at: $0) as? BoardCollectionViewCell
+                    let viewData = self.viewModel.output.viewData[$0.section][$0.item]
+                    cell?.refresh(with: viewData)
+                }
+            })
             .disposed(by: disposeBag)
     }
 }
