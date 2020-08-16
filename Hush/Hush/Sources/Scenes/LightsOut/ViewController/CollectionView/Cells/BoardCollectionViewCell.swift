@@ -10,12 +10,25 @@ import UIKit
 
 class BoardCollectionViewCell: UICollectionViewCell {
 
+    @IBOutlet weak var lightView: UIView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }
     
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        prepareView()
+    }
+    
+    private func prepareView() {
+        let value = bounds.height/10
+        contentView.setMargin(value/2.5)
+        lightView.layer.cornerRadius = value
+    }
+    
     func configure(with viewData: BoardViewData) {
-        self.backgroundColor = viewData.color
+        self.lightView.backgroundColor = viewData.color
     }
     
     func refresh(with viewData: BoardViewData) {
