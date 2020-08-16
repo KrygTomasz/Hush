@@ -11,6 +11,8 @@ import UIKit
 class BoardView: UIView {
     lazy var layout: UICollectionViewLayout = {
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
+        layout.minimumLineSpacing = 0
+        layout.minimumInteritemSpacing = 0
         return layout
     }()
     

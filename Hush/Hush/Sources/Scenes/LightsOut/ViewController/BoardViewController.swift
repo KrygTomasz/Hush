@@ -10,7 +10,10 @@ import UIKit
 
 final class BoardViewController: UIViewController {
 
+    @IBOutlet weak var boardView: BoardView!
+    
     let viewModel: BoardViewModel
+    var collectionAdapter: BoardCollectionViewAdapter!
     
     init(viewModel: BoardViewModel) {
         self.viewModel = viewModel
@@ -23,6 +26,13 @@ final class BoardViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupCollectionView()
+    }
+    
+    private func setupCollectionView() {
+        self.collectionAdapter = BoardCollectionViewAdapter(collectionView: boardView.collectionView, viewModel: viewModel)
+        self.boardView.collectionView.delegate = collectionAdapter
+        self.boardView.collectionView.dataSource = collectionAdapter
     }
 
 }

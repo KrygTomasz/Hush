@@ -60,6 +60,10 @@
 		23AB23CB24E95C320028E4EB /* BoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AB23CA24E95C320028E4EB /* BoardView.swift */; };
 		23AB23D024E95FF20028E4EB /* UICollectionView+Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AB23CF24E95FF20028E4EB /* UICollectionView+Register.swift */; };
 		23AB23D224E9600A0028E4EB /* UICollectionViewCellProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AB23D124E9600A0028E4EB /* UICollectionViewCellProvider.swift */; };
+		23AB23D624E960840028E4EB /* BoardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AB23D424E960840028E4EB /* BoardCollectionViewCell.swift */; };
+		23AB23D724E960840028E4EB /* BoardCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23AB23D524E960840028E4EB /* BoardCollectionViewCell.xib */; };
+		23AB23DA24E96A5F0028E4EB /* BoardCollectionViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AB23D924E96A5F0028E4EB /* BoardCollectionViewAdapter.swift */; };
+		23AB23DC24E96A7A0028E4EB /* BoardCellProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AB23DB24E96A7A0028E4EB /* BoardCellProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -130,6 +134,10 @@
 		23AB23CA24E95C320028E4EB /* BoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardView.swift; sourceTree = "<group>"; };
 		23AB23CF24E95FF20028E4EB /* UICollectionView+Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Register.swift"; sourceTree = "<group>"; };
 		23AB23D124E9600A0028E4EB /* UICollectionViewCellProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewCellProvider.swift; sourceTree = "<group>"; };
+		23AB23D424E960840028E4EB /* BoardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardCollectionViewCell.swift; sourceTree = "<group>"; };
+		23AB23D524E960840028E4EB /* BoardCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BoardCollectionViewCell.xib; sourceTree = "<group>"; };
+		23AB23D924E96A5F0028E4EB /* BoardCollectionViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardCollectionViewAdapter.swift; sourceTree = "<group>"; };
+		23AB23DB24E96A7A0028E4EB /* BoardCellProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardCellProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -533,7 +541,7 @@
 		23AB23BB24E954870028E4EB /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				23AB23CC24E95F570028E4EB /* Cells */,
+				23AB23D824E96A4F0028E4EB /* CollectionView */,
 				23AB23C024E954F90028E4EB /* BoardViewController.swift */,
 				23AB23C124E954F90028E4EB /* BoardViewController.xib */,
 			);
@@ -567,6 +575,8 @@
 		23AB23CC24E95F570028E4EB /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				23AB23D424E960840028E4EB /* BoardCollectionViewCell.swift */,
+				23AB23D524E960840028E4EB /* BoardCollectionViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -587,6 +597,16 @@
 				23AB23CF24E95FF20028E4EB /* UICollectionView+Register.swift */,
 			);
 			path = Collection;
+			sourceTree = "<group>";
+		};
+		23AB23D824E96A4F0028E4EB /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				23AB23CC24E95F570028E4EB /* Cells */,
+				23AB23D924E96A5F0028E4EB /* BoardCollectionViewAdapter.swift */,
+				23AB23DB24E96A7A0028E4EB /* BoardCellProvider.swift */,
+			);
+			path = CollectionView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -682,6 +702,7 @@
 				23AB23C324E954F90028E4EB /* BoardViewController.xib in Resources */,
 				2361753824E329470052AB01 /* LaunchScreen.storyboard in Resources */,
 				2361753524E329470052AB01 /* Assets.xcassets in Resources */,
+				23AB23D724E960840028E4EB /* BoardCollectionViewCell.xib in Resources */,
 				2399636024E46FE3008A6768 /* MenuTableViewCell.xib in Resources */,
 				2399635624E469F5008A6768 /* MenuViewController.xib in Resources */,
 			);
@@ -716,6 +737,7 @@
 				23A69DDC24E8278B00B205CC /* BoardRow.swift in Sources */,
 				23A69DD724E8250D00B205CC /* Collection+Safe.swift in Sources */,
 				2361755224E32B550052AB01 /* NavigationController.swift in Sources */,
+				23AB23D624E960840028E4EB /* BoardCollectionViewCell.swift in Sources */,
 				23A69DD424E817F000B205CC /* Board.swift in Sources */,
 				2399635824E46A0D008A6768 /* MenuViewModel.swift in Sources */,
 				2399631024E468A5008A6768 /* UIView+AutoLayout.swift in Sources */,
@@ -745,7 +767,9 @@
 				2361755C24E32F790052AB01 /* BreathViewModel.swift in Sources */,
 				232280E624E85CA800F28378 /* BoardSetup.swift in Sources */,
 				23AB23CB24E95C320028E4EB /* BoardView.swift in Sources */,
+				23AB23DA24E96A5F0028E4EB /* BoardCollectionViewAdapter.swift in Sources */,
 				23A69E6624E82EB100B205CC /* LightStateReducer.swift in Sources */,
+				23AB23DC24E96A7A0028E4EB /* BoardCellProvider.swift in Sources */,
 				2399636A24E4721C008A6768 /* MenuTableViewAdapter.swift in Sources */,
 				2399630D24E467D0008A6768 /* Margin.swift in Sources */,
 			);
