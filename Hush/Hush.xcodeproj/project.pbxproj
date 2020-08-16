@@ -66,6 +66,8 @@
 		23AB23DC24E96A7A0028E4EB /* BoardCellProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AB23DB24E96A7A0028E4EB /* BoardCellProvider.swift */; };
 		23AB23DF24E96B670028E4EB /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 23AB23DE24E96B670028E4EB /* RxSwift */; };
 		23AB23E124E96B670028E4EB /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 23AB23E024E96B670028E4EB /* RxCocoa */; };
+		23AB247124E98CF80028E4EB /* BoardViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AB247024E98CF80028E4EB /* BoardViewData.swift */; };
+		23AB247524E98DB40028E4EB /* BoardViewDataMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AB247424E98DB40028E4EB /* BoardViewDataMapper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -140,6 +142,8 @@
 		23AB23D524E960840028E4EB /* BoardCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BoardCollectionViewCell.xib; sourceTree = "<group>"; };
 		23AB23D924E96A5F0028E4EB /* BoardCollectionViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardCollectionViewAdapter.swift; sourceTree = "<group>"; };
 		23AB23DB24E96A7A0028E4EB /* BoardCellProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardCellProvider.swift; sourceTree = "<group>"; };
+		23AB247024E98CF80028E4EB /* BoardViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardViewData.swift; sourceTree = "<group>"; };
+		23AB247424E98DB40028E4EB /* BoardViewDataMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardViewDataMapper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -555,6 +559,8 @@
 		23AB23BC24E954960028E4EB /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				23AB247324E98DA70028E4EB /* Mappers */,
+				23AB247224E98D0F0028E4EB /* ViewData */,
 				23AB23C424E955040028E4EB /* BoardViewModel.swift */,
 			);
 			path = ViewModel;
@@ -611,6 +617,22 @@
 				23AB23DB24E96A7A0028E4EB /* BoardCellProvider.swift */,
 			);
 			path = CollectionView;
+			sourceTree = "<group>";
+		};
+		23AB247224E98D0F0028E4EB /* ViewData */ = {
+			isa = PBXGroup;
+			children = (
+				23AB247024E98CF80028E4EB /* BoardViewData.swift */,
+			);
+			path = ViewData;
+			sourceTree = "<group>";
+		};
+		23AB247324E98DA70028E4EB /* Mappers */ = {
+			isa = PBXGroup;
+			children = (
+				23AB247424E98DB40028E4EB /* BoardViewDataMapper.swift */,
+			);
+			path = Mappers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -764,8 +786,10 @@
 				2399635A24E46A18008A6768 /* MenuRouter.swift in Sources */,
 				23A69E5E24E82A1E00B205CC /* BoardSetupFactory.swift in Sources */,
 				232280E224E8598500F28378 /* BoardBuilder.swift in Sources */,
+				23AB247124E98CF80028E4EB /* BoardViewData.swift in Sources */,
 				23AB23D024E95FF20028E4EB /* UICollectionView+Register.swift in Sources */,
 				2399635524E469F5008A6768 /* MenuViewController.swift in Sources */,
+				23AB247524E98DB40028E4EB /* BoardViewDataMapper.swift in Sources */,
 				2399635F24E46FE3008A6768 /* MenuTableViewCell.swift in Sources */,
 				23AB23C524E955040028E4EB /* BoardViewModel.swift in Sources */,
 				236175A224E336830052AB01 /* AppRouter.swift in Sources */,

@@ -9,7 +9,7 @@
 import Foundation
 
 class BoardSetup {
-    private var rows: [BoardRow]
+    private(set) var rows: [BoardRow]
     
     init(rows: [BoardRow]) {
         self.rows = rows

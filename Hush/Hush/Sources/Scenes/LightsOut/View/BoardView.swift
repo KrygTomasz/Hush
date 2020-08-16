@@ -19,7 +19,7 @@ class BoardView: UIView {
     lazy var collectionView: UICollectionView = {
         let view = UICollectionView(frame: .zero, collectionViewLayout: layout)
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = .gray
+        view.backgroundColor = .clear
         return view
     }()
     

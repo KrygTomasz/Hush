@@ -13,5 +13,9 @@ class BoardCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
     }
+    
+    func configure(with viewData: BoardViewData) {
+        backgroundColor = viewData.color
+    }
 
 }

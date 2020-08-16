@@ -9,7 +9,7 @@
 import Foundation
 
 class Board {
-    private let setup: BoardSetup
+    let setup: BoardSetup
     private let engine: BoardEngine
     
     init(setup: BoardSetup, engine: BoardEngine) {

@@ -14,7 +14,14 @@ final class BoardRouter: Router {
     private let viewModel: BoardViewModel
     
     init() {
-        self.viewModel = BoardViewModel()
+        let board = BoardBuilder()
+            .set(size: .init(height: 3, width: 4))
+            .set(engine: DefaultBoardEngine())
+            .set(initialToggles: 1)
+            .build()
+        board.log()
+        
+        self.viewModel = BoardViewModel(board: board)
         self.viewController = BoardViewController(viewModel: viewModel)
     }
 }

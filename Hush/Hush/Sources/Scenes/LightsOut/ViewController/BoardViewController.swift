@@ -7,13 +7,23 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 final class BoardViewController: UIViewController {
-
-    @IBOutlet weak var boardView: BoardView!
     
+    // MARK: - Properties
+    
+    @IBOutlet weak var boardView: BoardView!
+    var collectionView: UICollectionView {
+        return boardView.collectionView
+    }
+    
+    private let disposeBag: DisposeBag = DisposeBag()
     let viewModel: BoardViewModel
-    var collectionAdapter: BoardCollectionViewAdapter!
+    let collectionAdapter: BoardCollectionViewAdapter = BoardCollectionViewAdapter()
+    
+    // MARK: - Lifecycle
     
     init(viewModel: BoardViewModel) {
         self.viewModel = viewModel
@@ -27,12 +37,19 @@ final class BoardViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCollectionView()
+        bind()
     }
     
+    // MARK: - Setup
+    
     private func setupCollectionView() {
-        self.collectionAdapter = BoardCollectionViewAdapter(collectionView: boardView.collectionView, viewModel: viewModel)
-        self.boardView.collectionView.delegate = collectionAdapter
-        self.boardView.collectionView.dataSource = collectionAdapter
+        self.collectionAdapter.setup(collectionView: boardView.collectionView, viewModel: viewModel)
     }
-
+    
+    private func bind() {
+        viewModel.transform(input: .init(click: collectionView.rx.itemSelected.asSignal()))
+        viewModel.output.reload
+            .drive(onNext: collectionView.reloadItems)
+            .disposed(by: disposeBag)
+    }
 }
