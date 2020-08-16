@@ -11,7 +11,7 @@ import Foundation
 enum MenuCellProvider: UITableViewCellProvider {
     case button
     
-    var type: Cell {
+    var type: TableCell {
         switch self {
         case .button:
             return MenuTableViewCell.self

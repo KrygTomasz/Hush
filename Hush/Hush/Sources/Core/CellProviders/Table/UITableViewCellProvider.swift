@@ -8,10 +8,10 @@
 
 import UIKit
 
-typealias Cell = UITableViewCell.Type
+typealias TableCell = UITableViewCell.Type
 
 protocol UITableViewCellProvider: CaseIterable {
-    var type: Cell { get }
+    var type: TableCell { get }
     var id: String { get }
 }
 
