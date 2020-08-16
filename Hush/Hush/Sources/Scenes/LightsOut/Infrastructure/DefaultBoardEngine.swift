@@ -11,6 +11,7 @@ import Foundation
 class DefaultBoardEngine: BoardEngine {
     init() { }
     
+    #warning("TODO: toggle should return updated indexes")
     func toggle(x: Int, y: Int, setup: BoardSetup) {
         tryToggle(x: x, y: y, setup: setup)
         tryToggle(x: x-1, y: y, setup: setup)

@@ -12,6 +12,6 @@ final class AppRouter {
     static let navigationController: NavigationController = NavigationController()
     func start(window: UIWindow?) {
         window?.rootViewController = AppRouter.navigationController
-        BreathRouter().route()
+        BoardRouter().route()
     }
 }
