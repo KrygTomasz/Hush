@@ -68,6 +68,8 @@
 		23AB23E124E96B670028E4EB /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 23AB23E024E96B670028E4EB /* RxCocoa */; };
 		23AB247124E98CF80028E4EB /* BoardViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AB247024E98CF80028E4EB /* BoardViewData.swift */; };
 		23AB247524E98DB40028E4EB /* BoardViewDataMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AB247424E98DB40028E4EB /* BoardViewDataMapper.swift */; };
+		23FFE71124E9EEED0043CEA0 /* UIView+Margin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FFE71024E9EEED0043CEA0 /* UIView+Margin.swift */; };
+		23FFE71324E9EF7A0043CEA0 /* HapticFeedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FFE71224E9EF7A0043CEA0 /* HapticFeedback.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -144,6 +146,8 @@
 		23AB23DB24E96A7A0028E4EB /* BoardCellProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardCellProvider.swift; sourceTree = "<group>"; };
 		23AB247024E98CF80028E4EB /* BoardViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardViewData.swift; sourceTree = "<group>"; };
 		23AB247424E98DB40028E4EB /* BoardViewDataMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardViewDataMapper.swift; sourceTree = "<group>"; };
+		23FFE71024E9EEED0043CEA0 /* UIView+Margin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Margin.swift"; sourceTree = "<group>"; };
+		23FFE71224E9EF7A0043CEA0 /* HapticFeedback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticFeedback.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -398,6 +402,7 @@
 			isa = PBXGroup;
 			children = (
 				2399630F24E468A5008A6768 /* UIView+AutoLayout.swift */,
+				23FFE71024E9EEED0043CEA0 /* UIView+Margin.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -493,6 +498,7 @@
 			isa = PBXGroup;
 			children = (
 				23A69DD624E8250D00B205CC /* Collection+Safe.swift */,
+				23FFE71224E9EF7A0043CEA0 /* HapticFeedback.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -774,6 +780,7 @@
 				23A69DD424E817F000B205CC /* Board.swift in Sources */,
 				2399635824E46A0D008A6768 /* MenuViewModel.swift in Sources */,
 				2399631024E468A5008A6768 /* UIView+AutoLayout.swift in Sources */,
+				23FFE71124E9EEED0043CEA0 /* UIView+Margin.swift in Sources */,
 				2361752C24E329460052AB01 /* AppDelegate.swift in Sources */,
 				23AB23D224E9600A0028E4EB /* UICollectionViewCellProvider.swift in Sources */,
 				2361755824E32F670052AB01 /* BreathViewController.swift in Sources */,
@@ -795,6 +802,7 @@
 				236175A224E336830052AB01 /* AppRouter.swift in Sources */,
 				23A69E6424E82CB300B205CC /* LightState.swift in Sources */,
 				23A69DDA24E8273400B205CC /* BoardItem.swift in Sources */,
+				23FFE71324E9EF7A0043CEA0 /* HapticFeedback.swift in Sources */,
 				23AB23BF24E954C10028E4EB /* BoardRouter.swift in Sources */,
 				2399636324E4705E008A6768 /* UITableViewCellProvider.swift in Sources */,
 				2361752E24E329460052AB01 /* SceneDelegate.swift in Sources */,
@@ -925,7 +933,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -979,7 +987,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

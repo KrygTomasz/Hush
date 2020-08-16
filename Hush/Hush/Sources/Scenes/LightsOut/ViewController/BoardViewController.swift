@@ -47,7 +47,10 @@ final class BoardViewController: UIViewController {
     }
     
     private func bind() {
-        viewModel.transform(input: .init(click: collectionView.rx.itemSelected.asSignal()))
+        let itemSelected = collectionView.rx.itemSelected.asSignal().do(onNext: { _ in
+            HapticFeedback.launch()
+        })
+        viewModel.transform(input: .init(click: itemSelected))
         viewModel.output.reload
             .drive(onNext: { [weak self] (indexPaths) in
                 guard let self = self else { return }
