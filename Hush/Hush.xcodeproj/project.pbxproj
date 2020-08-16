@@ -57,6 +57,7 @@
 		23AB23C224E954F90028E4EB /* BoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AB23C024E954F90028E4EB /* BoardViewController.swift */; };
 		23AB23C324E954F90028E4EB /* BoardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23AB23C124E954F90028E4EB /* BoardViewController.xib */; };
 		23AB23C524E955040028E4EB /* BoardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AB23C424E955040028E4EB /* BoardViewModel.swift */; };
+		23AB23CB24E95C320028E4EB /* BoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AB23CA24E95C320028E4EB /* BoardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -124,6 +125,7 @@
 		23AB23C024E954F90028E4EB /* BoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardViewController.swift; sourceTree = "<group>"; };
 		23AB23C124E954F90028E4EB /* BoardViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BoardViewController.xib; sourceTree = "<group>"; };
 		23AB23C424E955040028E4EB /* BoardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardViewModel.swift; sourceTree = "<group>"; };
+		23AB23CA24E95C320028E4EB /* BoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -456,6 +458,7 @@
 		23A69DD224E817E200B205CC /* LightsOut */ = {
 			isa = PBXGroup;
 			children = (
+				23AB23C924E95C260028E4EB /* View */,
 				23AB23BD24E9549B0028E4EB /* Router */,
 				23AB23BC24E954960028E4EB /* ViewModel */,
 				23AB23BB24E954870028E4EB /* ViewController */,
@@ -546,6 +549,14 @@
 				23AB23BE24E954C10028E4EB /* BoardRouter.swift */,
 			);
 			path = Router;
+			sourceTree = "<group>";
+		};
+		23AB23C924E95C260028E4EB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				23AB23CA24E95C320028E4EB /* BoardView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -701,6 +712,7 @@
 				2361755F24E3300B0052AB01 /* BreathRouter.swift in Sources */,
 				2361755C24E32F790052AB01 /* BreathViewModel.swift in Sources */,
 				232280E624E85CA800F28378 /* BoardSetup.swift in Sources */,
+				23AB23CB24E95C320028E4EB /* BoardView.swift in Sources */,
 				23A69E6624E82EB100B205CC /* LightStateReducer.swift in Sources */,
 				2399636A24E4721C008A6768 /* MenuTableViewAdapter.swift in Sources */,
 				2399630D24E467D0008A6768 /* Margin.swift in Sources */,
