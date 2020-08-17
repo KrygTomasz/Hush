@@ -8,6 +8,9 @@
 
 import UIKit
 
-final class NavigationController: UINavigationController {
-    
+final class NavigationController: UINavigationController {    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        isNavigationBarHidden = true
+    }
 }
