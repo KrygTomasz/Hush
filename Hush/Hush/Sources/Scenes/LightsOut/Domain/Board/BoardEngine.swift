@@ -9,5 +9,5 @@
 import Foundation
 
 protocol BoardEngine {
-    func toggle(x: Int, y: Int, setup: BoardSetup)
+    func toggle(position: BoardPosition, setup: BoardSetup)
 }

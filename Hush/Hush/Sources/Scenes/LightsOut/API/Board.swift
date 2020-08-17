@@ -18,7 +18,7 @@ class Board {
     }
     
     func click(x: Int, y: Int) {
-        engine.toggle(x: x, y: y, setup: setup)
+        engine.toggle(position: BoardPosition(x: x, y: y), setup: setup)
     }
     
     func log() {

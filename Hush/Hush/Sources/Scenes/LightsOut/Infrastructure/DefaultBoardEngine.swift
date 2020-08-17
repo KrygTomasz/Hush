@@ -12,12 +12,13 @@ class DefaultBoardEngine: BoardEngine {
     init() { }
     
     #warning("TODO: toggle should return updated indexes")
-    func toggle(x: Int, y: Int, setup: BoardSetup) {
-        tryToggle(x: x, y: y, setup: setup)
-        tryToggle(x: x-1, y: y, setup: setup)
-        tryToggle(x: x, y: y+1, setup: setup)
-        tryToggle(x: x+1, y: y, setup: setup)
-        tryToggle(x: x, y: y-1, setup: setup)
+    func toggle(position: BoardPosition, setup: BoardSetup) {
+        tryToggle(x: position.x, y: position.y, setup: setup)
+        tryToggle(x: position.x-1, y: position.y, setup: setup)
+        tryToggle(x: position.x, y: position.y+1, setup: setup)
+        tryToggle(x: position.x+1, y: position.y, setup: setup)
+        tryToggle(x: position.x, y: position.y-1, setup: setup)
+        setup.solution.update(position: position)
     }
     
     private func tryToggle(x: Int, y: Int, setup: BoardSetup) {

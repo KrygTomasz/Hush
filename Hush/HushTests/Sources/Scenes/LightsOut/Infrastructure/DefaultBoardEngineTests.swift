@@ -22,7 +22,8 @@ final class DefaultBoardEngineTests: XCTestCase {
     
     func test_emptyBoardSetup_middleFieldClicked_fieldsAroundItShouldBeAlsoToggled() {
         assertBoardSetupEmpty()
-        sut.toggle(x: 1, y: 1, setup: setup)
+        let position = BoardPosition(x: 1, y: 1)
+        sut.toggle(position: position, setup: setup)
         (0..<height).forEach { y in
             (0..<width).forEach { x in
                 let state = setup.getState(x: x, y: y)
@@ -36,7 +37,8 @@ final class DefaultBoardEngineTests: XCTestCase {
     
     func test_emptyBoardSetup_edgeFieldClicked_fieldsAroundItShouldBeAlsoToggled() {
         assertBoardSetupEmpty()
-        sut.toggle(x: 0, y: 0, setup: setup)
+        let position = BoardPosition(x: 0, y: 0)
+        sut.toggle(position: position, setup: setup)
         (0..<height).forEach { y in
             (0..<width).forEach { x in
                 let state = setup.getState(x: x, y: y)
@@ -50,7 +52,8 @@ final class DefaultBoardEngineTests: XCTestCase {
     
     func test_emptyBoardSetup_anyFieldClickedTwice_setupShouldBeEmpty() {
         assertBoardSetupEmpty()
-        sut.toggle(x: 2, y: 3, setup: setup)
+        let position = BoardPosition(x: 2, y: 3)
+        sut.toggle(position: position, setup: setup)
         (0..<height).forEach { y in
             (0..<width).forEach { x in
                 let state = setup.getState(x: x, y: y)
@@ -60,13 +63,14 @@ final class DefaultBoardEngineTests: XCTestCase {
                 }
             }
         }
-        sut.toggle(x: 2, y: 3, setup: setup)
+        sut.toggle(position: position, setup: setup)
         assertBoardSetupEmpty()
     }
     
     func test_emptyBoardSetup_twoNeighbourFieldsClicked_severalFieldsShouldBeEmptyAgain() {
         assertBoardSetupEmpty()
-        sut.toggle(x: 3, y: 3, setup: setup)
+        let firstPosition = BoardPosition(x: 3, y: 3)
+        sut.toggle(position: firstPosition, setup: setup)
         (0..<height).forEach { y in
             (0..<width).forEach { x in
                 let state = setup.getState(x: x, y: y)
@@ -76,7 +80,8 @@ final class DefaultBoardEngineTests: XCTestCase {
                 }
             }
         }
-        sut.toggle(x: 2, y: 3, setup: setup)
+        let secondPosition = BoardPosition(x: 2, y: 3)
+        sut.toggle(position: secondPosition, setup: setup)
         (0..<height).forEach { y in
             (0..<width).forEach { x in
                 let state = setup.getState(x: x, y: y)

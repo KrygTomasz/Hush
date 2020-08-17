@@ -25,8 +25,8 @@ final class StubBoardSetupBuilder {
     }
     
     func build() -> BoardSetup {
-        let rows = (0..<height).map { _ -> BoardRow in
-            let items = (0..<width).map { BoardItem(state: stateGenerator($0)) }
+        let rows = (0..<height).map { y -> BoardRow in
+            let items = (0..<width).map { BoardItem(state: stateGenerator($0), position: BoardPosition(x: $0, y: y)) }
             return BoardRow(items: items)
         }
         return BoardSetup(rows: rows)

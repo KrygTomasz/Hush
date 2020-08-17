@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		230D189124EAD9420075FE89 /* BoardSolution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230D189024EAD9420075FE89 /* BoardSolution.swift */; };
+		230D189324EAD99F0075FE89 /* BoardPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230D189224EAD99F0075FE89 /* BoardPosition.swift */; };
+		230D189524EAD9CD0075FE89 /* BoardSolutionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230D189424EAD9CD0075FE89 /* BoardSolutionTests.swift */; };
 		232280E224E8598500F28378 /* BoardBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232280E124E8598500F28378 /* BoardBuilder.swift */; };
 		232280E424E8599F00F28378 /* BoardSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232280E324E8599F00F28378 /* BoardSize.swift */; };
 		232280E624E85CA800F28378 /* BoardSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232280E524E85CA800F28378 /* BoardSetup.swift */; };
@@ -83,6 +86,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		230D189024EAD9420075FE89 /* BoardSolution.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardSolution.swift; sourceTree = "<group>"; };
+		230D189224EAD99F0075FE89 /* BoardPosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardPosition.swift; sourceTree = "<group>"; };
+		230D189424EAD9CD0075FE89 /* BoardSolutionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardSolutionTests.swift; sourceTree = "<group>"; };
 		232280E124E8598500F28378 /* BoardBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardBuilder.swift; sourceTree = "<group>"; };
 		232280E324E8599F00F28378 /* BoardSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardSize.swift; sourceTree = "<group>"; };
 		232280E524E85CA800F28378 /* BoardSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardSetup.swift; sourceTree = "<group>"; };
@@ -228,6 +234,7 @@
 				2322814724E8621A00F28378 /* BoardSetupTests.swift */,
 				2322814E24E8670800F28378 /* DefaultBoardEngineTests.swift */,
 				2322815024E86F8C00F28378 /* BoardSetupFactoryTests.swift */,
+				230D189424EAD9CD0075FE89 /* BoardSolutionTests.swift */,
 			);
 			path = Infrastructure;
 			sourceTree = "<group>";
@@ -527,6 +534,7 @@
 				23A69E5F24E82B4D00B205CC /* DefaultBoardEngine.swift */,
 				232280E124E8598500F28378 /* BoardBuilder.swift */,
 				232280E524E85CA800F28378 /* BoardSetup.swift */,
+				230D189024EAD9420075FE89 /* BoardSolution.swift */,
 			);
 			path = Infrastructure;
 			sourceTree = "<group>";
@@ -548,6 +556,7 @@
 				23A69DDB24E8278B00B205CC /* BoardRow.swift */,
 				23A69E6924E8356800B205CC /* BoardEngine.swift */,
 				232280E324E8599F00F28378 /* BoardSize.swift */,
+				230D189224EAD99F0075FE89 /* BoardPosition.swift */,
 			);
 			path = Board;
 			sourceTree = "<group>";
@@ -760,6 +769,7 @@
 				2322814824E8621A00F28378 /* BoardSetupTests.swift in Sources */,
 				2322814F24E8670800F28378 /* DefaultBoardEngineTests.swift in Sources */,
 				2322815B24E8781B00F28378 /* MarginTests.swift in Sources */,
+				230D189524EAD9CD0075FE89 /* BoardSolutionTests.swift in Sources */,
 				2322815724E872C000F28378 /* BoardTests.swift in Sources */,
 				2322814424E8614700F28378 /* LightStateReducerTests.swift in Sources */,
 			);
@@ -776,6 +786,7 @@
 				23A69DDC24E8278B00B205CC /* BoardRow.swift in Sources */,
 				23A69DD724E8250D00B205CC /* Collection+Safe.swift in Sources */,
 				2361755224E32B550052AB01 /* NavigationController.swift in Sources */,
+				230D189324EAD99F0075FE89 /* BoardPosition.swift in Sources */,
 				23AB23D624E960840028E4EB /* BoardCollectionViewCell.swift in Sources */,
 				23A69DD424E817F000B205CC /* Board.swift in Sources */,
 				2399635824E46A0D008A6768 /* MenuViewModel.swift in Sources */,
@@ -786,6 +797,7 @@
 				2361755824E32F670052AB01 /* BreathViewController.swift in Sources */,
 				236175A524E3383D0052AB01 /* PulsatoryView.swift in Sources */,
 				232280E424E8599F00F28378 /* BoardSize.swift in Sources */,
+				230D189124EAD9420075FE89 /* BoardSolution.swift in Sources */,
 				23AB23C224E954F90028E4EB /* BoardViewController.swift in Sources */,
 				236175A024E336560052AB01 /* Router.swift in Sources */,
 				23A69E6A24E8356800B205CC /* BoardEngine.swift in Sources */,

@@ -11,10 +11,11 @@ import Foundation
 struct BoardSetupFactory {
     static func create(size: BoardSize) -> BoardSetup {
         var rows: [BoardRow] = []
-        (0..<size.height).forEach { h in
+        (0..<size.height).forEach { y in
             var items: [BoardItem] = []
-            (0..<size.width).forEach { w in
-                items.append(BoardItem(state: .off))
+            (0..<size.width).forEach { x in
+                let position = BoardPosition(x: x, y: y)
+                items.append(BoardItem(state: .off, position: position))
             }
             let row = BoardRow(items: items)
             rows.append(row)

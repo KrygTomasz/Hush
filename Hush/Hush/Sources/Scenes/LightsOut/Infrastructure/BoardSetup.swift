@@ -10,9 +10,11 @@ import Foundation
 
 class BoardSetup {
     private(set) var rows: [BoardRow]
+    var solution: BoardSolution
     
     init(rows: [BoardRow]) {
         self.rows = rows
+        self.solution = BoardSolution()
     }
     
     func set(state: LightState, x: Int, y: Int) {

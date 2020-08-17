@@ -10,4 +10,5 @@ import Foundation
 
 struct BoardItem {
     var state: LightState
+    var position: BoardPosition
 }

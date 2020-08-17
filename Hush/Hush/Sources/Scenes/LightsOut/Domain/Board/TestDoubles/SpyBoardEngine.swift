@@ -9,13 +9,11 @@
 @testable import Hush
 
 final class SpyBoardEngine: BoardEngine {
-    var toggledX: Int?
-    var toggledY: Int?
+    var toggledPosition: BoardPosition?
     var toggledSetup: BoardSetup?
 
-    func toggle(x: Int, y: Int, setup: BoardSetup) {
-        self.toggledX = x
-        self.toggledY = y
+    func toggle(position: BoardPosition, setup: BoardSetup) {
+        self.toggledPosition = position
         self.toggledSetup = setup
     }
 }
