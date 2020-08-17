@@ -36,5 +36,13 @@ class BoardCollectionViewCell: UICollectionViewCell {
             self.configure(with: viewData)
         }
     }
+    
+    func hinted() {
+        backgroundColor = .red
+    }
+    
+    func unhinted() {
+        backgroundColor = .clear
+    }
 
 }

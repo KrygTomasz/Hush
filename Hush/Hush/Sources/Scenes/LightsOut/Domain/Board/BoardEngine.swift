@@ -10,4 +10,5 @@ import Foundation
 
 protocol BoardEngine {
     func toggle(position: BoardPosition, setup: BoardSetup)
+    func hint(for setup: BoardSetup) -> BoardPosition?
 }

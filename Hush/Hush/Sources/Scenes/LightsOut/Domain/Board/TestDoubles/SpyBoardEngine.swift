@@ -16,4 +16,8 @@ final class SpyBoardEngine: BoardEngine {
         self.toggledPosition = position
         self.toggledSetup = setup
     }
+    
+    func hint(for setup: BoardSetup) -> BoardPosition? {
+        return nil
+    }
 }

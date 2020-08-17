@@ -21,6 +21,10 @@ class DefaultBoardEngine: BoardEngine {
         setup.solution.update(position: position)
     }
     
+    func hint(for setup: BoardSetup) -> BoardPosition? {
+        return setup.solution.getHint()
+    }
+    
     private func tryToggle(x: Int, y: Int, setup: BoardSetup) {
         guard let state = setup.getState(x: x, y: y) else { return }
         let newState = LightStateReducer.reduce(state: state)

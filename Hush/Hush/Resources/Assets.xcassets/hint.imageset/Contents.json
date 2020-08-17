@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "baseline_help_center_white_48dp.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

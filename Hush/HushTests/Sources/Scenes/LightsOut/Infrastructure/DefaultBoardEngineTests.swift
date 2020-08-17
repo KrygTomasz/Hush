@@ -20,7 +20,9 @@ final class DefaultBoardEngineTests: XCTestCase {
         prepareSut()
     }
     
-    func test_emptyBoardSetup_middleFieldClicked_fieldsAroundItShouldBeAlsoToggled() {
+    // MARK: - Toggle
+    
+    func test_emptySetup_middleFieldClicked_fieldsAroundItShouldBeAlsoToggled() {
         assertBoardSetupEmpty()
         let position = BoardPosition(x: 1, y: 1)
         sut.toggle(position: position, setup: setup)
@@ -35,7 +37,7 @@ final class DefaultBoardEngineTests: XCTestCase {
         }
     }
     
-    func test_emptyBoardSetup_edgeFieldClicked_fieldsAroundItShouldBeAlsoToggled() {
+    func test_emptySetup_edgeFieldClicked_fieldsAroundItShouldBeAlsoToggled() {
         assertBoardSetupEmpty()
         let position = BoardPosition(x: 0, y: 0)
         sut.toggle(position: position, setup: setup)
@@ -50,7 +52,7 @@ final class DefaultBoardEngineTests: XCTestCase {
         }
     }
     
-    func test_emptyBoardSetup_anyFieldClickedTwice_setupShouldBeEmpty() {
+    func test_emptySetup_anyFieldClickedTwice_setupShouldBeEmpty() {
         assertBoardSetupEmpty()
         let position = BoardPosition(x: 2, y: 3)
         sut.toggle(position: position, setup: setup)
@@ -67,7 +69,7 @@ final class DefaultBoardEngineTests: XCTestCase {
         assertBoardSetupEmpty()
     }
     
-    func test_emptyBoardSetup_twoNeighbourFieldsClicked_severalFieldsShouldBeEmptyAgain() {
+    func test_emptySetup_twoNeighbourFieldsClicked_severalFieldsShouldBeEmptyAgain() {
         assertBoardSetupEmpty()
         let firstPosition = BoardPosition(x: 3, y: 3)
         sut.toggle(position: firstPosition, setup: setup)
@@ -92,6 +94,51 @@ final class DefaultBoardEngineTests: XCTestCase {
             }
         }
     }
+    
+    // MARK: - Hint
+    
+    func test_emptySetup_noHint() {
+        assertBoardSetupEmpty()
+        let hintPosition = sut.hint(for: setup)
+        XCTAssertEqual(hintPosition, nil)
+    }
+    
+    func test_emptySetup_fieldClicked_hintShowsThatField() {
+        assertBoardSetupEmpty()
+        let clickedPosition = BoardPosition(x: 1, y: 1)
+        sut.toggle(position: clickedPosition, setup: setup)
+        let hintPosition = sut.hint(for: setup)
+        XCTAssertEqual(hintPosition, clickedPosition)
+    }
+    
+    func test_emptySetup_fieldClickedTwice_noHint() {
+        assertBoardSetupEmpty()
+        let clickedPosition = BoardPosition(x: 2, y: 2)
+        sut.toggle(position: clickedPosition, setup: setup)
+        sut.toggle(position: clickedPosition, setup: setup)
+        let hintPosition = sut.hint(for: setup)
+        XCTAssertEqual(hintPosition, nil)
+    }
+    
+    func test_emptySetup_severalDifferentFieldsClicked_hintShowsThoseFieldsInOrder() {
+        var hintPosition: BoardPosition?
+        assertBoardSetupEmpty()
+        XCTAssertEqual(hintPosition, nil)
+        let firstClickedPosition = BoardPosition(x: 3, y: 1)
+        let secondClickedPosition = BoardPosition(x: 0, y: 2)
+        sut.toggle(position: firstClickedPosition, setup: setup)
+        sut.toggle(position: secondClickedPosition, setup: setup)
+        hintPosition = sut.hint(for: setup)
+        XCTAssertEqual(hintPosition, secondClickedPosition)
+        sut.toggle(position: secondClickedPosition, setup: setup)
+        hintPosition = sut.hint(for: setup)
+        XCTAssertEqual(hintPosition, firstClickedPosition)
+        sut.toggle(position: firstClickedPosition, setup: setup)
+        hintPosition = sut.hint(for: setup)
+        XCTAssertEqual(hintPosition, nil)
+    }
+    
+    // MARK: - Helpers
     
     private func prepareFailMessage(x: Int, y: Int, state: LightState) -> String {
         switch state {

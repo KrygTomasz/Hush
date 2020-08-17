@@ -47,18 +47,28 @@ final class BoardViewController: UIViewController {
     }
     
     private func bind() {
-        let itemSelected = collectionView.rx.itemSelected.asSignal().do(onNext: { _ in
+        let lightTrigger = collectionView.rx.itemSelected.asSignal().do(onNext: { _ in
             HapticFeedback.launch()
         })
-        viewModel.transform(input: .init(click: itemSelected))
+        let hintTrigger = boardView.hintButton.rx.tap.asSignal().map { _ in return Void() }
+        
+        viewModel.transform(input: .init(lightTrigger: lightTrigger, hintTrigger: hintTrigger))
         viewModel.output.reload
             .drive(onNext: { [weak self] (indexPaths) in
                 guard let self = self else { return }
                 indexPaths.forEach {
                     let cell = self.collectionView.cellForItem(at: $0) as? BoardCollectionViewCell
                     let viewData = self.viewModel.output.viewData[$0.section][$0.item]
+                    cell?.unhinted()
                     cell?.refresh(with: viewData)
                 }
+            })
+            .disposed(by: disposeBag)
+        
+        viewModel.output.hint
+            .drive(onNext: { (indexPath) in
+                let cell = self.collectionView.cellForItem(at: indexPath) as? BoardCollectionViewCell
+                cell?.hinted()
             })
             .disposed(by: disposeBag)
     }

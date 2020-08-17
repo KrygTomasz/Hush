@@ -19,7 +19,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q7Q-Vg-Bjm" customClass="BoardView" customModule="Hush" customModuleProvider="target">
-                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                 </view>
             </subviews>
@@ -28,7 +28,7 @@
                 <constraint firstItem="Q7Q-Vg-Bjm" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="4m7-Mh-Ab5"/>
                 <constraint firstItem="Q7Q-Vg-Bjm" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Nbw-4d-MFq"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Q7Q-Vg-Bjm" secondAttribute="trailing" id="zMh-hZ-JY2"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Q7Q-Vg-Bjm" secondAttribute="bottom" id="zuv-jo-0ZK"/>
+                <constraint firstAttribute="bottom" secondItem="Q7Q-Vg-Bjm" secondAttribute="bottom" id="zuv-jo-0ZK"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="-35" y="21"/>

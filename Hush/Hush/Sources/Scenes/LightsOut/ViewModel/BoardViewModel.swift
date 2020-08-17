@@ -15,11 +15,13 @@ final class BoardViewModel {
     // MARK: - Input and Output
     
     struct Input {
-        var click: Signal<IndexPath>
+        var lightTrigger: Signal<IndexPath>
+        var hintTrigger: Signal<Void>
     }
     
     struct Output {
         var reload: Driver<[IndexPath]>
+        var hint: Driver<IndexPath>
         var viewData: [[BoardViewData]]
         var sectionsCount: Int { viewData.count }
         var rowsCount: Int { viewData.first?.count ?? 0 }
@@ -37,15 +39,25 @@ final class BoardViewModel {
     }
     
     func transform(input: Input) {
-        let reload = input.click
+        let reload = input.lightTrigger
             .asObservable()
             .do(onNext: { [weak self] indexPath in
                 self?.click(at: indexPath)
             })
             .map { [weak self] _ in return self?.allIndexPaths() ?? [] }
             .asDriver(onErrorJustReturn: [])
+        
+        let hint = input.hintTrigger
+            .flatMap { [weak self] _ -> Signal<IndexPath> in
+                guard let position = self?.board.hint() else { return .empty() }
+                let indexPath = IndexPath(item: position.x, section: position.y)
+                return Signal.just(indexPath)
+            }
+            .asDriver(onErrorJustReturn: .init())
             
-        self.output = .init(reload: reload, viewData: BoardViewDataMapper.map(setup: board.setup))
+        self.output = .init(reload: reload,
+                            hint: hint,
+                            viewData: BoardViewDataMapper.map(setup: board.setup))
     }
     
     // MARK: – Helpers

@@ -21,6 +21,11 @@ class Board {
         engine.toggle(position: BoardPosition(x: x, y: y), setup: setup)
     }
     
+    func hint() -> (x: Int, y: Int)? {
+        guard let hint = engine.hint(for: setup) else { return nil }
+        return (x: hint.x, y: hint.y)
+    }
+    
     func log() {
         setup.log()
     }
