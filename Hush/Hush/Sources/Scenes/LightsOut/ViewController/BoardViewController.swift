@@ -71,5 +71,17 @@ final class BoardViewController: UIViewController {
                 cell?.hinted()
             })
             .disposed(by: disposeBag)
+        
+        viewModel.output.score
+            .drive(onNext: { [weak self] (score) in
+                self?.boardView.scoreLabel.text = score.display()
+            })
+            .disposed(by: disposeBag)
+        
+        viewModel.output.gameOver
+            .drive(onNext: { [weak self] (_) in
+                self?.boardView.scoreLabel.text = "Winner"
+            })
+            .disposed(by: disposeBag)
     }
 }
