@@ -33,10 +33,15 @@ final class BoardBuilder {
     func build() -> Board {
         let setup = BoardSetupFactory.create(size: size)
         let board = Board(setup: setup, engine: engine)
-        (0..<initialToggles).forEach { _ in
-            let x = Int.random(in: (0..<size.width))
-            let y = Int.random(in: (0..<size.height))
-            board.click(x: x, y: y)
+        let emptyFieldsShuffled: [BoardPosition] = (0..<size.width).flatMap { x in
+                (0..<size.height).map { y in
+                    BoardPosition(x: x, y: y)
+                }
+            }.shuffled()
+        let togglesCount = min(initialToggles, emptyFieldsShuffled.count)
+        (0..<togglesCount).forEach { index in
+            let position = emptyFieldsShuffled[index]
+            board.click(x: position.x, y: position.y)
         }
         return board
     }
