@@ -24,6 +24,7 @@ final class BoardViewModel {
         var hint: Driver<IndexPath>
         var score: Driver<BoardScore>
         var gameOver: Driver<Void>
+        var color: Driver<Color>
         var viewData: [[BoardViewData]]
         var sectionsCount: Int { viewData.count }
         var rowsCount: Int { viewData.first?.count ?? 0 }
@@ -32,6 +33,7 @@ final class BoardViewModel {
     // MARK: - Properties
     
     private let board: Board
+    private let color: Color = .random
     var output: Output!
     
     // MARK: - Lifecycle
@@ -57,14 +59,16 @@ final class BoardViewModel {
             }
             .asDriver(onErrorJustReturn: .init())
         
-        let gameOver = board.gameOver
         let score = board.score
-            
+        let gameOver = board.gameOver
+        let color = Observable.just(self.color).asDriver(onErrorJustReturn: self.color)
+        
         self.output = .init(reload: reload,
                             hint: hint,
                             score: score,
                             gameOver: gameOver,
-                            viewData: BoardViewDataMapper.map(setup: board.setup))
+                            color: color,
+                            viewData: BoardViewDataMapper.map(setup: board.setup, baseColor: self.color))
     }
     
     // MARK: – Helpers
@@ -73,7 +77,7 @@ final class BoardViewModel {
         board.click(x: indexPath.item, y: indexPath.section)
         allIndexPaths().forEach { indexPath in
             guard let state = board.setup.getState(x: indexPath.item, y: indexPath.section) else { return }
-            let viewData = BoardViewDataMapper.map(state: state)
+            let viewData = BoardViewDataMapper.map(state: state, baseColor: self.color)
             output.viewData[indexPath.section][indexPath.item] = viewData
         }
     }

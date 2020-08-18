@@ -38,7 +38,7 @@ class BoardCollectionViewCell: UICollectionViewCell {
     }
     
     func hinted() {
-        let hintColor = UIColor.orange
+        let hintColor = UIColor.white
         UIView.animate(withDuration: 0.5, delay: 0.0, options: [.curveEaseInOut, .autoreverse, .repeat, .allowUserInteraction], animations: { [weak self] in
             self?.lightView.backgroundColor = hintColor
         })

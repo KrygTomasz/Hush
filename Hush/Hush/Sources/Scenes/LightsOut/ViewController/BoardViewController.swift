@@ -83,5 +83,13 @@ final class BoardViewController: UIViewController {
                 self?.boardView.scoreLabel.text = "Winner"
             })
             .disposed(by: disposeBag)
+        
+        viewModel.output.color
+            .drive(onNext: { [weak self] (color) in
+                self?.view.backgroundColor = color.primary
+                self?.boardView.scoreLabel.textColor = color.secondary
+                self?.boardView.hintButton.tintColor = color.secondary
+            })
+            .disposed(by: disposeBag)
     }
 }

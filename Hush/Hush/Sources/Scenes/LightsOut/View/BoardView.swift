@@ -47,7 +47,7 @@ class BoardView: UIView {
         let button = UIButton(autoLayout: true)
         button.backgroundColor = .clear
         button.setTitle("", for: .normal)
-        let image = UIImage(named: "hint")
+        let image = UIImage(named: "hint")?.withRenderingMode(.alwaysTemplate)
         button.setImage(image, for: .normal)
         return button
     }()

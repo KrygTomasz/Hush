@@ -9,18 +9,18 @@
 import Foundation
 
 struct BoardViewDataMapper {
-    static func map(setup: BoardSetup) -> [[BoardViewData]] {
+    static func map(setup: BoardSetup, baseColor: Color) -> [[BoardViewData]] {
         return setup.rows.map { row -> [BoardViewData] in
             return row.items.map { item -> BoardViewData in
-                map(state: item.state)
+                map(state: item.state, baseColor: baseColor)
             }
         }
     }
     
-    static func map(state: LightState) -> BoardViewData {
+    static func map(state: LightState, baseColor: Color) -> BoardViewData {
         switch state {
-        case .off: return BoardViewData(color: .black)
-        case .on: return BoardViewData(color: .yellow)
+        case .off: return BoardViewData(color: baseColor.secondary)
+        case .on: return BoardViewData(color: baseColor.tertiary)
         }
     }
 }
