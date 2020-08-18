@@ -21,6 +21,8 @@
 		2322815424E8724400F28378 /* SpyBoardEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2322815224E8723C00F28378 /* SpyBoardEngine.swift */; };
 		2322815724E872C000F28378 /* BoardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2322815624E872C000F28378 /* BoardTests.swift */; };
 		2322815B24E8781B00F28378 /* MarginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2322815A24E8781B00F28378 /* MarginTests.swift */; };
+		2354097E24EC3C0E007B8571 /* BoardScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2354097D24EC3C0E007B8571 /* BoardScore.swift */; };
+		235409C224EC4A8E007B8571 /* BoardScore+Display.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235409C124EC4A8E007B8571 /* BoardScore+Display.swift */; };
 		2361752C24E329460052AB01 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2361752B24E329460052AB01 /* AppDelegate.swift */; };
 		2361752E24E329460052AB01 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2361752D24E329460052AB01 /* SceneDelegate.swift */; };
 		2361753524E329470052AB01 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2361753424E329470052AB01 /* Assets.xcassets */; };
@@ -102,6 +104,8 @@
 		2322815224E8723C00F28378 /* SpyBoardEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpyBoardEngine.swift; sourceTree = "<group>"; };
 		2322815624E872C000F28378 /* BoardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardTests.swift; sourceTree = "<group>"; };
 		2322815A24E8781B00F28378 /* MarginTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarginTests.swift; sourceTree = "<group>"; };
+		2354097D24EC3C0E007B8571 /* BoardScore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardScore.swift; sourceTree = "<group>"; };
+		235409C124EC4A8E007B8571 /* BoardScore+Display.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BoardScore+Display.swift"; sourceTree = "<group>"; };
 		2361752824E329460052AB01 /* Hush.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hush.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2361752B24E329460052AB01 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2361752D24E329460052AB01 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -270,6 +274,14 @@
 				2322815A24E8781B00F28378 /* MarginTests.swift */,
 			);
 			path = Margins;
+			sourceTree = "<group>";
+		};
+		235409C024EC4A5B007B8571 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				235409C124EC4A8E007B8571 /* BoardScore+Display.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		2361751F24E329460052AB01 = {
@@ -557,6 +569,7 @@
 				23A69E6924E8356800B205CC /* BoardEngine.swift */,
 				232280E324E8599F00F28378 /* BoardSize.swift */,
 				230D189224EAD99F0075FE89 /* BoardPosition.swift */,
+				2354097D24EC3C0E007B8571 /* BoardScore.swift */,
 			);
 			path = Board;
 			sourceTree = "<group>";
@@ -574,6 +587,7 @@
 		23AB23BC24E954960028E4EB /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				235409C024EC4A5B007B8571 /* Extensions */,
 				23AB247324E98DA70028E4EB /* Mappers */,
 				23AB247224E98D0F0028E4EB /* ViewData */,
 				23AB23C424E955040028E4EB /* BoardViewModel.swift */,
@@ -788,6 +802,7 @@
 				2361755224E32B550052AB01 /* NavigationController.swift in Sources */,
 				230D189324EAD99F0075FE89 /* BoardPosition.swift in Sources */,
 				23AB23D624E960840028E4EB /* BoardCollectionViewCell.swift in Sources */,
+				2354097E24EC3C0E007B8571 /* BoardScore.swift in Sources */,
 				23A69DD424E817F000B205CC /* Board.swift in Sources */,
 				2399635824E46A0D008A6768 /* MenuViewModel.swift in Sources */,
 				2399631024E468A5008A6768 /* UIView+AutoLayout.swift in Sources */,
@@ -818,6 +833,7 @@
 				23AB23BF24E954C10028E4EB /* BoardRouter.swift in Sources */,
 				2399636324E4705E008A6768 /* UITableViewCellProvider.swift in Sources */,
 				2361752E24E329460052AB01 /* SceneDelegate.swift in Sources */,
+				235409C224EC4A8E007B8571 /* BoardScore+Display.swift in Sources */,
 				2361755F24E3300B0052AB01 /* BreathRouter.swift in Sources */,
 				2361755C24E32F790052AB01 /* BreathViewModel.swift in Sources */,
 				232280E624E85CA800F28378 /* BoardSetup.swift in Sources */,

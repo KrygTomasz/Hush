@@ -22,6 +22,8 @@ final class BoardViewModel {
     struct Output {
         var reload: Driver<[IndexPath]>
         var hint: Driver<IndexPath>
+        var score: Driver<BoardScore>
+        var gameOver: Driver<Void>
         var viewData: [[BoardViewData]]
         var sectionsCount: Int { viewData.count }
         var rowsCount: Int { viewData.first?.count ?? 0 }
@@ -54,9 +56,14 @@ final class BoardViewModel {
                 return Signal.just(indexPath)
             }
             .asDriver(onErrorJustReturn: .init())
+        
+        let gameOver = board.gameOver
+        let score = board.score
             
         self.output = .init(reload: reload,
                             hint: hint,
+                            score: score,
+                            gameOver: gameOver,
                             viewData: BoardViewDataMapper.map(setup: board.setup))
     }
     

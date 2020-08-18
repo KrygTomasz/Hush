@@ -6,7 +6,7 @@
 //  Copyright © 2020 Kryg. All rights reserved.
 //
 
-import Foundation
+import RxCocoa
 
 class Board {
     let setup: BoardSetup
@@ -26,7 +26,11 @@ class Board {
         return (x: hint.x, y: hint.y)
     }
     
-    func log() {
-        setup.log()
+    var score: Driver<BoardScore> {
+        return engine.score
+    }
+    
+    var gameOver: Driver<Void> {
+        return engine.gameOver
     }
 }
