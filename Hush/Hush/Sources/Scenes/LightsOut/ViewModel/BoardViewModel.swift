@@ -79,13 +79,10 @@ final class BoardViewModel {
     }
     
     private func allIndexPaths() -> [IndexPath] {
-        var allIndexPaths: [IndexPath] = []
-        (0..<output.sectionsCount).forEach { section in
-            let paths = (0..<output.rowsCount).map { item -> IndexPath in
+        return (0..<output.sectionsCount).flatMap { section in
+            (0..<output.rowsCount).map { item -> IndexPath in
                 return IndexPath(item: item, section: section)
             }
-            allIndexPaths.append(contentsOf: paths)
         }
-        return allIndexPaths
     }
 }
