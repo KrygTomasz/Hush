@@ -10,16 +10,4 @@ import Foundation
 
 struct BoardRow {
     var items: [BoardItem]
-    
-    ///Debug  purposes only
-    func log() {
-        var rowLog = ""
-        items.forEach {
-            switch $0.state {
-            case .on: rowLog.append("x")
-            case .off: rowLog.append("o")
-            }
-        }
-        print(rowLog)
-    }
 }

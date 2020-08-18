@@ -25,11 +25,4 @@ class BoardSetup {
     func getState(x: Int, y: Int) -> LightState? {
         return rows[safe: y]?.items[safe: x]?.state
     }
-    
-    ///Debug  purposes only
-    func log() {
-        rows.forEach {
-            $0.log()
-        }
-    }
 }
