@@ -8,7 +8,7 @@
 
 import Foundation
 
-class BoardSetup {
+final class BoardSetup {
     private(set) var rows: [BoardRow]
     var solution: BoardSolution
     

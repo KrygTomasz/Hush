@@ -8,7 +8,7 @@
 
 import Foundation
 
-class BoardBuilder {
+final class BoardBuilder {
     var size: BoardSize = BoardSize(height: 0, width: 0)
     var engine: BoardEngine = DefaultBoardEngine()
     var initialToggles: Int = 0

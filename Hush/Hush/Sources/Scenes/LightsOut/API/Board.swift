@@ -8,7 +8,7 @@
 
 import RxCocoa
 
-class Board {
+final class Board {
     let setup: BoardSetup
     private let engine: BoardEngine
     
