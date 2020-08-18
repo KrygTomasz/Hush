@@ -23,11 +23,24 @@ class BoardView: UIView {
         return view
     }()
     
+    lazy var topBar: UIStackView = {
+        let view = UIStackView(autoLayout: true)
+        view.axis = .horizontal
+        view.distribution = .fillEqually
+        return view
+    }()
+    
     lazy var bottomBar: UIStackView = {
         let view = UIStackView(autoLayout: true)
         view.axis = .horizontal
         view.distribution = .fillEqually
         return view
+    }()
+    
+    lazy var scoreLabel: UILabel = {
+        let label = UILabel(autoLayout: true)
+        label.text = ""
+        return label
     }()
     
     lazy var hintButton: UIButton = {
@@ -51,8 +64,15 @@ class BoardView: UIView {
     
     private func commonSetup() {
         backgroundColor = .clear
+        addSubview(topBar)
         addSubview(bottomBar)
+        
+        prepareTopBar()
         prepareBottomBar()
+        
+        topBar.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
+        topBar.topAnchor.constraint(equalTo: topAnchor).isActive = true
+        topBar.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
         
         bottomBar.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
         bottomBar.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -Margin.wide).isActive = true
@@ -60,31 +80,52 @@ class BoardView: UIView {
         
         addSubview(collectionView)
         
-        collectionView.topAnchor.constraint(equalTo: topAnchor).isActive = true
+        collectionView.topAnchor.constraint(equalTo: topBar.bottomAnchor).isActive = true
         collectionView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
         collectionView.bottomAnchor.constraint(equalTo: bottomBar.topAnchor).isActive = true
         collectionView.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
     }
     
     private func prepareBottomBar() {
-        let firstBottomView = UIView()
-        let secondBottomView = UIView()
-        let thirdBottomView = UIView()
-        let fourthBottomView = UIView()
+        let firstView = UIView()
+        let secondView = UIView()
+        let thirdView = UIView()
+        let fourthView = UIView()
         
-        fourthBottomView.addSubview(hintButton)
+        fourthView.addSubview(hintButton)
         hintButton.heightAnchor.constraint(equalToConstant: 64).isActive = true
         hintButton.widthAnchor.constraint(equalTo: hintButton.heightAnchor).isActive = true
-        hintButton.centerYAnchor.constraint(equalTo: fourthBottomView.centerYAnchor).isActive = true
-        hintButton.centerXAnchor.constraint(equalTo: fourthBottomView.centerXAnchor).isActive = true
-        hintButton.leadingAnchor.constraint(greaterThanOrEqualToSystemSpacingAfter: fourthBottomView.leadingAnchor, multiplier: 1.0).isActive = true
-        hintButton.trailingAnchor.constraint(greaterThanOrEqualToSystemSpacingAfter: fourthBottomView.trailingAnchor, multiplier: 1.0).isActive = true
-        hintButton.topAnchor.constraint(greaterThanOrEqualToSystemSpacingBelow: fourthBottomView.topAnchor, multiplier: 1.0).isActive = true
-        hintButton.bottomAnchor.constraint(greaterThanOrEqualToSystemSpacingBelow: fourthBottomView.bottomAnchor, multiplier: 1.0).isActive = true
+        hintButton.centerYAnchor.constraint(equalTo: fourthView.centerYAnchor).isActive = true
+        hintButton.centerXAnchor.constraint(equalTo: fourthView.centerXAnchor).isActive = true
+        hintButton.leadingAnchor.constraint(greaterThanOrEqualToSystemSpacingAfter: fourthView.leadingAnchor, multiplier: 1.0).isActive = true
+        hintButton.trailingAnchor.constraint(greaterThanOrEqualToSystemSpacingAfter: fourthView.trailingAnchor, multiplier: 1.0).isActive = true
+        hintButton.topAnchor.constraint(greaterThanOrEqualToSystemSpacingBelow: fourthView.topAnchor, multiplier: 1.0).isActive = true
+        hintButton.bottomAnchor.constraint(greaterThanOrEqualToSystemSpacingBelow: fourthView.bottomAnchor, multiplier: 1.0).isActive = true
 
-        bottomBar.addArrangedSubview(firstBottomView)
-        bottomBar.addArrangedSubview(secondBottomView)
-        bottomBar.addArrangedSubview(thirdBottomView)
-        bottomBar.addArrangedSubview(fourthBottomView)
+        bottomBar.addArrangedSubview(firstView)
+        bottomBar.addArrangedSubview(secondView)
+        bottomBar.addArrangedSubview(thirdView)
+        bottomBar.addArrangedSubview(fourthView)
+    }
+    
+    private func prepareTopBar() {
+        let firstView = UIView()
+        let secondView = UIView()
+        let thirdView = UIView()
+        let fourthView = UIView()
+        
+        fourthView.addSubview(scoreLabel)
+        scoreLabel.heightAnchor.constraint(equalToConstant: 64).isActive = true
+        scoreLabel.centerYAnchor.constraint(equalTo: fourthView.centerYAnchor).isActive = true
+        scoreLabel.centerXAnchor.constraint(equalTo: fourthView.centerXAnchor).isActive = true
+        scoreLabel.leadingAnchor.constraint(greaterThanOrEqualToSystemSpacingAfter: fourthView.leadingAnchor, multiplier: 1.0).isActive = true
+        scoreLabel.trailingAnchor.constraint(greaterThanOrEqualToSystemSpacingAfter: fourthView.trailingAnchor, multiplier: 1.0).isActive = true
+        scoreLabel.topAnchor.constraint(greaterThanOrEqualToSystemSpacingBelow: fourthView.topAnchor, multiplier: 1.0).isActive = true
+        scoreLabel.bottomAnchor.constraint(greaterThanOrEqualToSystemSpacingBelow: fourthView.bottomAnchor, multiplier: 1.0).isActive = true
+
+        topBar.addArrangedSubview(firstView)
+        topBar.addArrangedSubview(secondView)
+        topBar.addArrangedSubview(thirdView)
+        topBar.addArrangedSubview(fourthView)
     }
 }
