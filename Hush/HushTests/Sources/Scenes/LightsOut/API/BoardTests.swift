@@ -18,12 +18,21 @@ final class BoardTests: XCTestCase {
         prepareSut()
     }
     
-    func test_boardFieldClicked_EngineActionIsLaunched() {
+    func test_boardFieldClicked_engineActionIsLaunched() {
         assertSpyEngineEmpty()
         sut.click(x: 1, y: 1)
         let position = BoardPosition(x: 1, y: 1)
         XCTAssertEqual(engine.toggledPosition, position)
-        XCTAssertEqual(engine.toggledSetup != nil, true)
+        XCTAssertTrue(engine.toggledSetup != nil)
+        XCTAssertTrue(engine.hintedSetup == nil)
+    }
+    
+    func test_boardHinted_engineHintIsLaunched() {
+        assertSpyEngineEmpty()
+        let _ = sut.hint()
+        XCTAssertEqual(engine.toggledPosition, nil)
+        XCTAssertTrue(engine.toggledSetup == nil)
+        XCTAssertTrue(engine.hintedSetup != nil)
     }
     
     private func prepareSut() {
@@ -34,6 +43,7 @@ final class BoardTests: XCTestCase {
     
     private func assertSpyEngineEmpty() {
         XCTAssertEqual(engine.toggledPosition, nil)
-        XCTAssertEqual(engine.toggledSetup == nil, true)
+        XCTAssertTrue(engine.toggledSetup == nil)
+        XCTAssertTrue(engine.hintedSetup == nil)
     }
 }
