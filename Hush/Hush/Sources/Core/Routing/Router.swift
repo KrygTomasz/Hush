@@ -17,4 +17,8 @@ extension Router {
     func route() {
         AppRouter.navigationController.pushViewController(routingViewController, animated: true)
     }
+    
+    func routeBack() {
+        AppRouter.navigationController.popViewController(animated: true)
+    }
 }
