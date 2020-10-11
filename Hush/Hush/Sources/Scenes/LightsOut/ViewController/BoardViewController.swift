@@ -50,9 +50,13 @@ final class BoardViewController: UIViewController {
         let lightTrigger = collectionView.rx.itemSelected.asSignal().do(onNext: { _ in
             HapticFeedback.launch()
         })
-        let hintTrigger = boardView.hintButton.rx.tap.asSignal().map { _ in return Void() }
+        let hintTrigger = boardView.hintButton.rx.tap.asSignal()
+        let backTrigger = boardView.backButton.rx.tap.asSignal()
         
-        viewModel.transform(input: .init(lightTrigger: lightTrigger, hintTrigger: hintTrigger))
+        viewModel.transform(input: .init(lightTrigger: lightTrigger,
+                                         hintTrigger: hintTrigger,
+                                         backTrigger: backTrigger))
+        
         viewModel.output.reload
             .drive(onNext: { [weak self] (indexPaths) in
                 guard let self = self else { return }
@@ -66,8 +70,8 @@ final class BoardViewController: UIViewController {
             .disposed(by: disposeBag)
         
         viewModel.output.hint
-            .drive(onNext: { (indexPath) in
-                let cell = self.collectionView.cellForItem(at: indexPath) as? BoardCollectionViewCell
+            .drive(onNext: { [weak self] (indexPath) in
+                let cell = self?.collectionView.cellForItem(at: indexPath) as? BoardCollectionViewCell
                 cell?.hinted()
             })
             .disposed(by: disposeBag)
@@ -87,8 +91,7 @@ final class BoardViewController: UIViewController {
         viewModel.output.color
             .drive(onNext: { [weak self] (color) in
                 self?.view.backgroundColor = color.primary
-                self?.boardView.scoreLabel.textColor = color.secondary
-                self?.boardView.hintButton.tintColor = color.secondary
+                self?.boardView.colorIcons(color.secondary)
             })
             .disposed(by: disposeBag)
     }

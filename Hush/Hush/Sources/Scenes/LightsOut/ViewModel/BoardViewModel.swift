@@ -17,6 +17,7 @@ final class BoardViewModel {
     struct Input {
         var lightTrigger: Signal<IndexPath>
         var hintTrigger: Signal<Void>
+        var backTrigger: Signal<Void>
     }
     
     struct Output {
@@ -32,6 +33,7 @@ final class BoardViewModel {
     
     // MARK: - Properties
     
+    private let disposeBag: DisposeBag = DisposeBag()
     private let route: (BoardChannel) -> Void
     private let board: Board
     private let color: Color = .random
@@ -46,6 +48,13 @@ final class BoardViewModel {
     }
     
     func transform(input: Input) {
+        input.backTrigger
+            .asDriver(onErrorJustReturn: ())
+            .drive(onNext: { [weak self] (_) in
+                self?.route(.back)
+            })
+            .disposed(by: disposeBag)
+        
         let reload = input.lightTrigger
             .asObservable()
             .do(onNext: { [weak self] indexPath in

@@ -43,6 +43,15 @@ class BoardView: UIView {
         return label
     }()
     
+    lazy var backButton: UIButton = {
+        let button = UIButton(autoLayout: true)
+        button.backgroundColor = .clear
+        button.setTitle("", for: .normal)
+        let image = UIImage(named: "back")?.withRenderingMode(.alwaysTemplate)
+        button.setImage(image, for: .normal)
+        return button
+    }()
+    
     lazy var hintButton: UIButton = {
         let button = UIButton(autoLayout: true)
         button.backgroundColor = .clear
@@ -92,6 +101,7 @@ class BoardView: UIView {
         let thirdView = UIView()
         let fourthView = UIView()
         
+        firstView.addSubview(backButton)
         fourthView.addSubview(hintButton)
         hintButton.heightAnchor.constraint(equalToConstant: 64).isActive = true
         hintButton.widthAnchor.constraint(equalTo: hintButton.heightAnchor).isActive = true
@@ -127,5 +137,11 @@ class BoardView: UIView {
         topBar.addArrangedSubview(secondView)
         topBar.addArrangedSubview(thirdView)
         topBar.addArrangedSubview(fourthView)
+    }
+    
+    func colorIcons(_ color: UIColor) {
+        scoreLabel.textColor = color
+        hintButton.tintColor = color
+        backButton.tintColor = color
     }
 }

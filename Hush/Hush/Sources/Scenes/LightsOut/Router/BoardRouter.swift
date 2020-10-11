@@ -9,7 +9,7 @@
 import UIKit
 
 enum BoardChannel: RouterChannel {
-    
+    case back
 }
 
 final class BoardRouter: BaseRouter<BoardChannel> {
@@ -29,6 +29,9 @@ final class BoardRouter: BaseRouter<BoardChannel> {
     }
     
     override func handle(_ channel: BoardChannel) {
-        
+        switch channel {
+        case .back:
+            routeBack()
+        }
     }
 }
