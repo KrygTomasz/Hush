@@ -6,9 +6,10 @@
 //  Copyright © 2020 Kryg. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 struct MenuViewData {
     var title: String
+    var color: UIColor
     var action: () -> Void
 }

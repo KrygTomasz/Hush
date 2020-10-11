@@ -27,19 +27,14 @@ final class MenuViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupView()
         setupCollectionView()
     }
     
-    private func setupView() {
-        view.backgroundColor = .blue
-    }
-    
     private func setupCollectionView() {
-        self.collectionAdapter = MenuCollectionViewAdapter(tableView: collectionView, viewModel: viewModel)
-        self.collectionView.delegate = collectionAdapter
-        self.collectionView.dataSource = collectionAdapter
-        collectionView.backgroundColor = .clear
+        collectionAdapter = MenuCollectionViewAdapter(collectionView: collectionView, viewModel: viewModel)
+        collectionView.delegate = collectionAdapter
+        collectionView.dataSource = collectionAdapter
+        collectionView.backgroundColor = viewModel.output.color.primary
     }
     
 }

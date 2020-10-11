@@ -10,6 +10,6 @@ import Foundation
 
 extension BoardScore {
     func display() -> String {
-        return "Score: \(value)"
+        return "\(value)"
     }
 }

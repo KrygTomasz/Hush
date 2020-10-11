@@ -15,6 +15,7 @@ final class MenuViewModel {
     }
     
     struct Output {
+        let color: Color
         let viewData: [MenuViewData]
         func viewData(for indexPath: IndexPath) -> MenuViewData? {
             return viewData[safe: indexPath.item]
@@ -29,10 +30,12 @@ final class MenuViewModel {
     }
     
     func transform(input: Input) {
-        output = Output(viewData: [
-            MenuViewData(title: "1st button", action: { [weak self] in self?.route(.board) }),
-            MenuViewData(title: "2nd button", action: { [weak self] in self?.route(.board) }),
-            MenuViewData(title: "3rd button", action: { [weak self] in self?.route(.board) })
+        let color = Color.random
+        output = Output(color: color,
+                        viewData: [
+                            MenuViewData(title: "1st button", color: color.secondary, action: { [weak self] in self?.route(.board) }),
+                            MenuViewData(title: "2nd button", color: color.secondary, action: { [weak self] in self?.route(.board) }),
+                            MenuViewData(title: "3rd button", color: color.secondary, action: { [weak self] in self?.route(.board) })
         ])
     }
 }

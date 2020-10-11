@@ -84,7 +84,7 @@ final class BoardViewController: UIViewController {
         
         viewModel.output.gameOver
             .drive(onNext: { [weak self] (_) in
-                self?.boardView.scoreLabel.text = "Winner"
+                self?.boardView.scoreLabel.text = "🎉"
             })
             .disposed(by: disposeBag)
         

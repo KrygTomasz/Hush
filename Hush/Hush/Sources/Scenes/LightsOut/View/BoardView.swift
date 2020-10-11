@@ -9,6 +9,11 @@
 import UIKit
 
 class BoardView: UIView {
+    private enum Constants {
+        static let imageSize: CGFloat = 64
+        static let fontSize: CGFloat = 56
+    }
+    
     lazy var layout: UICollectionViewLayout = {
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         layout.minimumLineSpacing = 0
@@ -40,24 +45,18 @@ class BoardView: UIView {
     lazy var scoreLabel: UILabel = {
         let label = UILabel(autoLayout: true)
         label.text = ""
+        label.textAlignment = .center
+        label.font = UIFont.boldSystemFont(ofSize: Constants.fontSize)
         return label
     }()
     
     lazy var backButton: UIButton = {
-        let button = UIButton(autoLayout: true)
-        button.backgroundColor = .clear
-        button.setTitle("", for: .normal)
-        let image = UIImage(named: "back")?.withRenderingMode(.alwaysTemplate)
-        button.setImage(image, for: .normal)
+        let button = createButton(imageName: "back")
         return button
     }()
     
     lazy var hintButton: UIButton = {
-        let button = UIButton(autoLayout: true)
-        button.backgroundColor = .clear
-        button.setTitle("", for: .normal)
-        let image = UIImage(named: "hint")?.withRenderingMode(.alwaysTemplate)
-        button.setImage(image, for: .normal)
+        let button = createButton(imageName: "question")
         return button
     }()
     
@@ -103,14 +102,9 @@ class BoardView: UIView {
         
         firstView.addSubview(backButton)
         fourthView.addSubview(hintButton)
-        hintButton.heightAnchor.constraint(equalToConstant: 64).isActive = true
-        hintButton.widthAnchor.constraint(equalTo: hintButton.heightAnchor).isActive = true
-        hintButton.centerYAnchor.constraint(equalTo: fourthView.centerYAnchor).isActive = true
-        hintButton.centerXAnchor.constraint(equalTo: fourthView.centerXAnchor).isActive = true
-        hintButton.leadingAnchor.constraint(greaterThanOrEqualToSystemSpacingAfter: fourthView.leadingAnchor, multiplier: 1.0).isActive = true
-        hintButton.trailingAnchor.constraint(greaterThanOrEqualToSystemSpacingAfter: fourthView.trailingAnchor, multiplier: 1.0).isActive = true
-        hintButton.topAnchor.constraint(greaterThanOrEqualToSystemSpacingBelow: fourthView.topAnchor, multiplier: 1.0).isActive = true
-        hintButton.bottomAnchor.constraint(greaterThanOrEqualToSystemSpacingBelow: fourthView.bottomAnchor, multiplier: 1.0).isActive = true
+        
+        constraintCentered(view: backButton, inside: firstView)
+        constraintCentered(view: hintButton, inside: fourthView)
 
         bottomBar.addArrangedSubview(firstView)
         bottomBar.addArrangedSubview(secondView)
@@ -122,21 +116,34 @@ class BoardView: UIView {
         let firstView = UIView()
         let secondView = UIView()
         let thirdView = UIView()
-        let fourthView = UIView()
         
-        fourthView.addSubview(scoreLabel)
-        scoreLabel.heightAnchor.constraint(equalToConstant: 64).isActive = true
-        scoreLabel.centerYAnchor.constraint(equalTo: fourthView.centerYAnchor).isActive = true
-        scoreLabel.centerXAnchor.constraint(equalTo: fourthView.centerXAnchor).isActive = true
-        scoreLabel.leadingAnchor.constraint(greaterThanOrEqualToSystemSpacingAfter: fourthView.leadingAnchor, multiplier: 1.0).isActive = true
-        scoreLabel.trailingAnchor.constraint(greaterThanOrEqualToSystemSpacingAfter: fourthView.trailingAnchor, multiplier: 1.0).isActive = true
-        scoreLabel.topAnchor.constraint(greaterThanOrEqualToSystemSpacingBelow: fourthView.topAnchor, multiplier: 1.0).isActive = true
-        scoreLabel.bottomAnchor.constraint(greaterThanOrEqualToSystemSpacingBelow: fourthView.bottomAnchor, multiplier: 1.0).isActive = true
+        thirdView.addSubview(scoreLabel)
+        constraintCentered(view: scoreLabel, inside: thirdView)
 
         topBar.addArrangedSubview(firstView)
         topBar.addArrangedSubview(secondView)
         topBar.addArrangedSubview(thirdView)
-        topBar.addArrangedSubview(fourthView)
+    }
+    
+    private func createButton(imageName: String) -> UIButton {
+        let button = UIButton(autoLayout: true)
+        button.backgroundColor = .clear
+        button.setTitle("", for: .normal)
+        let configuration = UIImage.SymbolConfiguration(font: UIFont.systemFont(ofSize: Constants.imageSize))
+        let image = UIImage(named: imageName, in: nil, with: configuration)
+        button.setImage(image, for: .normal)
+        button.imageView?.contentMode = .scaleAspectFit
+        button.addScaledTap()
+        return button
+    }
+    
+    private func constraintCentered(view: UIView, inside contentView: UIView) {
+        view.centerYAnchor.constraint(equalTo: contentView.centerYAnchor).isActive = true
+        view.centerXAnchor.constraint(equalTo: contentView.centerXAnchor).isActive = true
+        view.leadingAnchor.constraint(greaterThanOrEqualToSystemSpacingAfter: contentView.leadingAnchor, multiplier: 1.0).isActive = true
+        view.trailingAnchor.constraint(greaterThanOrEqualToSystemSpacingAfter: contentView.trailingAnchor, multiplier: 1.0).isActive = true
+        view.topAnchor.constraint(greaterThanOrEqualToSystemSpacingBelow: contentView.topAnchor, multiplier: 1.0).isActive = true
+        view.bottomAnchor.constraint(greaterThanOrEqualToSystemSpacingBelow: contentView.bottomAnchor, multiplier: 1.0).isActive = true
     }
     
     func colorIcons(_ color: UIColor) {
