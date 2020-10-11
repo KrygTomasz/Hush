@@ -8,13 +8,13 @@
 
 import Foundation
 
-enum MenuCellProvider: UITableViewCellProvider {
+enum MenuCellProvider: UICollectionViewCellProvider {
     case button
     
-    var type: TableCell {
+    var type: CollectionCell {
         switch self {
         case .button:
-            return MenuTableViewCell.self
+            return MenuCollectionViewCell.self
         }
     }
 }

@@ -10,10 +10,10 @@ import UIKit
 
 final class MenuViewController: UIViewController {
 
-    @IBOutlet private weak var tableView: UITableView!
+    @IBOutlet private weak var collectionView: UICollectionView!
     
     let viewModel: MenuViewModel
-    var tableAdapter: MenuTableViewAdapter!
+    var collectionAdapter: MenuCollectionViewAdapter!
     
     init(viewModel: MenuViewModel) {
         self.viewModel = viewModel
@@ -28,19 +28,18 @@ final class MenuViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
-        setupTableView()
+        setupCollectionView()
     }
     
     private func setupView() {
         view.backgroundColor = .blue
     }
     
-    private func setupTableView() {
-        self.tableAdapter = MenuTableViewAdapter(tableView: tableView, viewModel: viewModel)
-        self.tableView.delegate = tableAdapter
-        self.tableView.dataSource = tableAdapter
-        tableView.backgroundColor = .clear
-        tableView.separatorStyle = .none
+    private func setupCollectionView() {
+        self.collectionAdapter = MenuCollectionViewAdapter(tableView: collectionView, viewModel: viewModel)
+        self.collectionView.delegate = collectionAdapter
+        self.collectionView.dataSource = collectionAdapter
+        collectionView.backgroundColor = .clear
     }
     
 }

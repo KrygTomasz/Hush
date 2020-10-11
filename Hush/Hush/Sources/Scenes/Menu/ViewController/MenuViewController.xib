@@ -9,7 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MenuViewController" customModule="Hush" customModuleProvider="target">
             <connections>
-                <outlet property="tableView" destination="iE3-WZ-taI" id="OPq-mM-gBw"/>
+                <outlet property="collectionView" destination="Fxc-tY-bJi" id="FVK-PA-Eys"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -18,17 +18,23 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="iE3-WZ-taI">
-                    <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Fxc-tY-bJi">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                </tableView>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="miW-uP-sgf">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="iE3-WZ-taI" secondAttribute="bottom" id="3n0-45-yx0"/>
-                <constraint firstItem="iE3-WZ-taI" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="4GX-je-1Ps"/>
-                <constraint firstItem="iE3-WZ-taI" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="RdX-SL-AdM"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="iE3-WZ-taI" secondAttribute="trailing" id="krZ-nd-Ww5"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Fxc-tY-bJi" secondAttribute="trailing" id="A8U-54-bo8"/>
+                <constraint firstAttribute="bottom" secondItem="Fxc-tY-bJi" secondAttribute="bottom" id="S2s-oj-oja"/>
+                <constraint firstItem="Fxc-tY-bJi" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="VYz-yj-TJY"/>
+                <constraint firstItem="Fxc-tY-bJi" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="hqC-Fq-6DP"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="-35" y="41"/>
