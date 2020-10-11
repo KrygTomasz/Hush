@@ -21,6 +21,7 @@ extension UIView {
         gesture.onSuccess = onSuccess
         gesture.onCancel = onCancel
         gesture.minimumPressDuration = 0
+        gesture.cancelsTouchesInView = false
         addGestureRecognizer(gesture)
     }
     

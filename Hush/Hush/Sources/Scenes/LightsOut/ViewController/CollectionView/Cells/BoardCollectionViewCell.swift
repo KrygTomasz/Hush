@@ -25,6 +25,7 @@ class BoardCollectionViewCell: UICollectionViewCell {
         let value = bounds.height/10
         contentView.setMargin(value/2.5)
         lightView.layer.cornerRadius = value
+        lightView.addScaledTap()
     }
     
     func configure(with viewData: BoardViewData) {
