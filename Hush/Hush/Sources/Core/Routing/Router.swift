@@ -10,15 +10,16 @@ import UIKit
 
 protocol Router {
     var routingViewController: UIViewController { get }
-    func route()
 }
 
 extension Router {
     func route() {
+        AppRouter.activeRouters.append(self)
         AppRouter.navigationController.pushViewController(routingViewController, animated: true)
     }
     
     func routeBack() {
+        AppRouter.activeRouters.removeLast()
         AppRouter.navigationController.popViewController(animated: true)
     }
 }

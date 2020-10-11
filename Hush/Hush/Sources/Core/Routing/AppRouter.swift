@@ -10,6 +10,7 @@ import UIKit
 
 final class AppRouter {
     static let navigationController: NavigationController = NavigationController()
+    static var activeRouters: [Router] = []
     func start(window: UIWindow?) {
         window?.rootViewController = AppRouter.navigationController
         MenuRouter().route()
