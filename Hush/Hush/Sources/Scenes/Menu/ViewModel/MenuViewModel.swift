@@ -33,9 +33,8 @@ final class MenuViewModel {
         let color = Color.random
         output = Output(color: color,
                         viewData: [
-                            MenuViewData(title: "1st button", color: color.secondary, action: { [weak self] in self?.route(.board) }),
-                            MenuViewData(title: "2nd button", color: color.secondary, action: { [weak self] in self?.route(.board) }),
-                            MenuViewData(title: "3rd button", color: color.secondary, action: { [weak self] in self?.route(.board) })
+                            MenuViewData(imageName: "play", color: color, action: { [weak self] in self?.route(.board) }),
+                            MenuViewData(imageName: "settings", color: color, action: {  })
         ])
     }
 }

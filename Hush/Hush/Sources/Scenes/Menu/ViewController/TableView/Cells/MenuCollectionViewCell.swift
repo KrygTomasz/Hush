@@ -11,9 +11,12 @@ import UIKit
 class MenuCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var containerView: UIView!
+    @IBOutlet weak var imageView: UIImageView!
     
     func configure(with viewData: MenuViewData) {
-        containerView.backgroundColor = viewData.color
+        containerView.backgroundColor = viewData.color.secondary
+        imageView.image = UIImage(named: viewData.imageName)
+        imageView.tintColor = viewData.color.tertiary
         containerView.addScaledTap(onSuccess: {
             viewData.action()
         })
@@ -21,8 +24,9 @@ class MenuCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        contentView.setMediumMargins()
-        containerView.layer.cornerRadius = .medium
+        contentView.setWideMargins()
+        containerView.setWideMargins()
+        containerView.layer.cornerRadius = .small
     }
 
 }

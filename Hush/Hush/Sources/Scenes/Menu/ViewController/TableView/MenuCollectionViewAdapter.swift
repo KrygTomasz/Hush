@@ -31,8 +31,8 @@ final class MenuCollectionViewAdapter: NSObject, UICollectionViewDelegate, UICol
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = collectionView.bounds.width/2
-        let height = width
+        let width = collectionView.bounds.width
+        let height = width / 2
         return CGSize(width: width, height: height)
     }
     

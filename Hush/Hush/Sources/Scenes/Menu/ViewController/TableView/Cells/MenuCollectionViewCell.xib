@@ -18,7 +18,18 @@
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oZj-wA-14H">
                         <rect key="frame" x="16" y="44" width="268" height="256"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="c28-pv-9au">
+                                <rect key="frame" x="8" y="8" width="252" height="240"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="c28-pv-9au" firstAttribute="leading" secondItem="oZj-wA-14H" secondAttribute="leadingMargin" id="5o0-5Q-sEw"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="c28-pv-9au" secondAttribute="bottom" id="Q3K-g9-ZPZ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="c28-pv-9au" secondAttribute="trailing" id="Xyi-7B-mPZ"/>
+                            <constraint firstItem="c28-pv-9au" firstAttribute="top" secondItem="oZj-wA-14H" secondAttribute="topMargin" id="fds-W2-Zf3"/>
+                        </constraints>
                     </view>
                 </subviews>
             </view>
@@ -33,6 +44,7 @@
             <size key="customSize" width="300" height="300"/>
             <connections>
                 <outlet property="containerView" destination="oZj-wA-14H" id="wLq-Ey-siF"/>
+                <outlet property="imageView" destination="c28-pv-9au" id="NFY-0f-5Vb"/>
             </connections>
             <point key="canvasLocation" x="318.84057971014494" y="236.38392857142856"/>
         </collectionViewCell>

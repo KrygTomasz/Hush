@@ -9,7 +9,7 @@
 import UIKit
 
 struct MenuViewData {
-    var title: String
-    var color: UIColor
+    var imageName: String
+    var color: Color
     var action: () -> Void
 }
