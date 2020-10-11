@@ -72,6 +72,7 @@
 		23AB23E124E96B670028E4EB /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 23AB23E024E96B670028E4EB /* RxCocoa */; };
 		23AB247124E98CF80028E4EB /* BoardViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AB247024E98CF80028E4EB /* BoardViewData.swift */; };
 		23AB247524E98DB40028E4EB /* BoardViewDataMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AB247424E98DB40028E4EB /* BoardViewDataMapper.swift */; };
+		23B6004A25332BBA009A4BF5 /* LongPressGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B6004925332BBA009A4BF5 /* LongPressGestureRecognizer.swift */; };
 		23B6FFFD25331408009A4BF5 /* MenuCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B6FFFB25331408009A4BF5 /* MenuCollectionViewCell.swift */; };
 		23B6FFFE25331408009A4BF5 /* MenuCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23B6FFFC25331408009A4BF5 /* MenuCollectionViewCell.xib */; };
 		23FFE71124E9EEED0043CEA0 /* UIView+Margin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FFE71024E9EEED0043CEA0 /* UIView+Margin.swift */; };
@@ -156,6 +157,7 @@
 		23AB23DB24E96A7A0028E4EB /* BoardCellProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardCellProvider.swift; sourceTree = "<group>"; };
 		23AB247024E98CF80028E4EB /* BoardViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardViewData.swift; sourceTree = "<group>"; };
 		23AB247424E98DB40028E4EB /* BoardViewDataMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardViewDataMapper.swift; sourceTree = "<group>"; };
+		23B6004925332BBA009A4BF5 /* LongPressGestureRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongPressGestureRecognizer.swift; sourceTree = "<group>"; };
 		23B6FFFB25331408009A4BF5 /* MenuCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCollectionViewCell.swift; sourceTree = "<group>"; };
 		23B6FFFC25331408009A4BF5 /* MenuCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuCollectionViewCell.xib; sourceTree = "<group>"; };
 		23FFE71024E9EEED0043CEA0 /* UIView+Margin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Margin.swift"; sourceTree = "<group>"; };
@@ -316,6 +318,7 @@
 		2361754D24E32ACC0052AB01 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				23B6004725332B9D009A4BF5 /* Tools */,
 				236175A324E337630052AB01 /* ViewComponents */,
 				2361754F24E32AF70052AB01 /* Core */,
 				2361755324E32BA60052AB01 /* Scenes */,
@@ -667,6 +670,22 @@
 			path = Mappers;
 			sourceTree = "<group>";
 		};
+		23B6004725332B9D009A4BF5 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				23B6004825332BAE009A4BF5 /* GestureRecognizer */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		23B6004825332BAE009A4BF5 /* GestureRecognizer */ = {
+			isa = PBXGroup;
+			children = (
+				23B6004925332BBA009A4BF5 /* LongPressGestureRecognizer.swift */,
+			);
+			path = GestureRecognizer;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -834,6 +853,7 @@
 				23FFE71324E9EF7A0043CEA0 /* HapticFeedback.swift in Sources */,
 				235409C524EC5AC2007B8571 /* Color.swift in Sources */,
 				23AB23BF24E954C10028E4EB /* BoardRouter.swift in Sources */,
+				23B6004A25332BBA009A4BF5 /* LongPressGestureRecognizer.swift in Sources */,
 				2399636324E4705E008A6768 /* UITableViewCellProvider.swift in Sources */,
 				2361752E24E329460052AB01 /* SceneDelegate.swift in Sources */,
 				235409C224EC4A8E007B8571 /* BoardScore+Display.swift in Sources */,
