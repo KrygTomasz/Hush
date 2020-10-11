@@ -10,4 +10,5 @@ import Foundation
 
 struct MenuViewData {
     var title: String
+    var action: () -> Void
 }

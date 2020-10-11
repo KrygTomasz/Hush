@@ -12,14 +12,17 @@ class MenuCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var containerView: UIView!
     
+    func configure(with viewData: MenuViewData) {
+        containerView.addScaledTap(onSuccess: {
+            viewData.action()
+        })
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         contentView.setMediumMargins()
         containerView.backgroundColor = .yellow
         containerView.layer.cornerRadius = .medium
-        containerView.addScaledTap(onSuccess: {
-            print("TAP")
-        })
     }
 
 }

@@ -16,6 +16,9 @@ final class MenuViewModel {
     
     struct Output {
         let viewData: [MenuViewData]
+        func viewData(for indexPath: IndexPath) -> MenuViewData? {
+            return viewData[safe: indexPath.item]
+        }
     }
     
     var output: Output!
@@ -27,9 +30,9 @@ final class MenuViewModel {
     
     func transform(input: Input) {
         output = Output(viewData: [
-            MenuViewData(title: "1st button"),
-            MenuViewData(title: "2nd button"),
-            MenuViewData(title: "3rd button")
+            MenuViewData(title: "1st button", action: { [weak self] in self?.route(.board) }),
+            MenuViewData(title: "2nd button", action: { [weak self] in self?.route(.board) }),
+            MenuViewData(title: "3rd button", action: { [weak self] in self?.route(.board) })
         ])
     }
 }

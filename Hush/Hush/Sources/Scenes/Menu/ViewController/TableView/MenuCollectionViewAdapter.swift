@@ -25,7 +25,8 @@ final class MenuCollectionViewAdapter: NSObject, UICollectionViewDelegate, UICol
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MenuCellProvider.button.id, for: indexPath) as! MenuCollectionViewCell
-        cell.configure(with: viewModel.output.viewData(for: indexPath))
+        guard let viewData = viewModel.output.viewData(for: indexPath) else { return cell }
+        cell.configure(with: viewData)
         return cell
     }
     
