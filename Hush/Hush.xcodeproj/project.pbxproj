@@ -74,6 +74,8 @@
 		23AB247524E98DB40028E4EB /* BoardViewDataMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AB247424E98DB40028E4EB /* BoardViewDataMapper.swift */; };
 		23B6004A25332BBA009A4BF5 /* LongPressGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B6004925332BBA009A4BF5 /* LongPressGestureRecognizer.swift */; };
 		23B6004C25332C38009A4BF5 /* UIView+Tap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B6004B25332C38009A4BF5 /* UIView+Tap.swift */; };
+		23B6004E25334058009A4BF5 /* RouterChannel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B6004D25334058009A4BF5 /* RouterChannel.swift */; };
+		23B6005025334068009A4BF5 /* BaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B6004F25334068009A4BF5 /* BaseRouter.swift */; };
 		23B6FFFD25331408009A4BF5 /* MenuCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B6FFFB25331408009A4BF5 /* MenuCollectionViewCell.swift */; };
 		23B6FFFE25331408009A4BF5 /* MenuCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23B6FFFC25331408009A4BF5 /* MenuCollectionViewCell.xib */; };
 		23FFE71124E9EEED0043CEA0 /* UIView+Margin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FFE71024E9EEED0043CEA0 /* UIView+Margin.swift */; };
@@ -160,6 +162,8 @@
 		23AB247424E98DB40028E4EB /* BoardViewDataMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardViewDataMapper.swift; sourceTree = "<group>"; };
 		23B6004925332BBA009A4BF5 /* LongPressGestureRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongPressGestureRecognizer.swift; sourceTree = "<group>"; };
 		23B6004B25332C38009A4BF5 /* UIView+Tap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Tap.swift"; sourceTree = "<group>"; };
+		23B6004D25334058009A4BF5 /* RouterChannel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterChannel.swift; sourceTree = "<group>"; };
+		23B6004F25334068009A4BF5 /* BaseRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRouter.swift; sourceTree = "<group>"; };
 		23B6FFFB25331408009A4BF5 /* MenuCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCollectionViewCell.swift; sourceTree = "<group>"; };
 		23B6FFFC25331408009A4BF5 /* MenuCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuCollectionViewCell.xib; sourceTree = "<group>"; };
 		23FFE71024E9EEED0043CEA0 /* UIView+Margin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Margin.swift"; sourceTree = "<group>"; };
@@ -402,6 +406,8 @@
 			children = (
 				2361759F24E336560052AB01 /* Router.swift */,
 				236175A124E336830052AB01 /* AppRouter.swift */,
+				23B6004D25334058009A4BF5 /* RouterChannel.swift */,
+				23B6004F25334068009A4BF5 /* BaseRouter.swift */,
 			);
 			path = Routing;
 			sourceTree = "<group>";
@@ -818,12 +824,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23B6004E25334058009A4BF5 /* RouterChannel.swift in Sources */,
 				2399636524E47093008A6768 /* UITableView+Register.swift in Sources */,
 				2399636724E471B3008A6768 /* MenuCellProvider.swift in Sources */,
 				23A69E6024E82B4D00B205CC /* DefaultBoardEngine.swift in Sources */,
 				2399636D24E472EC008A6768 /* MenuViewData.swift in Sources */,
 				23A69DDC24E8278B00B205CC /* BoardRow.swift in Sources */,
 				23A69DD724E8250D00B205CC /* Collection+Safe.swift in Sources */,
+				23B6005025334068009A4BF5 /* BaseRouter.swift in Sources */,
 				2361755224E32B550052AB01 /* NavigationController.swift in Sources */,
 				230D189324EAD99F0075FE89 /* BoardPosition.swift in Sources */,
 				23AB23D624E960840028E4EB /* BoardCollectionViewCell.swift in Sources */,
