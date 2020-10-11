@@ -17,6 +17,9 @@ class MenuCollectionViewCell: UICollectionViewCell {
         contentView.setMediumMargins()
         containerView.backgroundColor = .yellow
         containerView.layer.cornerRadius = .medium
+        containerView.addScaledTap(onSuccess: {
+            print("TAP")
+        })
     }
 
 }

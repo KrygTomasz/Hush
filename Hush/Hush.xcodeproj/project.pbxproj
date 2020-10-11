@@ -73,6 +73,7 @@
 		23AB247124E98CF80028E4EB /* BoardViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AB247024E98CF80028E4EB /* BoardViewData.swift */; };
 		23AB247524E98DB40028E4EB /* BoardViewDataMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AB247424E98DB40028E4EB /* BoardViewDataMapper.swift */; };
 		23B6004A25332BBA009A4BF5 /* LongPressGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B6004925332BBA009A4BF5 /* LongPressGestureRecognizer.swift */; };
+		23B6004C25332C38009A4BF5 /* UIView+Tap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B6004B25332C38009A4BF5 /* UIView+Tap.swift */; };
 		23B6FFFD25331408009A4BF5 /* MenuCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B6FFFB25331408009A4BF5 /* MenuCollectionViewCell.swift */; };
 		23B6FFFE25331408009A4BF5 /* MenuCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23B6FFFC25331408009A4BF5 /* MenuCollectionViewCell.xib */; };
 		23FFE71124E9EEED0043CEA0 /* UIView+Margin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FFE71024E9EEED0043CEA0 /* UIView+Margin.swift */; };
@@ -158,6 +159,7 @@
 		23AB247024E98CF80028E4EB /* BoardViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardViewData.swift; sourceTree = "<group>"; };
 		23AB247424E98DB40028E4EB /* BoardViewDataMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardViewDataMapper.swift; sourceTree = "<group>"; };
 		23B6004925332BBA009A4BF5 /* LongPressGestureRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongPressGestureRecognizer.swift; sourceTree = "<group>"; };
+		23B6004B25332C38009A4BF5 /* UIView+Tap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Tap.swift"; sourceTree = "<group>"; };
 		23B6FFFB25331408009A4BF5 /* MenuCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCollectionViewCell.swift; sourceTree = "<group>"; };
 		23B6FFFC25331408009A4BF5 /* MenuCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuCollectionViewCell.xib; sourceTree = "<group>"; };
 		23FFE71024E9EEED0043CEA0 /* UIView+Margin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Margin.swift"; sourceTree = "<group>"; };
@@ -427,6 +429,7 @@
 			children = (
 				2399630F24E468A5008A6768 /* UIView+AutoLayout.swift */,
 				23FFE71024E9EEED0043CEA0 /* UIView+Margin.swift */,
+				23B6004B25332C38009A4BF5 /* UIView+Tap.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -842,6 +845,7 @@
 				2399635A24E46A18008A6768 /* MenuRouter.swift in Sources */,
 				23A69E5E24E82A1E00B205CC /* BoardSetupFactory.swift in Sources */,
 				232280E224E8598500F28378 /* BoardBuilder.swift in Sources */,
+				23B6004C25332C38009A4BF5 /* UIView+Tap.swift in Sources */,
 				23AB247124E98CF80028E4EB /* BoardViewData.swift in Sources */,
 				23AB23D024E95FF20028E4EB /* UICollectionView+Register.swift in Sources */,
 				2399635524E469F5008A6768 /* MenuViewController.swift in Sources */,
