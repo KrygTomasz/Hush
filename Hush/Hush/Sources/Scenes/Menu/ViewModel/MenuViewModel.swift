@@ -19,9 +19,10 @@ final class MenuViewModel {
     }
     
     var output: Output!
+    var route: (MenuChannel) -> Void
     
-    init() {
-        
+    init(route: @escaping (MenuChannel) -> Void) {
+        self.route = route
     }
     
     func transform(input: Input) {

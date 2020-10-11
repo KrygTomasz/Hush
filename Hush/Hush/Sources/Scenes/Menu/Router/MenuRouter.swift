@@ -8,13 +8,29 @@
 
 import UIKit
 
-final class MenuRouter: Router {
-    var routingViewController: UIViewController { return viewController }
-    private let viewModel: MenuViewModel
-    private let viewController: MenuViewController
+enum MenuChannel: RouterChannel {
+    case board
+}
+
+final class MenuRouter: BaseRouter<MenuChannel> {
+    override var routingViewController: UIViewController { return viewController }
+    private var viewModel: MenuViewModel!
+    private var viewController: MenuViewController!
     
-    init() {
-        self.viewModel = MenuViewModel()
+    override init() {
+        super.init()
+        self.viewModel = MenuViewModel(route: channel.accept)
         self.viewController = MenuViewController(viewModel: viewModel)
+    }
+    
+    override func handle(_ channel: MenuChannel) {
+        switch channel {
+        case .board:
+            routeToBoard()
+        }
+    }
+    
+    private func routeToBoard() {
+        BoardRouter().route()
     }
 }

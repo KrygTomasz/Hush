@@ -8,20 +8,27 @@
 
 import UIKit
 
-final class BoardRouter: Router {
-    var routingViewController: UIViewController { return viewController }
-    private let viewController: BoardViewController
-    private let viewModel: BoardViewModel
+enum BoardChannel: RouterChannel {
     
-    init() {
+}
+
+final class BoardRouter: BaseRouter<BoardChannel> {
+    override var routingViewController: UIViewController { return viewController }
+    private var viewController: BoardViewController!
+    private var viewModel: BoardViewModel!
+    
+    override init() {
+        super.init()
         let board = BoardBuilder()
-            .set(size: .init(height: 3, width: 4))
+            .set(size: .init(height: 4, width: 4))
             .set(engine: DefaultBoardEngine())
-            .set(initialToggles: 1)
-            .build()
-        board.log()
-        
-        self.viewModel = BoardViewModel(board: board)
+            .set(initialToggles: 2)
+            .build()        
+        self.viewModel = BoardViewModel(route: channel.accept, board: board)
         self.viewController = BoardViewController(viewModel: viewModel)
+    }
+    
+    override func handle(_ channel: BoardChannel) {
+        
     }
 }

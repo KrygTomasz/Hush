@@ -32,13 +32,16 @@ final class BoardViewModel {
     
     // MARK: - Properties
     
+    private let route: (BoardChannel) -> Void
     private let board: Board
     private let color: Color = .random
     var output: Output!
     
     // MARK: - Lifecycle
     
-    init(board: Board) {
+    init(route: @escaping (BoardChannel) -> Void,
+         board: Board) {
+        self.route = route
         self.board = board
     }
     
