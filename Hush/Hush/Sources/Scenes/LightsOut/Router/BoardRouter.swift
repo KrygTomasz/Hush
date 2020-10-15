@@ -20,9 +20,9 @@ final class BoardRouter: BaseRouter<BoardChannel> {
     override init() {
         super.init()
         let board = BoardBuilder()
-            .set(size: .init(height: 4, width: 4))
+            .set(size: .init(height: 8, width: 4))
             .set(engine: DefaultBoardEngine())
-            .set(initialToggles: 2)
+            .set(initialToggles: 5)
             .build()        
         self.viewModel = BoardViewModel(route: channel.accept, board: board)
         self.viewController = BoardViewController(viewModel: viewModel)
