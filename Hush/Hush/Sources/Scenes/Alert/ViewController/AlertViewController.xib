@@ -21,18 +21,17 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" placeholderIntrinsicWidth="240" placeholderIntrinsicHeight="128" translatesAutoresizingMaskIntoConstraints="NO" id="aFG-d3-ngW" customClass="AlertView" customModule="Hush" customModuleProvider="target">
-                    <rect key="frame" x="87" y="389" width="240" height="128"/>
+                    <rect key="frame" x="24" y="389" width="366" height="128"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="240" id="UH5-CS-30E"/>
-                    </constraints>
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="aFG-d3-ngW" secondAttribute="trailing" constant="24" id="Ic2-p5-leQ"/>
                 <constraint firstItem="aFG-d3-ngW" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="SB5-w3-brx"/>
                 <constraint firstItem="aFG-d3-ngW" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="eWJ-iD-NLZ"/>
+                <constraint firstItem="aFG-d3-ngW" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="yev-Gl-Xvu"/>
             </constraints>
             <point key="canvasLocation" x="139" y="105"/>
         </view>

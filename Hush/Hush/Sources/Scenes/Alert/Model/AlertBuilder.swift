@@ -9,9 +9,11 @@
 import Foundation
 
 class AlertBuilder {
-    var title: String = ""
-    var description: String = ""
-    var image: String = ""
+    private var title: String?
+    private var description: String?
+    private var firstButtonData: AlertButtonData?
+    private var secondButtonData: AlertButtonData?
+    private var color: Color?
     
     func set(title value: String) -> AlertBuilder {
         self.title = value
@@ -23,13 +25,26 @@ class AlertBuilder {
         return self
     }
     
-    func set(image value: String) -> AlertBuilder {
-        self.image = value
+    func set(firstButton value: AlertButtonData) -> AlertBuilder {
+        self.firstButtonData = value
+        return self
+    }
+    
+    func set(secondButton value: AlertButtonData) -> AlertBuilder {
+        self.secondButtonData = value
+        return self
+    }
+    
+    func set(color value: Color) -> AlertBuilder {
+        self.color = value
         return self
     }
     
     func build() -> Alert {
         return Alert(title: title,
-                     description: description)
+                     description: description,
+                     firstButtonData: firstButtonData,
+                     secondButtonData: secondButtonData,
+                     color: color)
     }
 }

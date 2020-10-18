@@ -17,7 +17,7 @@ final class BoardRouter: BaseRouter<BoardChannel> {
     override var routingViewController: UIViewController { return viewController }
     private var viewController: BoardViewController!
     private var viewModel: BoardViewModel!
-    
+    private let color: Color = .random
     override init() {
         super.init()
         let board = BoardBuilder()
@@ -25,7 +25,7 @@ final class BoardRouter: BaseRouter<BoardChannel> {
             .set(engine: DefaultBoardEngine())
             .set(initialToggles: 5)
             .build()        
-        self.viewModel = BoardViewModel(route: channel.accept, board: board)
+        self.viewModel = BoardViewModel(route: channel.accept, board: board, color: color)
         self.viewController = BoardViewController(viewModel: viewModel)
     }
     
@@ -39,7 +39,11 @@ final class BoardRouter: BaseRouter<BoardChannel> {
     }
     
     private func showWinnerAlert() {
-        let alert = Alert(title: "Kudos!", description: "")
+        let alert = AlertBuilder()
+            .set(title: "Great job!")
+            .set(color: color)
+            .set(firstButton: .init(text: "Continue"))
+            .build()
         AlertPresenter().present(alert)
     }
 }

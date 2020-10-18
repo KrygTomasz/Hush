@@ -35,15 +35,17 @@ final class BoardViewModel {
     private let disposeBag: DisposeBag = DisposeBag()
     private let route: (BoardChannel) -> Void
     private let board: Board
-    private let color: Color = .random
+    private let color: Color
     var output: Output!
     
     // MARK: - Lifecycle
     
     init(route: @escaping (BoardChannel) -> Void,
-         board: Board) {
+         board: Board,
+         color: Color) {
         self.route = route
         self.board = board
+        self.color = color
     }
     
     func transform(input: Input) {
