@@ -8,7 +8,11 @@
 
 import UIKit
 
+typealias DismissCompletion = (() -> Void)
+
 class AlertView: UIView {
+    
+    private var dismissHandler: ((_ completion: DismissCompletion?) -> Void)?
     
     lazy var stackView: UIStackView = {
         let view = UIStackView(autoLayout: true)
@@ -74,7 +78,8 @@ class AlertView: UIView {
         stackView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -.wide).isActive = true
     }
     
-    func configure(with alert: Alert) {
+    func configure(with alert: Alert, dismissHandler: ((_ completion: DismissCompletion?) -> Void)?) {
+        self.dismissHandler = dismissHandler
         stackView.arrangedSubviews.forEach(stackView.removeArrangedSubview)
         if alert.title.exists {
             stackView.addArrangedSubview(titleLabel)
@@ -109,6 +114,6 @@ class AlertView: UIView {
     }
     
     @objc func onButtonTapped(_ button: UIButton) {
-        buttonActions[button.hash]?()
+        dismissHandler?(buttonActions[button.hash])
     }
 }

@@ -42,7 +42,7 @@ final class BoardRouter: BaseRouter<BoardChannel> {
         let alert = AlertBuilder()
             .set(title: "Great job!")
             .set(color: color)
-            .set(firstButton: .init(text: "Continue"))
+            .set(firstButton: .init(text: "Continue", action: { [weak self] in self?.routeBack() }))
             .build()
         AlertPresenter().present(alert)
     }

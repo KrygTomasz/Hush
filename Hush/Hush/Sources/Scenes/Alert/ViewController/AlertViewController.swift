@@ -26,7 +26,13 @@ final class AlertViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        alertView.configure(with: viewModel.alert)
+        alertView.configure(with: viewModel.alert, dismissHandler: { [weak self] completion in
+            self?.dismiss(completion: completion)
+        })
+    }
+    
+    func dismiss(completion: (() -> Void)?) {
+        dismiss(animated: true, completion: completion)
     }
 
 }
