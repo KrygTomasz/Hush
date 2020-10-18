@@ -13,6 +13,6 @@ class AlertPresenter {
         let viewModel = AlertViewModel(alert: alert)
         let viewController = AlertViewController(viewModel: viewModel)
         viewController.modalPresentationStyle = .overFullScreen
-        AppRouter.navigationController.present(viewController, animated: true, completion: nil)
+        AppRouter.shared.present(viewController)
     }
 }

@@ -9,10 +9,29 @@
 import UIKit
 
 final class AppRouter {
-    static let navigationController: NavigationController = NavigationController()
-    static var activeRouters: [Router] = []
-    func start(window: UIWindow?) {
-        window?.rootViewController = AppRouter.navigationController
+    private let navigationController: NavigationController = NavigationController()
+    private var activeRouters: [Router] = []
+
+    private init() { }
+    
+    static let shared: AppRouter = .init()
+    
+    func start(with window: UIWindow?) {
+        window?.rootViewController = navigationController
         MenuRouter().route()
+    }
+    
+    func push(_ router: Router) {
+        navigationController.pushViewController(router.routingViewController, animated: true)
+        activeRouters.append(router)
+    }
+    
+    func pop() {
+        navigationController.popViewController(animated: true)
+        activeRouters.removeLast()
+    }
+    
+    func present(_ viewController: UIViewController) {
+        navigationController.present(viewController, animated: true, completion: nil)
     }
 }

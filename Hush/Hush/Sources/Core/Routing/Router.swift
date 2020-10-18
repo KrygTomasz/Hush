@@ -14,12 +14,10 @@ protocol Router {
 
 extension Router {
     func route() {
-        AppRouter.activeRouters.append(self)
-        AppRouter.navigationController.pushViewController(routingViewController, animated: true)
+        AppRouter.shared.push(self)
     }
     
     func routeBack() {
-        AppRouter.activeRouters.removeLast()
-        AppRouter.navigationController.popViewController(animated: true)
+        AppRouter.shared.pop()
     }
 }
