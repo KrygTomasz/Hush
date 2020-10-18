@@ -82,12 +82,6 @@ final class BoardViewController: UIViewController {
             })
             .disposed(by: disposeBag)
         
-        viewModel.output.gameOver
-            .drive(onNext: { [weak self] (_) in
-                self?.boardView.scoreLabel.text = "🎉"
-            })
-            .disposed(by: disposeBag)
-        
         viewModel.output.color
             .drive(onNext: { [weak self] (color) in
                 self?.view.backgroundColor = color.primary

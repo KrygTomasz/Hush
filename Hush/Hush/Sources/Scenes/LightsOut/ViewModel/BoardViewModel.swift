@@ -24,7 +24,6 @@ final class BoardViewModel {
         var reload: Driver<[IndexPath]>
         var hint: Driver<IndexPath>
         var score: Driver<BoardScore>
-        var gameOver: Driver<Void>
         var color: Driver<Color>
         var viewData: [[BoardViewData]]
         var sectionsCount: Int { viewData.count }
@@ -71,14 +70,18 @@ final class BoardViewModel {
             }
             .asDriver(onErrorJustReturn: .init())
         
+        board.gameOver
+            .drive(onNext: { [weak self] (_) in
+                self?.route(.winner)
+            }).disposed(by: disposeBag)
+
+        
         let score = board.score
-        let gameOver = board.gameOver
-        let color = Observable.just(self.color).asDriver(onErrorJustReturn: self.color)
+        let color = Driver.just(self.color)
         
         self.output = .init(reload: reload,
                             hint: hint,
                             score: score,
-                            gameOver: gameOver,
                             color: color,
                             viewData: BoardViewDataMapper.map(setup: board.setup, baseColor: self.color))
     }

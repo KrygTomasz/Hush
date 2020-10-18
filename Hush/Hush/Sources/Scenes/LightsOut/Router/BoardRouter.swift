@@ -10,6 +10,7 @@ import UIKit
 
 enum BoardChannel: RouterChannel {
     case back
+    case winner
 }
 
 final class BoardRouter: BaseRouter<BoardChannel> {
@@ -32,6 +33,13 @@ final class BoardRouter: BaseRouter<BoardChannel> {
         switch channel {
         case .back:
             routeBack()
+        case .winner:
+            showWinnerAlert()
         }
+    }
+    
+    private func showWinnerAlert() {
+        let alert = Alert(title: "Kudos!", description: "")
+        AlertPresenter().present(alert)
     }
 }

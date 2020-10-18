@@ -10,6 +10,9 @@
 		230D189124EAD9420075FE89 /* BoardSolution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230D189024EAD9420075FE89 /* BoardSolution.swift */; };
 		230D189324EAD99F0075FE89 /* BoardPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230D189224EAD99F0075FE89 /* BoardPosition.swift */; };
 		230D189524EAD9CD0075FE89 /* BoardSolutionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230D189424EAD9CD0075FE89 /* BoardSolutionTests.swift */; };
+		231E049E253C9E3B00102130 /* AlertPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231E049D253C9E3B00102130 /* AlertPresenter.swift */; };
+		231E04A6253C9E5A00102130 /* AlertViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231E04A5253C9E5A00102130 /* AlertViewModel.swift */; };
+		231E04AB253C9E7900102130 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231E04AA253C9E7900102130 /* Alert.swift */; };
 		232280E224E8598500F28378 /* BoardBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232280E124E8598500F28378 /* BoardBuilder.swift */; };
 		232280E424E8599F00F28378 /* BoardSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232280E324E8599F00F28378 /* BoardSize.swift */; };
 		232280E624E85CA800F28378 /* BoardSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232280E524E85CA800F28378 /* BoardSetup.swift */; };
@@ -21,6 +24,10 @@
 		2322815424E8724400F28378 /* SpyBoardEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2322815224E8723C00F28378 /* SpyBoardEngine.swift */; };
 		2322815724E872C000F28378 /* BoardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2322815624E872C000F28378 /* BoardTests.swift */; };
 		2322815B24E8781B00F28378 /* MarginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2322815A24E8781B00F28378 /* MarginTests.swift */; };
+		234E52EA25389D3F001A696F /* AlertBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234E52E925389D3F001A696F /* AlertBuilder.swift */; };
+		234E537B2538ACEE001A696F /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234E53792538ACEE001A696F /* AlertViewController.swift */; };
+		234E537C2538ACEE001A696F /* AlertViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 234E537A2538ACEE001A696F /* AlertViewController.xib */; };
+		234E53812538C151001A696F /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234E53802538C151001A696F /* AlertView.swift */; };
 		2354097E24EC3C0E007B8571 /* BoardScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2354097D24EC3C0E007B8571 /* BoardScore.swift */; };
 		235409C224EC4A8E007B8571 /* BoardScore+Display.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235409C124EC4A8E007B8571 /* BoardScore+Display.swift */; };
 		235409C524EC5AC2007B8571 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235409C424EC5AC2007B8571 /* Color.swift */; };
@@ -96,6 +103,9 @@
 		230D189024EAD9420075FE89 /* BoardSolution.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardSolution.swift; sourceTree = "<group>"; };
 		230D189224EAD99F0075FE89 /* BoardPosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardPosition.swift; sourceTree = "<group>"; };
 		230D189424EAD9CD0075FE89 /* BoardSolutionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardSolutionTests.swift; sourceTree = "<group>"; };
+		231E049D253C9E3B00102130 /* AlertPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPresenter.swift; sourceTree = "<group>"; };
+		231E04A5253C9E5A00102130 /* AlertViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewModel.swift; sourceTree = "<group>"; };
+		231E04AA253C9E7900102130 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		232280E124E8598500F28378 /* BoardBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardBuilder.swift; sourceTree = "<group>"; };
 		232280E324E8599F00F28378 /* BoardSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardSize.swift; sourceTree = "<group>"; };
 		232280E524E85CA800F28378 /* BoardSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardSetup.swift; sourceTree = "<group>"; };
@@ -109,6 +119,10 @@
 		2322815224E8723C00F28378 /* SpyBoardEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpyBoardEngine.swift; sourceTree = "<group>"; };
 		2322815624E872C000F28378 /* BoardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardTests.swift; sourceTree = "<group>"; };
 		2322815A24E8781B00F28378 /* MarginTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarginTests.swift; sourceTree = "<group>"; };
+		234E52E925389D3F001A696F /* AlertBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertBuilder.swift; sourceTree = "<group>"; };
+		234E53792538ACEE001A696F /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
+		234E537A2538ACEE001A696F /* AlertViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlertViewController.xib; sourceTree = "<group>"; };
+		234E53802538C151001A696F /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
 		2354097D24EC3C0E007B8571 /* BoardScore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardScore.swift; sourceTree = "<group>"; };
 		235409C124EC4A8E007B8571 /* BoardScore+Display.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BoardScore+Display.swift"; sourceTree = "<group>"; };
 		235409C424EC5AC2007B8571 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
@@ -190,6 +204,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		231E04A9253C9E7300102130 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				234E52E925389D3F001A696F /* AlertBuilder.swift */,
+				231E04AA253C9E7900102130 /* Alert.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		232280E724E85E3000F28378 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
@@ -286,6 +309,51 @@
 			path = Margins;
 			sourceTree = "<group>";
 		};
+		234E52DE25389C25001A696F /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				231E04A9253C9E7300102130 /* Model */,
+				234E537F2538C13B001A696F /* View */,
+				234E52E125389C6E001A696F /* Presenter */,
+				234E52E025389C69001A696F /* ViewModel */,
+				234E52DF25389C60001A696F /* ViewController */,
+			);
+			path = Alert;
+			sourceTree = "<group>";
+		};
+		234E52DF25389C60001A696F /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				234E53792538ACEE001A696F /* AlertViewController.swift */,
+				234E537A2538ACEE001A696F /* AlertViewController.xib */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		234E52E025389C69001A696F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				231E04A5253C9E5A00102130 /* AlertViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		234E52E125389C6E001A696F /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				231E049D253C9E3B00102130 /* AlertPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		234E537F2538C13B001A696F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				234E53802538C151001A696F /* AlertView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		235409C024EC4A5B007B8571 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -359,6 +427,7 @@
 		2361755324E32BA60052AB01 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				234E52DE25389C25001A696F /* Alert */,
 				23A69DD224E817E200B205CC /* LightsOut */,
 				2399634F24E469D4008A6768 /* Menu */,
 				2361755424E32BB00052AB01 /* Breath */,
@@ -798,6 +867,7 @@
 				23AB23D724E960840028E4EB /* BoardCollectionViewCell.xib in Resources */,
 				2399635624E469F5008A6768 /* MenuViewController.xib in Resources */,
 				23B6FFFE25331408009A4BF5 /* MenuCollectionViewCell.xib in Resources */,
+				234E537C2538ACEE001A696F /* AlertViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -827,7 +897,9 @@
 				23B6004E25334058009A4BF5 /* RouterChannel.swift in Sources */,
 				2399636524E47093008A6768 /* UITableView+Register.swift in Sources */,
 				2399636724E471B3008A6768 /* MenuCellProvider.swift in Sources */,
+				231E04A6253C9E5A00102130 /* AlertViewModel.swift in Sources */,
 				23A69E6024E82B4D00B205CC /* DefaultBoardEngine.swift in Sources */,
+				234E537B2538ACEE001A696F /* AlertViewController.swift in Sources */,
 				2399636D24E472EC008A6768 /* MenuViewData.swift in Sources */,
 				23A69DDC24E8278B00B205CC /* BoardRow.swift in Sources */,
 				23A69DD724E8250D00B205CC /* Collection+Safe.swift in Sources */,
@@ -836,8 +908,10 @@
 				230D189324EAD99F0075FE89 /* BoardPosition.swift in Sources */,
 				23AB23D624E960840028E4EB /* BoardCollectionViewCell.swift in Sources */,
 				2354097E24EC3C0E007B8571 /* BoardScore.swift in Sources */,
+				234E52EA25389D3F001A696F /* AlertBuilder.swift in Sources */,
 				23A69DD424E817F000B205CC /* Board.swift in Sources */,
 				2399635824E46A0D008A6768 /* MenuViewModel.swift in Sources */,
+				231E04AB253C9E7900102130 /* Alert.swift in Sources */,
 				2399631024E468A5008A6768 /* UIView+AutoLayout.swift in Sources */,
 				23FFE71124E9EEED0043CEA0 /* UIView+Margin.swift in Sources */,
 				2361752C24E329460052AB01 /* AppDelegate.swift in Sources */,
@@ -877,6 +951,8 @@
 				23AB23DA24E96A5F0028E4EB /* BoardCollectionViewAdapter.swift in Sources */,
 				23A69E6624E82EB100B205CC /* LightStateReducer.swift in Sources */,
 				23AB23DC24E96A7A0028E4EB /* BoardCellProvider.swift in Sources */,
+				234E53812538C151001A696F /* AlertView.swift in Sources */,
+				231E049E253C9E3B00102130 /* AlertPresenter.swift in Sources */,
 				2399636A24E4721C008A6768 /* MenuCollectionViewAdapter.swift in Sources */,
 				2399630D24E467D0008A6768 /* Margin.swift in Sources */,
 			);
