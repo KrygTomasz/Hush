@@ -10,6 +10,7 @@
 		230D189124EAD9420075FE89 /* BoardSolution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230D189024EAD9420075FE89 /* BoardSolution.swift */; };
 		230D189324EAD99F0075FE89 /* BoardPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230D189224EAD99F0075FE89 /* BoardPosition.swift */; };
 		230D189524EAD9CD0075FE89 /* BoardSolutionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230D189424EAD9CD0075FE89 /* BoardSolutionTests.swift */; };
+		2319A1A8253CA5ED00B40F5A /* String+Exists.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2319A1A7253CA5ED00B40F5A /* String+Exists.swift */; };
 		231E049E253C9E3B00102130 /* AlertPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231E049D253C9E3B00102130 /* AlertPresenter.swift */; };
 		231E04A6253C9E5A00102130 /* AlertViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231E04A5253C9E5A00102130 /* AlertViewModel.swift */; };
 		231E04AB253C9E7900102130 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231E04AA253C9E7900102130 /* Alert.swift */; };
@@ -103,6 +104,7 @@
 		230D189024EAD9420075FE89 /* BoardSolution.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardSolution.swift; sourceTree = "<group>"; };
 		230D189224EAD99F0075FE89 /* BoardPosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardPosition.swift; sourceTree = "<group>"; };
 		230D189424EAD9CD0075FE89 /* BoardSolutionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardSolutionTests.swift; sourceTree = "<group>"; };
+		2319A1A7253CA5ED00B40F5A /* String+Exists.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Exists.swift"; sourceTree = "<group>"; };
 		231E049D253C9E3B00102130 /* AlertPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPresenter.swift; sourceTree = "<group>"; };
 		231E04A5253C9E5A00102130 /* AlertViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewModel.swift; sourceTree = "<group>"; };
 		231E04AA253C9E7900102130 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
@@ -204,6 +206,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2319A1A6253CA5DD00B40F5A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2319A1A7253CA5ED00B40F5A /* String+Exists.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		231E04A9253C9E7300102130 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -751,6 +761,7 @@
 		23B6004725332B9D009A4BF5 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				2319A1A6253CA5DD00B40F5A /* Extensions */,
 				23B6004825332BAE009A4BF5 /* GestureRecognizer */,
 			);
 			path = Tools;
@@ -938,6 +949,7 @@
 				23A69DDA24E8273400B205CC /* BoardItem.swift in Sources */,
 				23FFE71324E9EF7A0043CEA0 /* HapticFeedback.swift in Sources */,
 				235409C524EC5AC2007B8571 /* Color.swift in Sources */,
+				2319A1A8253CA5ED00B40F5A /* String+Exists.swift in Sources */,
 				23AB23BF24E954C10028E4EB /* BoardRouter.swift in Sources */,
 				23B6004A25332BBA009A4BF5 /* LongPressGestureRecognizer.swift in Sources */,
 				2399636324E4705E008A6768 /* UITableViewCellProvider.swift in Sources */,
