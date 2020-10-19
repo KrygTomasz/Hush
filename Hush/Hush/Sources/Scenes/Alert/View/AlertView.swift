@@ -10,7 +10,7 @@ import UIKit
 
 typealias DismissCompletion = (() -> Void)
 
-class AlertView: UIView {
+class AlertView: GradientView {
     
     private var dismissHandler: ((_ completion: DismissCompletion?) -> Void)?
     
@@ -50,6 +50,7 @@ class AlertView: UIView {
         button.layer.cornerRadius = .wide
         button.heightAnchor.constraint(equalToConstant: .wide*2).isActive = true
         button.addTarget(self, action: #selector(onButtonTapped), for: .touchUpInside)
+        button.addScaledTap()
         return button
     }
     
@@ -99,7 +100,7 @@ class AlertView: UIView {
             add(button: secondButton, with: secondButtonData)
             set(color: alert.color, for: secondButton)
         }
-        backgroundColor = alert.color.tertiary
+        set(gradient: .init(colors: [alert.color.tertiary, alert.color.primary]))
     }
         
     private func add(button: UIButton, with data: AlertButtonData) {

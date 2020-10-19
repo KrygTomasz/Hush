@@ -36,6 +36,7 @@ final class BoardViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .black
         setupCollectionView()
         bind()
     }
@@ -84,7 +85,6 @@ final class BoardViewController: UIViewController {
         
         viewModel.output.color
             .drive(onNext: { [weak self] (color) in
-                self?.view.backgroundColor = color.primary
                 self?.boardView.colorIcons(color.secondary)
             })
             .disposed(by: disposeBag)

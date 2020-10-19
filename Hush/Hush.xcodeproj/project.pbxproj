@@ -56,6 +56,8 @@
 		2399636724E471B3008A6768 /* MenuCellProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2399636624E471B3008A6768 /* MenuCellProvider.swift */; };
 		2399636A24E4721C008A6768 /* MenuCollectionViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2399636924E4721C008A6768 /* MenuCollectionViewAdapter.swift */; };
 		2399636D24E472EC008A6768 /* MenuViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2399636C24E472EC008A6768 /* MenuViewData.swift */; };
+		239D4FC5253DF3DC00A61D73 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239D4FC4253DF3DC00A61D73 /* GradientView.swift */; };
+		239D4FCA253DF3FA00A61D73 /* Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239D4FC9253DF3FA00A61D73 /* Gradient.swift */; };
 		23A69DD424E817F000B205CC /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A69DD324E817F000B205CC /* Board.swift */; };
 		23A69DD724E8250D00B205CC /* Collection+Safe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A69DD624E8250D00B205CC /* Collection+Safe.swift */; };
 		23A69DDA24E8273400B205CC /* BoardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A69DD924E8273400B205CC /* BoardItem.swift */; };
@@ -154,6 +156,8 @@
 		2399636624E471B3008A6768 /* MenuCellProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCellProvider.swift; sourceTree = "<group>"; };
 		2399636924E4721C008A6768 /* MenuCollectionViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCollectionViewAdapter.swift; sourceTree = "<group>"; };
 		2399636C24E472EC008A6768 /* MenuViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewData.swift; sourceTree = "<group>"; };
+		239D4FC4253DF3DC00A61D73 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		239D4FC9253DF3FA00A61D73 /* Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gradient.swift; sourceTree = "<group>"; };
 		23A69DD324E817F000B205CC /* Board.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
 		23A69DD624E8250D00B205CC /* Collection+Safe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Safe.swift"; sourceTree = "<group>"; };
 		23A69DD924E8273400B205CC /* BoardItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardItem.swift; sourceTree = "<group>"; };
@@ -494,6 +498,7 @@
 		236175A324E337630052AB01 /* ViewComponents */ = {
 			isa = PBXGroup;
 			children = (
+				239D4FC8253DF3EE00A61D73 /* Gradient */,
 				2399630E24E4688D008A6768 /* Extensions */,
 				236175A424E3383D0052AB01 /* PulsatoryView.swift */,
 				236175A624E349540052AB01 /* Circle.swift */,
@@ -590,6 +595,15 @@
 				2399636C24E472EC008A6768 /* MenuViewData.swift */,
 			);
 			path = ViewData;
+			sourceTree = "<group>";
+		};
+		239D4FC8253DF3EE00A61D73 /* Gradient */ = {
+			isa = PBXGroup;
+			children = (
+				239D4FC4253DF3DC00A61D73 /* GradientView.swift */,
+				239D4FC9253DF3FA00A61D73 /* Gradient.swift */,
+			);
+			path = Gradient;
 			sourceTree = "<group>";
 		};
 		23A69DD224E817E200B205CC /* LightsOut */ = {
@@ -928,6 +942,7 @@
 				2361752C24E329460052AB01 /* AppDelegate.swift in Sources */,
 				23AB23D224E9600A0028E4EB /* UICollectionViewCellProvider.swift in Sources */,
 				2361755824E32F670052AB01 /* BreathViewController.swift in Sources */,
+				239D4FCA253DF3FA00A61D73 /* Gradient.swift in Sources */,
 				236175A524E3383D0052AB01 /* PulsatoryView.swift in Sources */,
 				232280E424E8599F00F28378 /* BoardSize.swift in Sources */,
 				230D189124EAD9420075FE89 /* BoardSolution.swift in Sources */,
@@ -958,6 +973,7 @@
 				2361755F24E3300B0052AB01 /* BreathRouter.swift in Sources */,
 				23B6FFFD25331408009A4BF5 /* MenuCollectionViewCell.swift in Sources */,
 				2361755C24E32F790052AB01 /* BreathViewModel.swift in Sources */,
+				239D4FC5253DF3DC00A61D73 /* GradientView.swift in Sources */,
 				232280E624E85CA800F28378 /* BoardSetup.swift in Sources */,
 				23AB23CB24E95C320028E4EB /* BoardView.swift in Sources */,
 				23AB23DA24E96A5F0028E4EB /* BoardCollectionViewAdapter.swift in Sources */,
