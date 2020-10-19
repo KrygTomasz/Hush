@@ -29,6 +29,8 @@
 		234E537B2538ACEE001A696F /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234E53792538ACEE001A696F /* AlertViewController.swift */; };
 		234E537C2538ACEE001A696F /* AlertViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 234E537A2538ACEE001A696F /* AlertViewController.xib */; };
 		234E53812538C151001A696F /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234E53802538C151001A696F /* AlertView.swift */; };
+		23523C17253E1002008C6875 /* UIView+Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23523C16253E1002008C6875 /* UIView+Background.swift */; };
+		23523C1B253E10C9008C6875 /* UIColor+Dynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23523C1A253E10C9008C6875 /* UIColor+Dynamic.swift */; };
 		2354097E24EC3C0E007B8571 /* BoardScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2354097D24EC3C0E007B8571 /* BoardScore.swift */; };
 		235409C224EC4A8E007B8571 /* BoardScore+Display.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235409C124EC4A8E007B8571 /* BoardScore+Display.swift */; };
 		235409C524EC5AC2007B8571 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235409C424EC5AC2007B8571 /* Color.swift */; };
@@ -127,6 +129,8 @@
 		234E53792538ACEE001A696F /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
 		234E537A2538ACEE001A696F /* AlertViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlertViewController.xib; sourceTree = "<group>"; };
 		234E53802538C151001A696F /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
+		23523C16253E1002008C6875 /* UIView+Background.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Background.swift"; sourceTree = "<group>"; };
+		23523C1A253E10C9008C6875 /* UIColor+Dynamic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Dynamic.swift"; sourceTree = "<group>"; };
 		2354097D24EC3C0E007B8571 /* BoardScore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardScore.swift; sourceTree = "<group>"; };
 		235409C124EC4A8E007B8571 /* BoardScore+Display.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BoardScore+Display.swift"; sourceTree = "<group>"; };
 		235409C424EC5AC2007B8571 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
@@ -520,6 +524,8 @@
 				2399630F24E468A5008A6768 /* UIView+AutoLayout.swift */,
 				23FFE71024E9EEED0043CEA0 /* UIView+Margin.swift */,
 				23B6004B25332C38009A4BF5 /* UIView+Tap.swift */,
+				23523C16253E1002008C6875 /* UIView+Background.swift */,
+				23523C1A253E10C9008C6875 /* UIColor+Dynamic.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -976,6 +982,8 @@
 				239D4FC5253DF3DC00A61D73 /* GradientView.swift in Sources */,
 				232280E624E85CA800F28378 /* BoardSetup.swift in Sources */,
 				23AB23CB24E95C320028E4EB /* BoardView.swift in Sources */,
+				23523C1B253E10C9008C6875 /* UIColor+Dynamic.swift in Sources */,
+				23523C17253E1002008C6875 /* UIView+Background.swift in Sources */,
 				23AB23DA24E96A5F0028E4EB /* BoardCollectionViewAdapter.swift in Sources */,
 				23A69E6624E82EB100B205CC /* LightStateReducer.swift in Sources */,
 				23AB23DC24E96A7A0028E4EB /* BoardCellProvider.swift in Sources */,

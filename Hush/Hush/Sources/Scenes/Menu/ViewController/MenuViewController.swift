@@ -19,6 +19,7 @@ final class MenuViewController: UIViewController {
         self.viewModel = viewModel
         viewModel.transform(input: .init())
         super.init(nibName: String(describing: MenuViewController.self), bundle: Bundle(for: MenuViewController.self))
+        view.addGradientBackground(with: .init(colors: [viewModel.output.color.dynamicTertiary, viewModel.output.color.primary]))
     }
     
     required init?(coder: NSCoder) {
@@ -34,7 +35,7 @@ final class MenuViewController: UIViewController {
         collectionAdapter = MenuCollectionViewAdapter(collectionView: collectionView, viewModel: viewModel)
         collectionView.delegate = collectionAdapter
         collectionView.dataSource = collectionAdapter
-        collectionView.backgroundColor = viewModel.output.color.primary
+        collectionView.backgroundColor = .clear
     }
     
 }

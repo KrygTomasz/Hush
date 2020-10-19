@@ -19,7 +19,7 @@ struct Gradient {
          locations: [NSNumber] = [0.0, 1.0],
          type: CAGradientLayerType = .axial,
          startPoint: CGPoint = .init(x: 0.0, y: 0.0),
-         endPoint: CGPoint = .init(x: 1.0, y: 1.0)) {
+         endPoint: CGPoint = .init(x: 0.0, y: 1.0)) {
         self.colors = colors
         self.locations = locations
         self.type = type

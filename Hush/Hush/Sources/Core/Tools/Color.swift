@@ -13,6 +13,18 @@ final class Color {
     private(set) var secondary: UIColor
     private(set) var tertiary: UIColor
     
+    var dynamicPrimary: UIColor {
+        return primary.asDynamic(onDark: .black)
+    }
+    
+    var dynamicSecondary: UIColor {
+        return secondary.asDynamic(onDark: .black)
+    }
+    
+    var dynamicTertiary: UIColor {
+        return tertiary.asDynamic(onDark: .black)
+    }
+    
     private enum Constants {
         static let brightnessCoef: CGFloat = 0.7
         static let saturationCoef: CGFloat = 0.6

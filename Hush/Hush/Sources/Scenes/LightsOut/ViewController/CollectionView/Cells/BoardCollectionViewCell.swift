@@ -29,12 +29,12 @@ class BoardCollectionViewCell: UICollectionViewCell {
     }
     
     func configure(with viewData: BoardViewData) {
-        self.lightView.backgroundColor = viewData.color
+        lightView.backgroundColor = viewData.color
     }
     
     func refresh(with viewData: BoardViewData) {
-        UIView.animate(withDuration: 0.3) {
-            self.configure(with: viewData)
+        UIView.animate(withDuration: 0.3) { [weak self] in
+            self?.configure(with: viewData)
         }
     }
     
