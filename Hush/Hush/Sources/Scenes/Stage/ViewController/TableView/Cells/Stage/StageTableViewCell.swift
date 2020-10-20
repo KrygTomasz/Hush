@@ -12,15 +12,15 @@ class StageTableViewCell: UITableViewCell {
 
     @IBOutlet weak var collectionView: UICollectionView!
     
+    let collectionAdapter: LevelCollectionViewAdapter = LevelCollectionViewAdapter()
+
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        collectionAdapter.setup(collectionView: collectionView)
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    func configure(color: Color) {
+        
     }
     
 }

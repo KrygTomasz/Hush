@@ -13,7 +13,7 @@ final class StageViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     let viewModel: StageViewModel
-    var tableAdapter: StageTableViewAdapter = StageTableViewAdapter()
+    let tableAdapter: StageTableViewAdapter = StageTableViewAdapter()
 
     // MARK: - Lifecycle
     
@@ -28,6 +28,7 @@ final class StageViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = viewModel.output.color.primary
         setupTableView()
     }
     

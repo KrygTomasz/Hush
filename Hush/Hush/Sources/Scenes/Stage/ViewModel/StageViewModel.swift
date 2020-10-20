@@ -9,5 +9,9 @@
 import Foundation
 
 final class StageViewModel {
+    struct Output {
+        let color: Color
+    }
     
+    var output: Output! = .init(color: .random)
 }

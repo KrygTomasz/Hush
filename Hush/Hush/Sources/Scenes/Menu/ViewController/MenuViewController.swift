@@ -13,7 +13,7 @@ final class MenuViewController: UIViewController {
     @IBOutlet private weak var collectionView: UICollectionView!
     
     let viewModel: MenuViewModel
-    var collectionAdapter: MenuCollectionViewAdapter = MenuCollectionViewAdapter()
+    let collectionAdapter: MenuCollectionViewAdapter = MenuCollectionViewAdapter()
     
     init(viewModel: MenuViewModel) {
         self.viewModel = viewModel

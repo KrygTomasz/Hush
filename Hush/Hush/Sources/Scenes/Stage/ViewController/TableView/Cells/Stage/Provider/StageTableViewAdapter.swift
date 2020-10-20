@@ -21,6 +21,8 @@ final class StageTableViewAdapter: NSObject, UITableViewDelegate, UITableViewDat
         tableView.register(cells: StageCellProvider.self)
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.separatorStyle = .none
+        tableView.allowsSelection = false
     }
     
     // MARK: - Delegates
@@ -31,7 +33,12 @@ final class StageTableViewAdapter: NSObject, UITableViewDelegate, UITableViewDat
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: StageCellProvider.stage.id, for: indexPath) as? StageTableViewCell else { return UITableViewCell() }
+        cell.configure(color: viewModel.output.color)
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return tableView.bounds.width / 3
     }
     
 }

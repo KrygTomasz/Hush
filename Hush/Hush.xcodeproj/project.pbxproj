@@ -101,6 +101,10 @@
 		23F14D85253F44A40034DDF6 /* StageCellProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F14D84253F44A40034DDF6 /* StageCellProvider.swift */; };
 		23F14D8A253F45570034DDF6 /* StageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F14D88253F45570034DDF6 /* StageTableViewCell.swift */; };
 		23F14D8B253F45570034DDF6 /* StageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23F14D89253F45570034DDF6 /* StageTableViewCell.xib */; };
+		23F14D9E253F4BBC0034DDF6 /* LevelCollectionViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F14D9D253F4BBC0034DDF6 /* LevelCollectionViewAdapter.swift */; };
+		23F14DA2253F4C5A0034DDF6 /* LevelCellProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F14DA1253F4C5A0034DDF6 /* LevelCellProvider.swift */; };
+		23F14DA7253F4C900034DDF6 /* LevelCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F14DA5253F4C900034DDF6 /* LevelCollectionViewCell.swift */; };
+		23F14DA8253F4C900034DDF6 /* LevelCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23F14DA6253F4C900034DDF6 /* LevelCollectionViewCell.xib */; };
 		23FFE71124E9EEED0043CEA0 /* UIView+Margin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FFE71024E9EEED0043CEA0 /* UIView+Margin.swift */; };
 		23FFE71324E9EF7A0043CEA0 /* HapticFeedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FFE71224E9EF7A0043CEA0 /* HapticFeedback.swift */; };
 /* End PBXBuildFile section */
@@ -212,6 +216,10 @@
 		23F14D84253F44A40034DDF6 /* StageCellProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StageCellProvider.swift; sourceTree = "<group>"; };
 		23F14D88253F45570034DDF6 /* StageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StageTableViewCell.swift; sourceTree = "<group>"; };
 		23F14D89253F45570034DDF6 /* StageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StageTableViewCell.xib; sourceTree = "<group>"; };
+		23F14D9D253F4BBC0034DDF6 /* LevelCollectionViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelCollectionViewAdapter.swift; sourceTree = "<group>"; };
+		23F14DA1253F4C5A0034DDF6 /* LevelCellProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelCellProvider.swift; sourceTree = "<group>"; };
+		23F14DA5253F4C900034DDF6 /* LevelCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelCollectionViewCell.swift; sourceTree = "<group>"; };
+		23F14DA6253F4C900034DDF6 /* LevelCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LevelCollectionViewCell.xib; sourceTree = "<group>"; };
 		23FFE71024E9EEED0043CEA0 /* UIView+Margin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Margin.swift"; sourceTree = "<group>"; };
 		23FFE71224E9EF7A0043CEA0 /* HapticFeedback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticFeedback.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -877,8 +885,6 @@
 			isa = PBXGroup;
 			children = (
 				23F14D7D253F44340034DDF6 /* Cells */,
-				23F14D7E253F443E0034DDF6 /* StageTableViewAdapter.swift */,
-				23F14D84253F44A40034DDF6 /* StageCellProvider.swift */,
 			);
 			path = TableView;
 			sourceTree = "<group>";
@@ -886,10 +892,48 @@
 		23F14D7D253F44340034DDF6 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				23F14DAC253F4CA60034DDF6 /* Level */,
+				23F14DAB253F4C9C0034DDF6 /* Stage */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		23F14DAB253F4C9C0034DDF6 /* Stage */ = {
+			isa = PBXGroup;
+			children = (
+				23F14DAE253F4D0C0034DDF6 /* Provider */,
 				23F14D88253F45570034DDF6 /* StageTableViewCell.swift */,
 				23F14D89253F45570034DDF6 /* StageTableViewCell.xib */,
 			);
-			path = Cells;
+			path = Stage;
+			sourceTree = "<group>";
+		};
+		23F14DAC253F4CA60034DDF6 /* Level */ = {
+			isa = PBXGroup;
+			children = (
+				23F14DAD253F4D060034DDF6 /* Provider */,
+				23F14DA5253F4C900034DDF6 /* LevelCollectionViewCell.swift */,
+				23F14DA6253F4C900034DDF6 /* LevelCollectionViewCell.xib */,
+			);
+			path = Level;
+			sourceTree = "<group>";
+		};
+		23F14DAD253F4D060034DDF6 /* Provider */ = {
+			isa = PBXGroup;
+			children = (
+				23F14D9D253F4BBC0034DDF6 /* LevelCollectionViewAdapter.swift */,
+				23F14DA1253F4C5A0034DDF6 /* LevelCellProvider.swift */,
+			);
+			path = Provider;
+			sourceTree = "<group>";
+		};
+		23F14DAE253F4D0C0034DDF6 /* Provider */ = {
+			isa = PBXGroup;
+			children = (
+				23F14D7E253F443E0034DDF6 /* StageTableViewAdapter.swift */,
+				23F14D84253F44A40034DDF6 /* StageCellProvider.swift */,
+			);
+			path = Provider;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -989,6 +1033,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2361755924E32F670052AB01 /* BreathViewController.xib in Resources */,
+				23F14DA8253F4C900034DDF6 /* LevelCollectionViewCell.xib in Resources */,
 				23AB23C324E954F90028E4EB /* BoardViewController.xib in Resources */,
 				2361753824E329470052AB01 /* LaunchScreen.storyboard in Resources */,
 				2361753524E329470052AB01 /* Assets.xcassets in Resources */,
@@ -1056,6 +1101,7 @@
 				239D4FCA253DF3FA00A61D73 /* Gradient.swift in Sources */,
 				236175A524E3383D0052AB01 /* PulsatoryView.swift in Sources */,
 				232280E424E8599F00F28378 /* BoardSize.swift in Sources */,
+				23F14DA7253F4C900034DDF6 /* LevelCollectionViewCell.swift in Sources */,
 				23F14D7F253F443E0034DDF6 /* StageTableViewAdapter.swift in Sources */,
 				230D189124EAD9420075FE89 /* BoardSolution.swift in Sources */,
 				235233D2253F315100044C5E /* BoardPosition+IndexPath.swift in Sources */,
@@ -1091,8 +1137,10 @@
 				23AB23CB24E95C320028E4EB /* BoardView.swift in Sources */,
 				23F14D8A253F45570034DDF6 /* StageTableViewCell.swift in Sources */,
 				23523C1B253E10C9008C6875 /* UIColor+Dynamic.swift in Sources */,
+				23F14D9E253F4BBC0034DDF6 /* LevelCollectionViewAdapter.swift in Sources */,
 				23523C17253E1002008C6875 /* UIView+Background.swift in Sources */,
 				23AB23DA24E96A5F0028E4EB /* BoardCollectionViewAdapter.swift in Sources */,
+				23F14DA2253F4C5A0034DDF6 /* LevelCellProvider.swift in Sources */,
 				23A69E6624E82EB100B205CC /* LightStateReducer.swift in Sources */,
 				23AB23DC24E96A7A0028E4EB /* BoardCellProvider.swift in Sources */,
 				234E53812538C151001A696F /* AlertView.swift in Sources */,
