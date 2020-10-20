@@ -27,6 +27,8 @@
 		2322815B24E8781B00F28378 /* MarginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2322815A24E8781B00F28378 /* MarginTests.swift */; };
 		234CB092253F5DF100E9480D /* StageViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234CB091253F5DF100E9480D /* StageViewData.swift */; };
 		234CB098253F5DF800E9480D /* LevelViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234CB097253F5DF800E9480D /* LevelViewData.swift */; };
+		234CB09E253F639100E9480D /* UILabel+Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234CB09D253F639100E9480D /* UILabel+Styles.swift */; };
+		234CB0A2253F63A600E9480D /* FontSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234CB0A1253F63A600E9480D /* FontSize.swift */; };
 		234E52EA25389D3F001A696F /* AlertBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234E52E925389D3F001A696F /* AlertBuilder.swift */; };
 		234E537B2538ACEE001A696F /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234E53792538ACEE001A696F /* AlertViewController.swift */; };
 		234E537C2538ACEE001A696F /* AlertViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 234E537A2538ACEE001A696F /* AlertViewController.xib */; };
@@ -144,6 +146,8 @@
 		2322815A24E8781B00F28378 /* MarginTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarginTests.swift; sourceTree = "<group>"; };
 		234CB091253F5DF100E9480D /* StageViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StageViewData.swift; sourceTree = "<group>"; };
 		234CB097253F5DF800E9480D /* LevelViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelViewData.swift; sourceTree = "<group>"; };
+		234CB09D253F639100E9480D /* UILabel+Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Styles.swift"; sourceTree = "<group>"; };
+		234CB0A1253F63A600E9480D /* FontSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontSize.swift; sourceTree = "<group>"; };
 		234E52E925389D3F001A696F /* AlertBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertBuilder.swift; sourceTree = "<group>"; };
 		234E53792538ACEE001A696F /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
 		234E537A2538ACEE001A696F /* AlertViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlertViewController.xib; sourceTree = "<group>"; };
@@ -551,6 +555,7 @@
 				2399630E24E4688D008A6768 /* Extensions */,
 				236175A424E3383D0052AB01 /* PulsatoryView.swift */,
 				236175A624E349540052AB01 /* Circle.swift */,
+				234CB0A1253F63A600E9480D /* FontSize.swift */,
 			);
 			path = ViewComponents;
 			sourceTree = "<group>";
@@ -571,6 +576,7 @@
 				23B6004B25332C38009A4BF5 /* UIView+Tap.swift */,
 				23523C16253E1002008C6875 /* UIView+Background.swift */,
 				23523C1A253E10C9008C6875 /* UIColor+Dynamic.swift */,
+				234CB09D253F639100E9480D /* UILabel+Styles.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1157,9 +1163,11 @@
 				23523C17253E1002008C6875 /* UIView+Background.swift in Sources */,
 				23AB23DA24E96A5F0028E4EB /* BoardCollectionViewAdapter.swift in Sources */,
 				23F14DA2253F4C5A0034DDF6 /* LevelCellProvider.swift in Sources */,
+				234CB0A2253F63A600E9480D /* FontSize.swift in Sources */,
 				23A69E6624E82EB100B205CC /* LightStateReducer.swift in Sources */,
 				23AB23DC24E96A7A0028E4EB /* BoardCellProvider.swift in Sources */,
 				234E53812538C151001A696F /* AlertView.swift in Sources */,
+				234CB09E253F639100E9480D /* UILabel+Styles.swift in Sources */,
 				231E049E253C9E3B00102130 /* AlertPresenter.swift in Sources */,
 				2399636A24E4721C008A6768 /* MenuCollectionViewAdapter.swift in Sources */,
 				2399630D24E467D0008A6768 /* Margin.swift in Sources */,

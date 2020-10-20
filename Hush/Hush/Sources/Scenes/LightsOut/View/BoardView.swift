@@ -46,7 +46,7 @@ class BoardView: UIView {
         let label = UILabel(autoLayout: true)
         label.text = ""
         label.textAlignment = .center
-        label.font = UIFont.boldSystemFont(ofSize: Constants.fontSize)
+        label.bold(.large)
         return label
     }()
     

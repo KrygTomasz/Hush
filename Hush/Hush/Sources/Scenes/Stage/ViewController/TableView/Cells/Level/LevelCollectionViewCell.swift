@@ -17,7 +17,7 @@ class LevelCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
         containerView.layer.cornerRadius = .medium
         titleLabel.textAlignment = .center
-        titleLabel.font = UIFont.boldSystemFont(ofSize: 56.0)
+        titleLabel.bold(.large)
     }
     
     func configure(with viewData: LevelViewData) {
