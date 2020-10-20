@@ -30,6 +30,7 @@
 		234E537C2538ACEE001A696F /* AlertViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 234E537A2538ACEE001A696F /* AlertViewController.xib */; };
 		234E53812538C151001A696F /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234E53802538C151001A696F /* AlertView.swift */; };
 		235233D2253F315100044C5E /* BoardPosition+IndexPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235233D1253F315100044C5E /* BoardPosition+IndexPath.swift */; };
+		235233D6253F31A100044C5E /* BoardInitialState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235233D5253F31A100044C5E /* BoardInitialState.swift */; };
 		23523C17253E1002008C6875 /* UIView+Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23523C16253E1002008C6875 /* UIView+Background.swift */; };
 		23523C1B253E10C9008C6875 /* UIColor+Dynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23523C1A253E10C9008C6875 /* UIColor+Dynamic.swift */; };
 		2354097E24EC3C0E007B8571 /* BoardScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2354097D24EC3C0E007B8571 /* BoardScore.swift */; };
@@ -131,6 +132,7 @@
 		234E537A2538ACEE001A696F /* AlertViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlertViewController.xib; sourceTree = "<group>"; };
 		234E53802538C151001A696F /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
 		235233D1253F315100044C5E /* BoardPosition+IndexPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BoardPosition+IndexPath.swift"; sourceTree = "<group>"; };
+		235233D5253F31A100044C5E /* BoardInitialState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardInitialState.swift; sourceTree = "<group>"; };
 		23523C16253E1002008C6875 /* UIView+Background.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Background.swift"; sourceTree = "<group>"; };
 		23523C1A253E10C9008C6875 /* UIColor+Dynamic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Dynamic.swift"; sourceTree = "<group>"; };
 		2354097D24EC3C0E007B8571 /* BoardScore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardScore.swift; sourceTree = "<group>"; };
@@ -686,6 +688,7 @@
 				23A69E6924E8356800B205CC /* BoardEngine.swift */,
 				232280E324E8599F00F28378 /* BoardSize.swift */,
 				230D189224EAD99F0075FE89 /* BoardPosition.swift */,
+				235233D5253F31A100044C5E /* BoardInitialState.swift */,
 				2354097D24EC3C0E007B8571 /* BoardScore.swift */,
 			);
 			path = Board;
@@ -941,6 +944,7 @@
 				2361755224E32B550052AB01 /* NavigationController.swift in Sources */,
 				230D189324EAD99F0075FE89 /* BoardPosition.swift in Sources */,
 				23AB23D624E960840028E4EB /* BoardCollectionViewCell.swift in Sources */,
+				235233D6253F31A100044C5E /* BoardInitialState.swift in Sources */,
 				2354097E24EC3C0E007B8571 /* BoardScore.swift in Sources */,
 				234E52EA25389D3F001A696F /* AlertBuilder.swift in Sources */,
 				23A69DD424E817F000B205CC /* Board.swift in Sources */,

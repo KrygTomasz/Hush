@@ -23,7 +23,7 @@ final class BoardRouter: BaseRouter<BoardChannel> {
         let board = BoardBuilder()
             .set(size: .init(height: 8, width: 4))
             .set(engine: DefaultBoardEngine())
-            .set(initialToggles: 5)
+            .set(initialState: .random(4))
             .build()        
         self.viewModel = BoardViewModel(route: channel.accept, board: board, color: color)
         self.viewController = BoardViewController(viewModel: viewModel)

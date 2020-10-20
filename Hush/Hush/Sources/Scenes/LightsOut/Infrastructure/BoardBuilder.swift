@@ -11,7 +11,7 @@ import Foundation
 final class BoardBuilder {
     var size: BoardSize = BoardSize(height: 0, width: 0)
     var engine: BoardEngine = DefaultBoardEngine()
-    var initialToggles: Int = 0
+    var initialState: BoardInitialState = .fixed([])
     
     init() { }
     
@@ -25,23 +25,31 @@ final class BoardBuilder {
         return self
     }
     
-    func set(initialToggles: Int) -> BoardBuilder {
-        self.initialToggles = initialToggles
+    func set(initialState: BoardInitialState) -> BoardBuilder {
+        self.initialState = initialState
         return self
     }
     
     func build() -> Board {
         let setup = BoardSetupFactory.create(size: size)
         let board = Board(setup: setup, engine: engine)
-        let emptyFieldsShuffled: [BoardPosition] = (0..<size.width).flatMap { x in
-                (0..<size.height).map { y in
-                    BoardPosition(x: x, y: y)
-                }
-            }.shuffled()
-        let togglesCount = min(initialToggles, emptyFieldsShuffled.count)
-        (0..<togglesCount).forEach { index in
-            let position = emptyFieldsShuffled[index]
-            board.click(x: position.x, y: position.y)
+        
+        switch initialState {
+        case .random(let number):
+            let emptyFieldsShuffled: [BoardPosition] = (0..<size.width).flatMap { x in
+                    (0..<size.height).map { y in
+                        BoardPosition(x: x, y: y)
+                    }
+                }.shuffled()
+            let togglesCount = min(number, emptyFieldsShuffled.count)
+            (0..<togglesCount).forEach { index in
+                let position = emptyFieldsShuffled[index]
+                board.click(position: position)
+            }
+        case .fixed(let positions):
+            positions.forEach { position in
+                board.click(position: position)
+            }
         }
         return board
     }
