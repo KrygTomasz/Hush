@@ -17,13 +17,12 @@ final class Board {
         self.setup = setup
     }
     
-    func click(x: Int, y: Int) {
-        engine.toggle(position: BoardPosition(x: x, y: y), setup: setup)
+    func click(position: BoardPosition) {
+        engine.toggle(position: position, setup: setup)
     }
     
-    func hint() -> (x: Int, y: Int)? {
-        guard let hint = engine.hint(for: setup) else { return nil }
-        return (x: hint.x, y: hint.y)
+    func hint() -> BoardPosition? {
+        return engine.hint(for: setup)
     }
     
     var score: Driver<BoardScore> {

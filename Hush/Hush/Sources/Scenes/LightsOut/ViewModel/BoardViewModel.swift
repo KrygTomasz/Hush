@@ -91,7 +91,7 @@ final class BoardViewModel {
     // MARK: – Helpers
     
     private func click(at indexPath: IndexPath) {
-        board.click(x: indexPath.item, y: indexPath.section)
+        board.click(position: BoardPosition(indexPath: indexPath))
         allIndexPaths().forEach { indexPath in
             guard let state = board.setup.getState(x: indexPath.item, y: indexPath.section) else { return }
             let viewData = BoardViewDataMapper.map(state: state, baseColor: self.color)

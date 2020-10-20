@@ -29,6 +29,7 @@
 		234E537B2538ACEE001A696F /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234E53792538ACEE001A696F /* AlertViewController.swift */; };
 		234E537C2538ACEE001A696F /* AlertViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 234E537A2538ACEE001A696F /* AlertViewController.xib */; };
 		234E53812538C151001A696F /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234E53802538C151001A696F /* AlertView.swift */; };
+		235233D2253F315100044C5E /* BoardPosition+IndexPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235233D1253F315100044C5E /* BoardPosition+IndexPath.swift */; };
 		23523C17253E1002008C6875 /* UIView+Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23523C16253E1002008C6875 /* UIView+Background.swift */; };
 		23523C1B253E10C9008C6875 /* UIColor+Dynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23523C1A253E10C9008C6875 /* UIColor+Dynamic.swift */; };
 		2354097E24EC3C0E007B8571 /* BoardScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2354097D24EC3C0E007B8571 /* BoardScore.swift */; };
@@ -129,6 +130,7 @@
 		234E53792538ACEE001A696F /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
 		234E537A2538ACEE001A696F /* AlertViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlertViewController.xib; sourceTree = "<group>"; };
 		234E53802538C151001A696F /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
+		235233D1253F315100044C5E /* BoardPosition+IndexPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BoardPosition+IndexPath.swift"; sourceTree = "<group>"; };
 		23523C16253E1002008C6875 /* UIView+Background.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Background.swift"; sourceTree = "<group>"; };
 		23523C1A253E10C9008C6875 /* UIColor+Dynamic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Dynamic.swift"; sourceTree = "<group>"; };
 		2354097D24EC3C0E007B8571 /* BoardScore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardScore.swift; sourceTree = "<group>"; };
@@ -661,6 +663,7 @@
 				232280E124E8598500F28378 /* BoardBuilder.swift */,
 				232280E524E85CA800F28378 /* BoardSetup.swift */,
 				230D189024EAD9420075FE89 /* BoardSolution.swift */,
+				235233D1253F315100044C5E /* BoardPosition+IndexPath.swift */,
 			);
 			path = Infrastructure;
 			sourceTree = "<group>";
@@ -952,6 +955,7 @@
 				236175A524E3383D0052AB01 /* PulsatoryView.swift in Sources */,
 				232280E424E8599F00F28378 /* BoardSize.swift in Sources */,
 				230D189124EAD9420075FE89 /* BoardSolution.swift in Sources */,
+				235233D2253F315100044C5E /* BoardPosition+IndexPath.swift in Sources */,
 				23AB23C224E954F90028E4EB /* BoardViewController.swift in Sources */,
 				236175A024E336560052AB01 /* Router.swift in Sources */,
 				23A69E6A24E8356800B205CC /* BoardEngine.swift in Sources */,
