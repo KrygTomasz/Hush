@@ -1,5 +1,5 @@
 //
-//  LevelsViewController.swift
+//  StageViewController.swift
 //  Hush
 //
 //  Created by Tomasz Kryg on 20/10/2020.
@@ -8,18 +8,18 @@
 
 import UIKit
 
-final class LevelsViewController: UIViewController {
+final class StageViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
-    let viewModel: LevelsViewModel
-    var tableAdapter: LevelsTableViewAdapter = LevelsTableViewAdapter()
+    let viewModel: StageViewModel
+    var tableAdapter: StageTableViewAdapter = StageTableViewAdapter()
 
     // MARK: - Lifecycle
     
-    init(viewModel: LevelsViewModel) {
+    init(viewModel: StageViewModel) {
         self.viewModel = viewModel
-        super.init(nibName: String(describing: LevelsViewController.self), bundle: Bundle(for: LevelsViewController.self))
+        super.init(nibName: String(describing: StageViewController.self), bundle: Bundle(for: StageViewController.self))
     }
     
     required init?(coder: NSCoder) {

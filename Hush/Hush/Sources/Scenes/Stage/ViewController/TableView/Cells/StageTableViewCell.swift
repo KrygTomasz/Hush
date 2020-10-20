@@ -1,5 +1,5 @@
 //
-//  LevelsTableViewCell.swift
+//  StageTableViewCell.swift
 //  Hush
 //
 //  Created by Tomasz Kryg on 20/10/2020.
@@ -8,8 +8,10 @@
 
 import UIKit
 
-class LevelsTableViewCell: UITableViewCell {
+class StageTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var collectionView: UICollectionView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

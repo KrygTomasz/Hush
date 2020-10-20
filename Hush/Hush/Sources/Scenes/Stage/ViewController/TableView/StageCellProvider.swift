@@ -1,5 +1,5 @@
 //
-//  LevelsCellProvider.swift
+//  StageCellProvider.swift
 //  Hush
 //
 //  Created by Tomasz Kryg on 20/10/2020.
@@ -8,13 +8,13 @@
 
 import Foundation
 
-enum LevelsCellProvider: UITableViewCellProvider {
-    case levels
+enum StageCellProvider: UITableViewCellProvider {
+    case stage
     
     var type: TableCell {
         switch self {
-        case .levels:
-            return LevelsTableViewCell.self
+        case .stage:
+            return StageTableViewCell.self
         }
     }
 }

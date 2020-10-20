@@ -1,5 +1,5 @@
 //
-//  LevelsViewModel.swift
+//  StageViewModel.swift
 //  Hush
 //
 //  Created by Tomasz Kryg on 20/10/2020.
@@ -8,6 +8,6 @@
 
 import Foundation
 
-final class LevelsViewModel {
+final class StageViewModel {
     
 }

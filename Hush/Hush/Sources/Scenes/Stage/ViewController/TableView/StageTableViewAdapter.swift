@@ -1,5 +1,5 @@
 //
-//  LevelsTableViewAdapter.swift
+//  StageTableViewAdapter.swift
 //  Hush
 //
 //  Created by Tomasz Kryg on 20/10/2020.
@@ -8,17 +8,17 @@
 
 import UIKit
 
-final class LevelsTableViewAdapter: NSObject, UITableViewDelegate, UITableViewDataSource {
+final class StageTableViewAdapter: NSObject, UITableViewDelegate, UITableViewDataSource {
     
     // MARK: - Properties
     
-    weak var viewModel: LevelsViewModel!
+    weak var viewModel: StageViewModel!
     
     // MARK: - Setup
     
-    func setup(tableView: UITableView, viewModel: LevelsViewModel) {
+    func setup(tableView: UITableView, viewModel: StageViewModel) {
         self.viewModel = viewModel
-        tableView.register(cells: LevelsCellProvider.self)
+        tableView.register(cells: StageCellProvider.self)
         tableView.delegate = self
         tableView.dataSource = self
     }
@@ -30,7 +30,7 @@ final class LevelsTableViewAdapter: NSObject, UITableViewDelegate, UITableViewDa
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: LevelsCellProvider.levels.id, for: indexPath) as? LevelsTableViewCell else { return UITableViewCell() }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: StageCellProvider.stage.id, for: indexPath) as? StageTableViewCell else { return UITableViewCell() }
         return cell
     }
     
