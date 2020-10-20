@@ -31,7 +31,7 @@ final class Color {
     }
 
     init(_ primary: UIColor) {
-        self.primary = UIColor(hue: 0, saturation: 1, brightness: 1, alpha: 1)
+        self.primary = primary
         var hue: CGFloat = 0.0
         var saturation: CGFloat = 0.0
         var brightness: CGFloat = 0.0
