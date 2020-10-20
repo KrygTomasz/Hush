@@ -11,11 +11,19 @@ import UIKit
 class LevelCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var containerView: UIView!
+    @IBOutlet weak var titleLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         containerView.layer.cornerRadius = .medium
-        containerView.backgroundColor = Color.random.primary
+        titleLabel.textAlignment = .center
+        titleLabel.font = UIFont.boldSystemFont(ofSize: 56.0)
+    }
+    
+    func configure(with viewData: LevelViewData) {
+        containerView.backgroundColor = viewData.color.secondary
+        titleLabel.text = viewData.title
+        titleLabel.textColor = viewData.color.tertiary
     }
 
 }

@@ -7,11 +7,14 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
-final class StageTableViewAdapter: NSObject, UITableViewDelegate, UITableViewDataSource {
+final class StageTableViewAdapter: NSObject, UITableViewDelegate {
     
     // MARK: - Properties
     
+    private let disposeBag: DisposeBag = DisposeBag()
     weak var viewModel: StageViewModel!
     
     // MARK: - Setup
@@ -20,22 +23,27 @@ final class StageTableViewAdapter: NSObject, UITableViewDelegate, UITableViewDat
         self.viewModel = viewModel
         tableView.register(cells: StageCellProvider.self)
         tableView.delegate = self
-        tableView.dataSource = self
         tableView.separatorStyle = .none
         tableView.allowsSelection = false
+        bind(tableView: tableView)
+    }
+    
+    private func bind(tableView: UITableView) {
+        viewModel.output.viewData
+            .drive(tableView.rx.items) { [weak self] (tableView, row, viewData) in
+                guard let self = self else { return UITableViewCell() }
+                return self.getCell(tableView: tableView, viewData: viewData, indexPath: IndexPath(row: row, section: 0))
+            }
+            .disposed(by: disposeBag)
+    }
+    
+    private func getCell(tableView: UITableView, viewData: StageViewData, indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: StageCellProvider.stage.id, for: indexPath) as! StageTableViewCell
+        cell.configure(viewData: viewData)
+        return cell
     }
     
     // MARK: - Delegates
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: StageCellProvider.stage.id, for: indexPath) as? StageTableViewCell else { return UITableViewCell() }
-        cell.configure(color: viewModel.output.color)
-        return cell
-    }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return tableView.bounds.width / 3

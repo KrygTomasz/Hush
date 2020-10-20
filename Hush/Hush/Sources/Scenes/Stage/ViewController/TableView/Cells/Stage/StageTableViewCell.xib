@@ -18,7 +18,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="yGL-nY-pQR">
-                        <rect key="frame" x="16" y="11" width="288" height="157"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="179"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="lxZ-X4-3ls">
                             <size key="itemSize" width="128" height="128"/>
@@ -30,10 +30,10 @@
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
-                    <constraint firstAttribute="trailingMargin" secondItem="yGL-nY-pQR" secondAttribute="trailing" id="OfO-y2-7Cv"/>
-                    <constraint firstItem="yGL-nY-pQR" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="TCk-oe-WpR"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="yGL-nY-pQR" secondAttribute="bottom" id="V4b-ke-erM"/>
-                    <constraint firstItem="yGL-nY-pQR" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="z27-cb-8zU"/>
+                    <constraint firstItem="yGL-nY-pQR" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="26b-fa-Ire"/>
+                    <constraint firstAttribute="bottom" secondItem="yGL-nY-pQR" secondAttribute="bottom" id="2Te-7O-JYt"/>
+                    <constraint firstAttribute="trailing" secondItem="yGL-nY-pQR" secondAttribute="trailing" id="Yme-j7-uDR"/>
+                    <constraint firstItem="yGL-nY-pQR" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="kyz-dJ-Toh"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

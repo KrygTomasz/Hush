@@ -12,15 +12,14 @@ class StageTableViewCell: UITableViewCell {
 
     @IBOutlet weak var collectionView: UICollectionView!
     
-    let collectionAdapter: LevelCollectionViewAdapter = LevelCollectionViewAdapter()
+    private let collectionAdapter: LevelCollectionViewAdapter = LevelCollectionViewAdapter()
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        collectionAdapter.setup(collectionView: collectionView)
     }
     
-    func configure(color: Color) {
-        
+    func configure(viewData: StageViewData) {
+        collectionAdapter.setup(collectionView: collectionView, viewData: viewData)
     }
     
 }

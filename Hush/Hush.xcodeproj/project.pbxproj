@@ -25,6 +25,8 @@
 		2322815424E8724400F28378 /* SpyBoardEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2322815224E8723C00F28378 /* SpyBoardEngine.swift */; };
 		2322815724E872C000F28378 /* BoardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2322815624E872C000F28378 /* BoardTests.swift */; };
 		2322815B24E8781B00F28378 /* MarginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2322815A24E8781B00F28378 /* MarginTests.swift */; };
+		234CB092253F5DF100E9480D /* StageViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234CB091253F5DF100E9480D /* StageViewData.swift */; };
+		234CB098253F5DF800E9480D /* LevelViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234CB097253F5DF800E9480D /* LevelViewData.swift */; };
 		234E52EA25389D3F001A696F /* AlertBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234E52E925389D3F001A696F /* AlertBuilder.swift */; };
 		234E537B2538ACEE001A696F /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234E53792538ACEE001A696F /* AlertViewController.swift */; };
 		234E537C2538ACEE001A696F /* AlertViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 234E537A2538ACEE001A696F /* AlertViewController.xib */; };
@@ -140,6 +142,8 @@
 		2322815224E8723C00F28378 /* SpyBoardEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpyBoardEngine.swift; sourceTree = "<group>"; };
 		2322815624E872C000F28378 /* BoardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardTests.swift; sourceTree = "<group>"; };
 		2322815A24E8781B00F28378 /* MarginTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarginTests.swift; sourceTree = "<group>"; };
+		234CB091253F5DF100E9480D /* StageViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StageViewData.swift; sourceTree = "<group>"; };
+		234CB097253F5DF800E9480D /* LevelViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelViewData.swift; sourceTree = "<group>"; };
 		234E52E925389D3F001A696F /* AlertBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertBuilder.swift; sourceTree = "<group>"; };
 		234E53792538ACEE001A696F /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
 		234E537A2538ACEE001A696F /* AlertViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlertViewController.xib; sourceTree = "<group>"; };
@@ -356,6 +360,15 @@
 				2322815A24E8781B00F28378 /* MarginTests.swift */,
 			);
 			path = Margins;
+			sourceTree = "<group>";
+		};
+		234CB090253F5DE400E9480D /* ViewData */ = {
+			isa = PBXGroup;
+			children = (
+				234CB091253F5DF100E9480D /* StageViewData.swift */,
+				234CB097253F5DF800E9480D /* LevelViewData.swift */,
+			);
+			path = ViewData;
 			sourceTree = "<group>";
 		};
 		234E52DE25389C25001A696F /* Alert */ = {
@@ -848,6 +861,7 @@
 		23F14D67253F431C0034DDF6 /* Stage */ = {
 			isa = PBXGroup;
 			children = (
+				234CB090253F5DE400E9480D /* ViewData */,
 				23F14D6B253F43410034DDF6 /* Router */,
 				23F14D6A253F433A0034DDF6 /* ViewModel */,
 				23F14D68253F43300034DDF6 /* ViewController */,
@@ -1097,6 +1111,7 @@
 				23FFE71124E9EEED0043CEA0 /* UIView+Margin.swift in Sources */,
 				2361752C24E329460052AB01 /* AppDelegate.swift in Sources */,
 				23AB23D224E9600A0028E4EB /* UICollectionViewCellProvider.swift in Sources */,
+				234CB098253F5DF800E9480D /* LevelViewData.swift in Sources */,
 				2361755824E32F670052AB01 /* BreathViewController.swift in Sources */,
 				239D4FCA253DF3FA00A61D73 /* Gradient.swift in Sources */,
 				236175A524E3383D0052AB01 /* PulsatoryView.swift in Sources */,
@@ -1111,6 +1126,7 @@
 				236175A724E349540052AB01 /* Circle.swift in Sources */,
 				2399635A24E46A18008A6768 /* MenuRouter.swift in Sources */,
 				23A69E5E24E82A1E00B205CC /* BoardSetupFactory.swift in Sources */,
+				234CB092253F5DF100E9480D /* StageViewData.swift in Sources */,
 				232280E224E8598500F28378 /* BoardBuilder.swift in Sources */,
 				23B6004C25332C38009A4BF5 /* UIView+Tap.swift in Sources */,
 				23AB247124E98CF80028E4EB /* BoardViewData.swift in Sources */,

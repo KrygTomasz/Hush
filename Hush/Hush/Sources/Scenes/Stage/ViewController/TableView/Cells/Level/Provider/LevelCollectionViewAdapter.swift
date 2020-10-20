@@ -9,21 +9,24 @@
 import UIKit
 
 final class LevelCollectionViewAdapter: NSObject, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-        
-    func setup(collectionView: UICollectionView) {
+    
+    var viewData: [LevelViewData] = []
+    
+    func setup(collectionView: UICollectionView, viewData: StageViewData) {
+        self.viewData = viewData.levels
         collectionView.register(cells: LevelCellProvider.self)
         collectionView.delegate = self
         collectionView.dataSource = self
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 17//viewModel.output.viewData.count
+        return viewData.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: LevelCellProvider.level.id, for: indexPath) as! LevelCollectionViewCell
-//        guard let viewData = viewModel.output.viewData(for: indexPath) else { return cell }
-//        cell.configure(with: viewData)
+        guard let level = viewData[safe: indexPath.item] else { return cell }
+        cell.configure(with: level)
         return cell
     }
     
