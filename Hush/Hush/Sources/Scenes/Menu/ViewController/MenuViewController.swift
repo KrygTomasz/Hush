@@ -13,7 +13,7 @@ final class MenuViewController: UIViewController {
     @IBOutlet private weak var collectionView: UICollectionView!
     
     let viewModel: MenuViewModel
-    var collectionAdapter: MenuCollectionViewAdapter!
+    var collectionAdapter: MenuCollectionViewAdapter = MenuCollectionViewAdapter()
     
     init(viewModel: MenuViewModel) {
         self.viewModel = viewModel
@@ -32,9 +32,7 @@ final class MenuViewController: UIViewController {
     }
     
     private func setupCollectionView() {
-        collectionAdapter = MenuCollectionViewAdapter(collectionView: collectionView, viewModel: viewModel)
-        collectionView.delegate = collectionAdapter
-        collectionView.dataSource = collectionAdapter
+        collectionAdapter.setup(collectionView: collectionView, viewModel: viewModel)
         collectionView.backgroundColor = .clear
     }
     

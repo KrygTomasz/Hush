@@ -19,9 +19,9 @@ final class BoardCollectionViewAdapter: NSObject, UICollectionViewDelegate, UICo
     
     func setup(collectionView: UICollectionView, viewModel: BoardViewModel) {
         self.viewModel = viewModel
+        collectionView.register(cells: BoardCellProvider.self)
         collectionView.delegate = self
         collectionView.dataSource = self
-        collectionView.register(cells: BoardCellProvider.self)
     }
     
     // MARK: - Delegates

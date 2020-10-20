@@ -10,13 +10,13 @@ import UIKit
 
 final class MenuCollectionViewAdapter: NSObject, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
-    weak var collectionView: UICollectionView!
     weak var viewModel: MenuViewModel!
     
-    init(collectionView: UICollectionView, viewModel: MenuViewModel) {
-        self.collectionView = collectionView
+    func setup(collectionView: UICollectionView, viewModel: MenuViewModel) {
         self.viewModel = viewModel
         collectionView.register(cells: MenuCellProvider.self)
+        collectionView.delegate = self
+        collectionView.dataSource = self
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
