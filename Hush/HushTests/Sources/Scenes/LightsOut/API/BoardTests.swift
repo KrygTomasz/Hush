@@ -20,8 +20,8 @@ final class BoardTests: XCTestCase {
     
     func test_boardFieldClicked_engineActionIsLaunched() {
         assertSpyEngineEmpty()
-        sut.click(x: 1, y: 1)
-        let position = BoardPosition(x: 1, y: 1)
+        let position = BoardPosition(x: 1, y: 2)
+        sut.click(position: position)
         XCTAssertEqual(engine.toggledPosition, position)
         XCTAssertTrue(engine.toggledSetup != nil)
         XCTAssertTrue(engine.hintedSetup == nil)
