@@ -25,4 +25,8 @@ final class BoardSetup {
     func getState(x: Int, y: Int) -> LightState? {
         return rows[safe: y]?.items[safe: x]?.state
     }
+    
+    func contains(_ position: BoardPosition) -> Bool {
+        return rows[safe: position.y]?.items[safe: position.x] != nil
+    }
 }

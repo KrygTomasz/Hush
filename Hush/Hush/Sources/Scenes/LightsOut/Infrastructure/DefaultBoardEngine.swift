@@ -28,6 +28,7 @@ final class DefaultBoardEngine: BoardEngine {
     
     // TODO: toggle may return updated indexes?
     func toggle(position: BoardPosition, setup: BoardSetup) {
+        if !setup.contains(position) { return }
         updateScore.accept(())
         tryToggle(x: position.x, y: position.y, setup: setup)
         tryToggle(x: position.x-1, y: position.y, setup: setup)
