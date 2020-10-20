@@ -93,6 +93,14 @@
 		23B6FFFD25331408009A4BF5 /* MenuCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B6FFFB25331408009A4BF5 /* MenuCollectionViewCell.swift */; };
 		23B6FFFE25331408009A4BF5 /* MenuCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23B6FFFC25331408009A4BF5 /* MenuCollectionViewCell.xib */; };
 		23F14D62253F41250034DDF6 /* String+ExistsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F14D61253F41250034DDF6 /* String+ExistsTests.swift */; };
+		23F14D6D253F43500034DDF6 /* LevelsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F14D6C253F43500034DDF6 /* LevelsRouter.swift */; };
+		23F14D73253F43CB0034DDF6 /* LevelsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F14D72253F43CB0034DDF6 /* LevelsViewModel.swift */; };
+		23F14D78253F43EB0034DDF6 /* LevelsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F14D76253F43EB0034DDF6 /* LevelsViewController.swift */; };
+		23F14D79253F43EB0034DDF6 /* LevelsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23F14D77253F43EB0034DDF6 /* LevelsViewController.xib */; };
+		23F14D7F253F443E0034DDF6 /* LevelsTableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F14D7E253F443E0034DDF6 /* LevelsTableViewAdapter.swift */; };
+		23F14D85253F44A40034DDF6 /* LevelsCellProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F14D84253F44A40034DDF6 /* LevelsCellProvider.swift */; };
+		23F14D8A253F45570034DDF6 /* LevelsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F14D88253F45570034DDF6 /* LevelsTableViewCell.swift */; };
+		23F14D8B253F45570034DDF6 /* LevelsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23F14D89253F45570034DDF6 /* LevelsTableViewCell.xib */; };
 		23FFE71124E9EEED0043CEA0 /* UIView+Margin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FFE71024E9EEED0043CEA0 /* UIView+Margin.swift */; };
 		23FFE71324E9EF7A0043CEA0 /* HapticFeedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FFE71224E9EF7A0043CEA0 /* HapticFeedback.swift */; };
 /* End PBXBuildFile section */
@@ -196,6 +204,14 @@
 		23B6FFFB25331408009A4BF5 /* MenuCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCollectionViewCell.swift; sourceTree = "<group>"; };
 		23B6FFFC25331408009A4BF5 /* MenuCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuCollectionViewCell.xib; sourceTree = "<group>"; };
 		23F14D61253F41250034DDF6 /* String+ExistsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+ExistsTests.swift"; sourceTree = "<group>"; };
+		23F14D6C253F43500034DDF6 /* LevelsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelsRouter.swift; sourceTree = "<group>"; };
+		23F14D72253F43CB0034DDF6 /* LevelsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelsViewModel.swift; sourceTree = "<group>"; };
+		23F14D76253F43EB0034DDF6 /* LevelsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelsViewController.swift; sourceTree = "<group>"; };
+		23F14D77253F43EB0034DDF6 /* LevelsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LevelsViewController.xib; sourceTree = "<group>"; };
+		23F14D7E253F443E0034DDF6 /* LevelsTableViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelsTableViewAdapter.swift; sourceTree = "<group>"; };
+		23F14D84253F44A40034DDF6 /* LevelsCellProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelsCellProvider.swift; sourceTree = "<group>"; };
+		23F14D88253F45570034DDF6 /* LevelsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelsTableViewCell.swift; sourceTree = "<group>"; };
+		23F14D89253F45570034DDF6 /* LevelsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LevelsTableViewCell.xib; sourceTree = "<group>"; };
 		23FFE71024E9EEED0043CEA0 /* UIView+Margin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Margin.swift"; sourceTree = "<group>"; };
 		23FFE71224E9EF7A0043CEA0 /* HapticFeedback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticFeedback.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -452,6 +468,7 @@
 		2361755324E32BA60052AB01 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				23F14D67253F431C0034DDF6 /* Levels */,
 				234E52DE25389C25001A696F /* Alert */,
 				23A69DD224E817E200B205CC /* LightsOut */,
 				2399634F24E469D4008A6768 /* Menu */,
@@ -820,6 +837,61 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		23F14D67253F431C0034DDF6 /* Levels */ = {
+			isa = PBXGroup;
+			children = (
+				23F14D6B253F43410034DDF6 /* Router */,
+				23F14D6A253F433A0034DDF6 /* ViewModel */,
+				23F14D68253F43300034DDF6 /* ViewController */,
+			);
+			path = Levels;
+			sourceTree = "<group>";
+		};
+		23F14D68253F43300034DDF6 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				23F14D7C253F442C0034DDF6 /* TableView */,
+				23F14D76253F43EB0034DDF6 /* LevelsViewController.swift */,
+				23F14D77253F43EB0034DDF6 /* LevelsViewController.xib */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		23F14D6A253F433A0034DDF6 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				23F14D72253F43CB0034DDF6 /* LevelsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		23F14D6B253F43410034DDF6 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				23F14D6C253F43500034DDF6 /* LevelsRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		23F14D7C253F442C0034DDF6 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				23F14D7D253F44340034DDF6 /* Cells */,
+				23F14D7E253F443E0034DDF6 /* LevelsTableViewAdapter.swift */,
+				23F14D84253F44A40034DDF6 /* LevelsCellProvider.swift */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		23F14D7D253F44340034DDF6 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				23F14D88253F45570034DDF6 /* LevelsTableViewCell.swift */,
+				23F14D89253F45570034DDF6 /* LevelsTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -920,9 +992,11 @@
 				23AB23C324E954F90028E4EB /* BoardViewController.xib in Resources */,
 				2361753824E329470052AB01 /* LaunchScreen.storyboard in Resources */,
 				2361753524E329470052AB01 /* Assets.xcassets in Resources */,
+				23F14D8B253F45570034DDF6 /* LevelsTableViewCell.xib in Resources */,
 				23AB23D724E960840028E4EB /* BoardCollectionViewCell.xib in Resources */,
 				2399635624E469F5008A6768 /* MenuViewController.xib in Resources */,
 				23B6FFFE25331408009A4BF5 /* MenuCollectionViewCell.xib in Resources */,
+				23F14D79253F43EB0034DDF6 /* LevelsViewController.xib in Resources */,
 				234E537C2538ACEE001A696F /* AlertViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -952,13 +1026,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				23B6004E25334058009A4BF5 /* RouterChannel.swift in Sources */,
+				23F14D6D253F43500034DDF6 /* LevelsRouter.swift in Sources */,
 				2399636524E47093008A6768 /* UITableView+Register.swift in Sources */,
+				23F14D78253F43EB0034DDF6 /* LevelsViewController.swift in Sources */,
 				2399636724E471B3008A6768 /* MenuCellProvider.swift in Sources */,
 				231E04A6253C9E5A00102130 /* AlertViewModel.swift in Sources */,
 				23A69E6024E82B4D00B205CC /* DefaultBoardEngine.swift in Sources */,
 				234E537B2538ACEE001A696F /* AlertViewController.swift in Sources */,
+				23F14D85253F44A40034DDF6 /* LevelsCellProvider.swift in Sources */,
 				2399636D24E472EC008A6768 /* MenuViewData.swift in Sources */,
 				23A69DDC24E8278B00B205CC /* BoardRow.swift in Sources */,
+				23F14D73253F43CB0034DDF6 /* LevelsViewModel.swift in Sources */,
 				23A69DD724E8250D00B205CC /* Collection+Safe.swift in Sources */,
 				23B6005025334068009A4BF5 /* BaseRouter.swift in Sources */,
 				2361755224E32B550052AB01 /* NavigationController.swift in Sources */,
@@ -978,6 +1056,7 @@
 				239D4FCA253DF3FA00A61D73 /* Gradient.swift in Sources */,
 				236175A524E3383D0052AB01 /* PulsatoryView.swift in Sources */,
 				232280E424E8599F00F28378 /* BoardSize.swift in Sources */,
+				23F14D7F253F443E0034DDF6 /* LevelsTableViewAdapter.swift in Sources */,
 				230D189124EAD9420075FE89 /* BoardSolution.swift in Sources */,
 				235233D2253F315100044C5E /* BoardPosition+IndexPath.swift in Sources */,
 				23AB23C224E954F90028E4EB /* BoardViewController.swift in Sources */,
@@ -1010,6 +1089,7 @@
 				239D4FC5253DF3DC00A61D73 /* GradientView.swift in Sources */,
 				232280E624E85CA800F28378 /* BoardSetup.swift in Sources */,
 				23AB23CB24E95C320028E4EB /* BoardView.swift in Sources */,
+				23F14D8A253F45570034DDF6 /* LevelsTableViewCell.swift in Sources */,
 				23523C1B253E10C9008C6875 /* UIColor+Dynamic.swift in Sources */,
 				23523C17253E1002008C6875 /* UIView+Background.swift in Sources */,
 				23AB23DA24E96A5F0028E4EB /* BoardCollectionViewAdapter.swift in Sources */,
