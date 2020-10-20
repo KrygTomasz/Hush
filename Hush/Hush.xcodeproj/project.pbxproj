@@ -92,6 +92,7 @@
 		23B6005025334068009A4BF5 /* BaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B6004F25334068009A4BF5 /* BaseRouter.swift */; };
 		23B6FFFD25331408009A4BF5 /* MenuCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B6FFFB25331408009A4BF5 /* MenuCollectionViewCell.swift */; };
 		23B6FFFE25331408009A4BF5 /* MenuCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23B6FFFC25331408009A4BF5 /* MenuCollectionViewCell.xib */; };
+		23F14D62253F41250034DDF6 /* String+ExistsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F14D61253F41250034DDF6 /* String+ExistsTests.swift */; };
 		23FFE71124E9EEED0043CEA0 /* UIView+Margin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FFE71024E9EEED0043CEA0 /* UIView+Margin.swift */; };
 		23FFE71324E9EF7A0043CEA0 /* HapticFeedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FFE71224E9EF7A0043CEA0 /* HapticFeedback.swift */; };
 /* End PBXBuildFile section */
@@ -194,6 +195,7 @@
 		23B6004F25334068009A4BF5 /* BaseRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRouter.swift; sourceTree = "<group>"; };
 		23B6FFFB25331408009A4BF5 /* MenuCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCollectionViewCell.swift; sourceTree = "<group>"; };
 		23B6FFFC25331408009A4BF5 /* MenuCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuCollectionViewCell.xib; sourceTree = "<group>"; };
+		23F14D61253F41250034DDF6 /* String+ExistsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+ExistsTests.swift"; sourceTree = "<group>"; };
 		23FFE71024E9EEED0043CEA0 /* UIView+Margin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Margin.swift"; sourceTree = "<group>"; };
 		23FFE71224E9EF7A0043CEA0 /* HapticFeedback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticFeedback.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -238,6 +240,7 @@
 		232280E724E85E3000F28378 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				23F14D5F253F41100034DDF6 /* Tools */,
 				2322815824E8780800F28378 /* Core */,
 				232280E824E85E4E00F28378 /* Scenes */,
 			);
@@ -801,6 +804,22 @@
 			path = GestureRecognizer;
 			sourceTree = "<group>";
 		};
+		23F14D5F253F41100034DDF6 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				23F14D60253F41190034DDF6 /* Extensions */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		23F14D60253F41190034DDF6 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				23F14D61253F41250034DDF6 /* String+ExistsTests.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -917,6 +936,7 @@
 			files = (
 				2322814D24E8669600F28378 /* StubBoardRowBuilder.swift in Sources */,
 				2322815424E8724400F28378 /* SpyBoardEngine.swift in Sources */,
+				23F14D62253F41250034DDF6 /* String+ExistsTests.swift in Sources */,
 				2322815124E86F8C00F28378 /* BoardSetupFactoryTests.swift in Sources */,
 				2322814824E8621A00F28378 /* BoardSetupTests.swift in Sources */,
 				2322814F24E8670800F28378 /* DefaultBoardEngineTests.swift in Sources */,
