@@ -23,7 +23,7 @@ final class MenuViewModel {
     }
     
     var output: Output!
-    var route: (MenuChannel) -> Void
+    private var route: (MenuChannel) -> Void
     
     init(route: @escaping (MenuChannel) -> Void) {
         self.route = route
@@ -33,7 +33,7 @@ final class MenuViewModel {
         let color = Color.random
         output = Output(color: color,
                         viewData: [
-                            MenuViewData(imageName: "play", color: color, action: { [weak self] in self?.route(.board) }),
+                            MenuViewData(imageName: "play", color: color, action: { [weak self] in self?.route(.stages) }),
                             MenuViewData(imageName: "settings", color: color, action: {  })
         ])
     }

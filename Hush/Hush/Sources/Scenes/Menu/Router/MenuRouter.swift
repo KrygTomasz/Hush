@@ -9,7 +9,7 @@
 import UIKit
 
 enum MenuChannel: RouterChannel {
-    case board
+    case stages
 }
 
 final class MenuRouter: BaseRouter<MenuChannel> {
@@ -25,12 +25,12 @@ final class MenuRouter: BaseRouter<MenuChannel> {
     
     override func handle(_ channel: MenuChannel) {
         switch channel {
-        case .board:
-            routeToBoard()
+        case .stages:
+            routeToStages()
         }
     }
     
-    private func routeToBoard() {
-        BoardRouter().route()
+    private func routeToStages() {
+        StageRouter().route()
     }
 }

@@ -10,6 +10,7 @@ import UIKit
 
 enum StageChannel: RouterChannel {
     case back
+    case board
 }
 
 final class StageRouter: BaseRouter<StageChannel> {
@@ -18,7 +19,7 @@ final class StageRouter: BaseRouter<StageChannel> {
     private var viewModel: StageViewModel!
     override init() {
         super.init()
-        self.viewModel = StageViewModel()
+        self.viewModel = StageViewModel(route: channel.accept)
         self.viewController = StageViewController(viewModel: viewModel)
     }
     
@@ -26,6 +27,8 @@ final class StageRouter: BaseRouter<StageChannel> {
         switch channel {
         case .back:
             routeBack()
+        case .board:
+            BoardRouter().route()
         }
     }
 }
