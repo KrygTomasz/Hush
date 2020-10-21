@@ -29,17 +29,17 @@ final class StageTableViewAdapter: NSObject, UITableViewDelegate {
     }
     
     private func bind(tableView: UITableView) {
-        viewModel.output.viewData
-            .drive(tableView.rx.items) { [weak self] (tableView, row, viewData) in
+        viewModel.output.stageData
+            .drive(tableView.rx.items) { [weak self] (tableView, row, stageData) in
                 guard let self = self else { return UITableViewCell() }
-                return self.getCell(tableView: tableView, viewData: viewData, indexPath: IndexPath(row: row, section: 0))
+                return self.getCell(tableView: tableView, stageData: stageData, indexPath: IndexPath(row: row, section: 0))
             }
             .disposed(by: disposeBag)
     }
     
-    private func getCell(tableView: UITableView, viewData: StageViewData, indexPath: IndexPath) -> UITableViewCell {
+    private func getCell(tableView: UITableView, stageData: StageData, indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: StageCellProvider.stage.id, for: indexPath) as! StageTableViewCell
-        cell.configure(viewData: viewData, didSelect: viewModel.input.itemSelected.accept)
+        cell.configure(with: stageData, didSelect: viewModel.input.levelSelected.accept)
         return cell
     }
     

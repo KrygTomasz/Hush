@@ -10,7 +10,7 @@ import UIKit
 
 enum StageChannel: RouterChannel {
     case back
-    case board
+    case board(BoardData)
 }
 
 final class StageRouter: BaseRouter<StageChannel> {
@@ -27,8 +27,8 @@ final class StageRouter: BaseRouter<StageChannel> {
         switch channel {
         case .back:
             routeBack()
-        case .board:
-            BoardRouter().route()
+        case .board(let boardData):
+            BoardRouter(boardData: boardData).route()
         }
     }
 }

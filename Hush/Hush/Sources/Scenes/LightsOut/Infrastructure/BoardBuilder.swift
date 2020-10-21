@@ -15,18 +15,14 @@ final class BoardBuilder {
     
     init() { }
     
-    func set(size: BoardSize) -> BoardBuilder {
-        self.size = size
-        return self
-    }
-    
     func set(engine: BoardEngine) -> BoardBuilder {
         self.engine = engine
         return self
     }
     
-    func set(initialState: BoardInitialState) -> BoardBuilder {
-        self.initialState = initialState
+    func set(boardData: BoardData) -> BoardBuilder {
+        self.size = boardData.size
+        self.initialState = boardData.initialState
         return self
     }
     

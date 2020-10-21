@@ -13,12 +13,12 @@ import RxCocoa
 final class StageViewModel {
     
     struct Input {
-        let itemSelected: PublishRelay<IndexPath> = PublishRelay()
+        let levelSelected: PublishRelay<BoardData> = PublishRelay()
     }
     
     struct Output {
         let color: Color
-        let viewData: Driver<[StageViewData]>
+        let stageData: Driver<[StageData]>
     }
     
     private let disposeBag: DisposeBag = DisposeBag()
@@ -27,35 +27,18 @@ final class StageViewModel {
     
     init(route: @escaping (StageChannel) -> Void) {
         let color: Color = .random
-        let levelViewData: [LevelViewData] = [.init(title: "1", color: color, passed: false),
-                                              .init(title: "2", color: color, passed: false),
-                                              .init(title: "3", color: color, passed: false),
-                                              .init(title: "4", color: color, passed: false),
-                                              .init(title: "5", color: color, passed: false),
-                                              .init(title: "6", color: color, passed: false),
-                                              .init(title: "7", color: color, passed: false),
-                                              .init(title: "8", color: color, passed: false),
-                                              .init(title: "9", color: color, passed: false),
-                                              .init(title: "10", color: color, passed: false)
-        ]
-        let stageViewData: [StageViewData] = [.init(color: color, levels: levelViewData),
-                                              .init(color: color, levels: levelViewData),
-                                              .init(color: color, levels: levelViewData),
-                                              .init(color: color, levels: levelViewData),
-                                              .init(color: color, levels: levelViewData),
-                                              .init(color: color, levels: levelViewData),
-                                              .init(color: color, levels: levelViewData)
-        ]
+        let levelDataProvider: (Int) -> [LevelData] = { stage in LevelDataProvider().provide(stage: stage, color: color) }
+        let stageData: [StageData] = (1...7).map { .init(color: color, levels: levelDataProvider($0)) }
         output = .init(color: color,
-                       viewData: .just(stageViewData))
+                       stageData: .just(stageData))
         bind(route: route)
     }
     
     private func bind(route: @escaping (StageChannel) -> Void) {
-        input.itemSelected
+        input.levelSelected
             .asSignal()
-            .emit(onNext: { indexPath in
-                route(.board)
+            .emit(onNext: { boardData in
+                route(.board(boardData))
             })
             .disposed(by: disposeBag)
     }

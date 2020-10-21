@@ -37,12 +37,13 @@ class StageTableViewCell: UITableViewCell {
         collectionView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
     }
     
-    func configure(viewData: StageViewData, didSelect: @escaping (IndexPath) -> Void) {
+    func configure(with stageData: StageData, didSelect: @escaping (BoardData) -> Void) {
+        let viewData = StageViewDataMapper.map(stageData)
         collectionAdapter.setup(collectionView: collectionView, viewData: viewData)
         collectionView.rx.itemSelected
             .asSignal()
             .emit(onNext: { indexPath in
-                didSelect(indexPath)
+                didSelect(stageData.levels[indexPath.row].board)
             })
             .disposed(by: disposeBag)
     }

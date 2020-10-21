@@ -18,12 +18,11 @@ final class BoardRouter: BaseRouter<BoardChannel> {
     private var viewController: BoardViewController!
     private var viewModel: BoardViewModel!
     private let color: Color = .random
-    override init() {
+    init(boardData: BoardData) {
         super.init()
         let board = BoardBuilder()
-            .set(size: .init(height: 8, width: 4))
+            .set(boardData: boardData)
             .set(engine: DefaultBoardEngine())
-            .set(initialState: .random(4))
             .build()        
         self.viewModel = BoardViewModel(route: channel.accept, board: board, color: color)
         self.viewController = BoardViewController(viewModel: viewModel)

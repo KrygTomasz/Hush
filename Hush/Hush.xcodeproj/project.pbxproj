@@ -96,6 +96,12 @@
 		23B6005025334068009A4BF5 /* BaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B6004F25334068009A4BF5 /* BaseRouter.swift */; };
 		23B6FFFD25331408009A4BF5 /* MenuCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B6FFFB25331408009A4BF5 /* MenuCollectionViewCell.swift */; };
 		23B6FFFE25331408009A4BF5 /* MenuCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23B6FFFC25331408009A4BF5 /* MenuCollectionViewCell.xib */; };
+		23BC0A0D2540CF1700C9F532 /* BoardData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BC0A0C2540CF1700C9F532 /* BoardData.swift */; };
+		23BC0A122540DFBA00C9F532 /* LevelDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BC0A112540DFBA00C9F532 /* LevelDataProvider.swift */; };
+		23BC0A192540E00700C9F532 /* StageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BC0A182540E00700C9F532 /* StageData.swift */; };
+		23BC0A1F2540E00F00C9F532 /* LevelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BC0A1E2540E00F00C9F532 /* LevelData.swift */; };
+		23BC0A242540E04300C9F532 /* StageViewDataMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BC0A232540E04300C9F532 /* StageViewDataMapper.swift */; };
+		23BC0A2A2540E05C00C9F532 /* LevelViewDataMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BC0A292540E05C00C9F532 /* LevelViewDataMapper.swift */; };
 		23DB8183253FA5F500C8A60C /* PagingCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DB8182253FA5F500C8A60C /* PagingCollectionView.swift */; };
 		23DB8189253FA60F00C8A60C /* CollectionViewPagingLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DB8188253FA60F00C8A60C /* CollectionViewPagingLayout.swift */; };
 		23F14D62253F41250034DDF6 /* String+ExistsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F14D61253F41250034DDF6 /* String+ExistsTests.swift */; };
@@ -217,6 +223,12 @@
 		23B6004F25334068009A4BF5 /* BaseRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRouter.swift; sourceTree = "<group>"; };
 		23B6FFFB25331408009A4BF5 /* MenuCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCollectionViewCell.swift; sourceTree = "<group>"; };
 		23B6FFFC25331408009A4BF5 /* MenuCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuCollectionViewCell.xib; sourceTree = "<group>"; };
+		23BC0A0C2540CF1700C9F532 /* BoardData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardData.swift; sourceTree = "<group>"; };
+		23BC0A112540DFBA00C9F532 /* LevelDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelDataProvider.swift; sourceTree = "<group>"; };
+		23BC0A182540E00700C9F532 /* StageData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StageData.swift; sourceTree = "<group>"; };
+		23BC0A1E2540E00F00C9F532 /* LevelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelData.swift; sourceTree = "<group>"; };
+		23BC0A232540E04300C9F532 /* StageViewDataMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StageViewDataMapper.swift; sourceTree = "<group>"; };
+		23BC0A292540E05C00C9F532 /* LevelViewDataMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelViewDataMapper.swift; sourceTree = "<group>"; };
 		23DB8182253FA5F500C8A60C /* PagingCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagingCollectionView.swift; sourceTree = "<group>"; };
 		23DB8188253FA60F00C8A60C /* CollectionViewPagingLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewPagingLayout.swift; sourceTree = "<group>"; };
 		23F14D61253F41250034DDF6 /* String+ExistsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+ExistsTests.swift"; sourceTree = "<group>"; };
@@ -742,6 +754,7 @@
 				230D189224EAD99F0075FE89 /* BoardPosition.swift */,
 				235233D5253F31A100044C5E /* BoardInitialState.swift */,
 				2354097D24EC3C0E007B8571 /* BoardScore.swift */,
+				23BC0A0C2540CF1700C9F532 /* BoardData.swift */,
 			);
 			path = Board;
 			sourceTree = "<group>";
@@ -853,6 +866,32 @@
 			path = GestureRecognizer;
 			sourceTree = "<group>";
 		};
+		23BC0A102540DFB200C9F532 /* Provider */ = {
+			isa = PBXGroup;
+			children = (
+				23BC0A112540DFBA00C9F532 /* LevelDataProvider.swift */,
+			);
+			path = Provider;
+			sourceTree = "<group>";
+		};
+		23BC0A172540DFFB00C9F532 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				23BC0A182540E00700C9F532 /* StageData.swift */,
+				23BC0A1E2540E00F00C9F532 /* LevelData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		23BC0A222540E03000C9F532 /* Mappers */ = {
+			isa = PBXGroup;
+			children = (
+				23BC0A232540E04300C9F532 /* StageViewDataMapper.swift */,
+				23BC0A292540E05C00C9F532 /* LevelViewDataMapper.swift */,
+			);
+			path = Mappers;
+			sourceTree = "<group>";
+		};
 		23DB8181253FA5EE00C8A60C /* PagingCollectionView */ = {
 			isa = PBXGroup;
 			children = (
@@ -881,6 +920,9 @@
 		23F14D67253F431C0034DDF6 /* Stage */ = {
 			isa = PBXGroup;
 			children = (
+				23BC0A222540E03000C9F532 /* Mappers */,
+				23BC0A172540DFFB00C9F532 /* Model */,
+				23BC0A102540DFB200C9F532 /* Provider */,
 				234CB090253F5DE400E9480D /* ViewData */,
 				23F14D6B253F43410034DDF6 /* Router */,
 				23F14D6A253F433A0034DDF6 /* ViewModel */,
@@ -1106,12 +1148,14 @@
 			files = (
 				23B6004E25334058009A4BF5 /* RouterChannel.swift in Sources */,
 				23F14D6D253F43500034DDF6 /* StageRouter.swift in Sources */,
+				23BC0A192540E00700C9F532 /* StageData.swift in Sources */,
 				2399636524E47093008A6768 /* UITableView+Register.swift in Sources */,
 				23F14D78253F43EB0034DDF6 /* StageViewController.swift in Sources */,
 				2399636724E471B3008A6768 /* MenuCellProvider.swift in Sources */,
 				231E04A6253C9E5A00102130 /* AlertViewModel.swift in Sources */,
 				23A69E6024E82B4D00B205CC /* DefaultBoardEngine.swift in Sources */,
 				234E537B2538ACEE001A696F /* AlertViewController.swift in Sources */,
+				23BC0A0D2540CF1700C9F532 /* BoardData.swift in Sources */,
 				23F14D85253F44A40034DDF6 /* StageCellProvider.swift in Sources */,
 				2399636D24E472EC008A6768 /* MenuViewData.swift in Sources */,
 				23A69DDC24E8278B00B205CC /* BoardRow.swift in Sources */,
@@ -1135,6 +1179,7 @@
 				234CB098253F5DF800E9480D /* LevelViewData.swift in Sources */,
 				2361755824E32F670052AB01 /* BreathViewController.swift in Sources */,
 				23DB8189253FA60F00C8A60C /* CollectionViewPagingLayout.swift in Sources */,
+				23BC0A2A2540E05C00C9F532 /* LevelViewDataMapper.swift in Sources */,
 				239D4FCA253DF3FA00A61D73 /* Gradient.swift in Sources */,
 				236175A524E3383D0052AB01 /* PulsatoryView.swift in Sources */,
 				232280E424E8599F00F28378 /* BoardSize.swift in Sources */,
@@ -1144,6 +1189,7 @@
 				235233D2253F315100044C5E /* BoardPosition+IndexPath.swift in Sources */,
 				23AB23C224E954F90028E4EB /* BoardViewController.swift in Sources */,
 				236175A024E336560052AB01 /* Router.swift in Sources */,
+				23BC0A242540E04300C9F532 /* StageViewDataMapper.swift in Sources */,
 				23A69E6A24E8356800B205CC /* BoardEngine.swift in Sources */,
 				236175A724E349540052AB01 /* Circle.swift in Sources */,
 				2399635A24E46A18008A6768 /* MenuRouter.swift in Sources */,
@@ -1161,6 +1207,8 @@
 				23A69DDA24E8273400B205CC /* BoardItem.swift in Sources */,
 				23FFE71324E9EF7A0043CEA0 /* HapticFeedback.swift in Sources */,
 				235409C524EC5AC2007B8571 /* Color.swift in Sources */,
+				23BC0A122540DFBA00C9F532 /* LevelDataProvider.swift in Sources */,
+				23BC0A1F2540E00F00C9F532 /* LevelData.swift in Sources */,
 				2319A1A8253CA5ED00B40F5A /* String+Exists.swift in Sources */,
 				23AB23BF24E954C10028E4EB /* BoardRouter.swift in Sources */,
 				23B6004A25332BBA009A4BF5 /* LongPressGestureRecognizer.swift in Sources */,
