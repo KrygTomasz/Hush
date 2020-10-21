@@ -10,10 +10,13 @@ import UIKit
 
 final class LevelCollectionViewAdapter: NSObject, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
-    var viewData: [LevelViewData] = []
+    private weak var collectionView: UICollectionView?
+    private var previouslyHaptedCell: Int = 0
+    private var viewData: [LevelViewData] = []
     
     func setup(collectionView: UICollectionView, viewData: StageViewData) {
         self.viewData = viewData.levels
+        self.collectionView = collectionView
         collectionView.register(cells: LevelCellProvider.self)
         collectionView.delegate = self
         collectionView.dataSource = self
@@ -59,5 +62,16 @@ final class LevelCollectionViewAdapter: NSObject, UICollectionViewDelegate, UICo
                             left: horizontalInset,
                             bottom: 0,
                             right: horizontalInset)
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        guard let layout = collectionView?.collectionViewLayout as? UICollectionViewFlowLayout else { return }
+        let itemWidth = layout.itemSize.width
+        let contentOffset = scrollView.contentOffset.x + (itemWidth/2)
+        let itemIndex = Int(contentOffset / itemWidth)
+        if previouslyHaptedCell != itemIndex {
+            HapticFeedback.light()
+            previouslyHaptedCell = itemIndex
+        }
     }
 }
