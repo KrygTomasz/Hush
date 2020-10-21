@@ -48,7 +48,7 @@ final class BoardViewController: UIViewController {
     
     private func bind() {
         let lightTrigger = collectionView.rx.itemSelected.asSignal().do(onNext: { _ in
-            HapticFeedback.launch()
+            HapticFeedback.heavy()
         })
         let hintTrigger = boardView.hintButton.rx.tap.asSignal()
         let backTrigger = boardView.backButton.rx.tap.asSignal()

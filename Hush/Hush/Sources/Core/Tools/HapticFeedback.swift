@@ -9,8 +9,11 @@
 import UIKit
 
 final class HapticFeedback {
-    static func launch() {
-        let notification = UIImpactFeedbackGenerator()
-        notification.impactOccurred()
+    static func heavy() {
+        UIImpactFeedbackGenerator().impactOccurred()
+    }
+    
+    static func light() {
+        UISelectionFeedbackGenerator().selectionChanged()
     }
 }
