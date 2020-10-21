@@ -96,6 +96,8 @@
 		23B6005025334068009A4BF5 /* BaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B6004F25334068009A4BF5 /* BaseRouter.swift */; };
 		23B6FFFD25331408009A4BF5 /* MenuCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B6FFFB25331408009A4BF5 /* MenuCollectionViewCell.swift */; };
 		23B6FFFE25331408009A4BF5 /* MenuCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23B6FFFC25331408009A4BF5 /* MenuCollectionViewCell.xib */; };
+		23DB8183253FA5F500C8A60C /* PagingCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DB8182253FA5F500C8A60C /* PagingCollectionView.swift */; };
+		23DB8189253FA60F00C8A60C /* CollectionViewPagingLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DB8188253FA60F00C8A60C /* CollectionViewPagingLayout.swift */; };
 		23F14D62253F41250034DDF6 /* String+ExistsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F14D61253F41250034DDF6 /* String+ExistsTests.swift */; };
 		23F14D6D253F43500034DDF6 /* StageRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F14D6C253F43500034DDF6 /* StageRouter.swift */; };
 		23F14D73253F43CB0034DDF6 /* StageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F14D72253F43CB0034DDF6 /* StageViewModel.swift */; };
@@ -215,6 +217,8 @@
 		23B6004F25334068009A4BF5 /* BaseRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRouter.swift; sourceTree = "<group>"; };
 		23B6FFFB25331408009A4BF5 /* MenuCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCollectionViewCell.swift; sourceTree = "<group>"; };
 		23B6FFFC25331408009A4BF5 /* MenuCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuCollectionViewCell.xib; sourceTree = "<group>"; };
+		23DB8182253FA5F500C8A60C /* PagingCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagingCollectionView.swift; sourceTree = "<group>"; };
+		23DB8188253FA60F00C8A60C /* CollectionViewPagingLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewPagingLayout.swift; sourceTree = "<group>"; };
 		23F14D61253F41250034DDF6 /* String+ExistsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+ExistsTests.swift"; sourceTree = "<group>"; };
 		23F14D6C253F43500034DDF6 /* StageRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StageRouter.swift; sourceTree = "<group>"; };
 		23F14D72253F43CB0034DDF6 /* StageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StageViewModel.swift; sourceTree = "<group>"; };
@@ -551,6 +555,7 @@
 		236175A324E337630052AB01 /* ViewComponents */ = {
 			isa = PBXGroup;
 			children = (
+				23DB8181253FA5EE00C8A60C /* PagingCollectionView */,
 				239D4FC8253DF3EE00A61D73 /* Gradient */,
 				2399630E24E4688D008A6768 /* Extensions */,
 				236175A424E3383D0052AB01 /* PulsatoryView.swift */,
@@ -848,6 +853,15 @@
 			path = GestureRecognizer;
 			sourceTree = "<group>";
 		};
+		23DB8181253FA5EE00C8A60C /* PagingCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				23DB8182253FA5F500C8A60C /* PagingCollectionView.swift */,
+				23DB8188253FA60F00C8A60C /* CollectionViewPagingLayout.swift */,
+			);
+			path = PagingCollectionView;
+			sourceTree = "<group>";
+		};
 		23F14D5F253F41100034DDF6 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
@@ -1102,6 +1116,7 @@
 				2399636D24E472EC008A6768 /* MenuViewData.swift in Sources */,
 				23A69DDC24E8278B00B205CC /* BoardRow.swift in Sources */,
 				23F14D73253F43CB0034DDF6 /* StageViewModel.swift in Sources */,
+				23DB8183253FA5F500C8A60C /* PagingCollectionView.swift in Sources */,
 				23A69DD724E8250D00B205CC /* Collection+Safe.swift in Sources */,
 				23B6005025334068009A4BF5 /* BaseRouter.swift in Sources */,
 				2361755224E32B550052AB01 /* NavigationController.swift in Sources */,
@@ -1119,6 +1134,7 @@
 				23AB23D224E9600A0028E4EB /* UICollectionViewCellProvider.swift in Sources */,
 				234CB098253F5DF800E9480D /* LevelViewData.swift in Sources */,
 				2361755824E32F670052AB01 /* BreathViewController.swift in Sources */,
+				23DB8189253FA60F00C8A60C /* CollectionViewPagingLayout.swift in Sources */,
 				239D4FCA253DF3FA00A61D73 /* Gradient.swift in Sources */,
 				236175A524E3383D0052AB01 /* PulsatoryView.swift in Sources */,
 				232280E424E8599F00F28378 /* BoardSize.swift in Sources */,

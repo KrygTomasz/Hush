@@ -10,12 +10,24 @@ import UIKit
 
 class StageTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var collectionView: UICollectionView!
+    lazy var collectionView: PagingCollectionView = {
+        return PagingCollectionView(frame: frame)
+    }()
     
     private let collectionAdapter: LevelCollectionViewAdapter = LevelCollectionViewAdapter()
 
     override func awakeFromNib() {
         super.awakeFromNib()
+        setupCollectionView()
+    }
+    
+    private func setupCollectionView() {
+        addSubview(collectionView)
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        collectionView.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
+        collectionView.topAnchor.constraint(equalTo: topAnchor).isActive = true
+        collectionView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
+        collectionView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
     }
     
     func configure(viewData: StageViewData) {

@@ -16,31 +16,10 @@
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="179"/>
                 <autoresizingMask key="autoresizingMask"/>
-                <subviews>
-                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="yGL-nY-pQR">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="179"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="lxZ-X4-3ls">
-                            <size key="itemSize" width="128" height="128"/>
-                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                        </collectionViewFlowLayout>
-                    </collectionView>
-                </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                <constraints>
-                    <constraint firstItem="yGL-nY-pQR" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="26b-fa-Ire"/>
-                    <constraint firstAttribute="bottom" secondItem="yGL-nY-pQR" secondAttribute="bottom" id="2Te-7O-JYt"/>
-                    <constraint firstAttribute="trailing" secondItem="yGL-nY-pQR" secondAttribute="trailing" id="Yme-j7-uDR"/>
-                    <constraint firstItem="yGL-nY-pQR" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="kyz-dJ-Toh"/>
-                </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-            <connections>
-                <outlet property="collectionView" destination="yGL-nY-pQR" id="a63-pr-x0H"/>
-            </connections>
             <point key="canvasLocation" x="137.68115942028987" y="149.66517857142856"/>
         </tableViewCell>
     </objects>

@@ -9,5 +9,6 @@
 import Foundation
 
 struct StageViewData {
+    let color: Color
     let levels: [LevelViewData]
 }

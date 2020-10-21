@@ -29,13 +29,13 @@ final class StageViewModel {
                                               .init(title: "9", color: color, passed: false),
                                               .init(title: "10", color: color, passed: false)
         ]
-        let stageViewData: [StageViewData] = [.init(levels: levelViewData),
-                                              .init(levels: levelViewData),
-                                              .init(levels: levelViewData),
-                                              .init(levels: levelViewData),
-                                              .init(levels: levelViewData),
-                                              .init(levels: levelViewData),
-                                              .init(levels: levelViewData)
+        let stageViewData: [StageViewData] = [.init(color: color, levels: levelViewData),
+                                              .init(color: color, levels: levelViewData),
+                                              .init(color: color, levels: levelViewData),
+                                              .init(color: color, levels: levelViewData),
+                                              .init(color: color, levels: levelViewData),
+                                              .init(color: color, levels: levelViewData),
+                                              .init(color: color, levels: levelViewData)
         ]
         output = .init(color: color,
                        viewData: .just(stageViewData))

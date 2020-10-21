@@ -17,6 +17,7 @@ final class LevelCollectionViewAdapter: NSObject, UICollectionViewDelegate, UICo
         collectionView.register(cells: LevelCellProvider.self)
         collectionView.delegate = self
         collectionView.dataSource = self
+        collectionView.backgroundColor = viewData.color.primary
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -33,14 +34,30 @@ final class LevelCollectionViewAdapter: NSObject, UICollectionViewDelegate, UICo
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let height = collectionView.bounds.height
         let width = height
-        return CGSize(width: width, height: height)
+        let size = CGSize(width: width, height: height)
+        if let flowLayout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout { flowLayout.itemSize = size }
+        return size
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 0
+        let spacing: CGFloat = 0
+        if let flowLayout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout { flowLayout.minimumLineSpacing = spacing }
+        return spacing
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 0
+        let spacing: CGFloat = 0
+        if let flowLayout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout { flowLayout.minimumInteritemSpacing = spacing }
+        return spacing
+    }
+    
+    public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        let firstIndexPath = IndexPath(item: 0, section: section)
+        let size = self.collectionView(collectionView, layout: collectionViewLayout, sizeForItemAt: firstIndexPath)
+        let horizontalInset = (collectionView.bounds.size.width - size.width) / 2
+        return UIEdgeInsets(top: 0,
+                            left: horizontalInset,
+                            bottom: 0,
+                            right: horizontalInset)
     }
 }
