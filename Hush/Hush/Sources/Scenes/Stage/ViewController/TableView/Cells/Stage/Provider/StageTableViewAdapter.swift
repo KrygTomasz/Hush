@@ -39,7 +39,7 @@ final class StageTableViewAdapter: NSObject, UITableViewDelegate {
     
     private func getCell(tableView: UITableView, viewData: StageViewData, indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: StageCellProvider.stage.id, for: indexPath) as! StageTableViewCell
-        cell.configure(viewData: viewData)
+        cell.configure(viewData: viewData, didSelect: viewModel.input.itemSelected.accept)
         return cell
     }
     
