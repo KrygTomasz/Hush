@@ -14,6 +14,8 @@
 		231E049E253C9E3B00102130 /* AlertPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231E049D253C9E3B00102130 /* AlertPresenter.swift */; };
 		231E04A6253C9E5A00102130 /* AlertViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231E04A5253C9E5A00102130 /* AlertViewModel.swift */; };
 		231E04AB253C9E7900102130 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231E04AA253C9E7900102130 /* Alert.swift */; };
+		231F51522541F5CC006802A8 /* BottomBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231F51512541F5CC006802A8 /* BottomBarView.swift */; };
+		231F51582541F6C4006802A8 /* UIView+AddCentered.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231F51572541F6C4006802A8 /* UIView+AddCentered.swift */; };
 		232280E224E8598500F28378 /* BoardBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232280E124E8598500F28378 /* BoardBuilder.swift */; };
 		232280E424E8599F00F28378 /* BoardSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232280E324E8599F00F28378 /* BoardSize.swift */; };
 		232280E624E85CA800F28378 /* BoardSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232280E524E85CA800F28378 /* BoardSetup.swift */; };
@@ -139,6 +141,8 @@
 		231E049D253C9E3B00102130 /* AlertPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPresenter.swift; sourceTree = "<group>"; };
 		231E04A5253C9E5A00102130 /* AlertViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewModel.swift; sourceTree = "<group>"; };
 		231E04AA253C9E7900102130 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		231F51512541F5CC006802A8 /* BottomBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomBarView.swift; sourceTree = "<group>"; };
+		231F51572541F6C4006802A8 /* UIView+AddCentered.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+AddCentered.swift"; sourceTree = "<group>"; };
 		232280E124E8598500F28378 /* BoardBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardBuilder.swift; sourceTree = "<group>"; };
 		232280E324E8599F00F28378 /* BoardSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardSize.swift; sourceTree = "<group>"; };
 		232280E524E85CA800F28378 /* BoardSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardSetup.swift; sourceTree = "<group>"; };
@@ -283,6 +287,14 @@
 				231E04AA253C9E7900102130 /* Alert.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		231F51502541F5C3006802A8 /* BottomBarView */ = {
+			isa = PBXGroup;
+			children = (
+				231F51512541F5CC006802A8 /* BottomBarView.swift */,
+			);
+			path = BottomBarView;
 			sourceTree = "<group>";
 		};
 		232280E724E85E3000F28378 /* Sources */ = {
@@ -567,6 +579,7 @@
 		236175A324E337630052AB01 /* ViewComponents */ = {
 			isa = PBXGroup;
 			children = (
+				231F51502541F5C3006802A8 /* BottomBarView */,
 				23DB8181253FA5EE00C8A60C /* PagingCollectionView */,
 				239D4FC8253DF3EE00A61D73 /* Gradient */,
 				2399630E24E4688D008A6768 /* Extensions */,
@@ -594,6 +607,7 @@
 				23523C16253E1002008C6875 /* UIView+Background.swift */,
 				23523C1A253E10C9008C6875 /* UIColor+Dynamic.swift */,
 				234CB09D253F639100E9480D /* UILabel+Styles.swift */,
+				231F51572541F6C4006802A8 /* UIView+AddCentered.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1174,6 +1188,7 @@
 				231E04AB253C9E7900102130 /* Alert.swift in Sources */,
 				2399631024E468A5008A6768 /* UIView+AutoLayout.swift in Sources */,
 				23FFE71124E9EEED0043CEA0 /* UIView+Margin.swift in Sources */,
+				231F51582541F6C4006802A8 /* UIView+AddCentered.swift in Sources */,
 				2361752C24E329460052AB01 /* AppDelegate.swift in Sources */,
 				23AB23D224E9600A0028E4EB /* UICollectionViewCellProvider.swift in Sources */,
 				234CB098253F5DF800E9480D /* LevelViewData.swift in Sources */,
@@ -1209,6 +1224,7 @@
 				235409C524EC5AC2007B8571 /* Color.swift in Sources */,
 				23BC0A122540DFBA00C9F532 /* LevelDataProvider.swift in Sources */,
 				23BC0A1F2540E00F00C9F532 /* LevelData.swift in Sources */,
+				231F51522541F5CC006802A8 /* BottomBarView.swift in Sources */,
 				2319A1A8253CA5ED00B40F5A /* String+Exists.swift in Sources */,
 				23AB23BF24E954C10028E4EB /* BoardRouter.swift in Sources */,
 				23B6004A25332BBA009A4BF5 /* LongPressGestureRecognizer.swift in Sources */,

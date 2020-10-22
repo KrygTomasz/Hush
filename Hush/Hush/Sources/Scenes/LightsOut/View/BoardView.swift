@@ -35,11 +35,8 @@ class BoardView: UIView {
         return view
     }()
     
-    lazy var bottomBar: UIStackView = {
-        let view = UIStackView(autoLayout: true)
-        view.axis = .horizontal
-        view.distribution = .fillEqually
-        return view
+    lazy var bottomBar: BottomBarView = {
+        return BottomBarView(autoLayout: true)
     }()
     
     lazy var scoreLabel: UILabel = {
@@ -83,7 +80,7 @@ class BoardView: UIView {
         topBar.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
         
         bottomBar.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
-        bottomBar.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -Margin.wide).isActive = true
+        bottomBar.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
         bottomBar.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
         
         addSubview(collectionView)
@@ -95,21 +92,7 @@ class BoardView: UIView {
     }
     
     private func prepareBottomBar() {
-        let firstView = UIView()
-        let secondView = UIView()
-        let thirdView = UIView()
-        let fourthView = UIView()
-        
-        firstView.addSubview(backButton)
-        fourthView.addSubview(hintButton)
-        
-        constraintCentered(view: backButton, inside: firstView)
-        constraintCentered(view: hintButton, inside: fourthView)
-
-        bottomBar.addArrangedSubview(firstView)
-        bottomBar.addArrangedSubview(secondView)
-        bottomBar.addArrangedSubview(thirdView)
-        bottomBar.addArrangedSubview(fourthView)
+        bottomBar.setButtons(first: backButton, fourth: hintButton)
     }
     
     private func prepareTopBar() {
@@ -117,8 +100,7 @@ class BoardView: UIView {
         let secondView = UIView()
         let thirdView = UIView()
         
-        thirdView.addSubview(scoreLabel)
-        constraintCentered(view: scoreLabel, inside: thirdView)
+        thirdView.addCentered(view: scoreLabel)
 
         topBar.addArrangedSubview(firstView)
         topBar.addArrangedSubview(secondView)
@@ -135,15 +117,6 @@ class BoardView: UIView {
         button.imageView?.contentMode = .scaleAspectFit
         button.addScaledTap()
         return button
-    }
-    
-    private func constraintCentered(view: UIView, inside contentView: UIView) {
-        view.centerYAnchor.constraint(equalTo: contentView.centerYAnchor).isActive = true
-        view.centerXAnchor.constraint(equalTo: contentView.centerXAnchor).isActive = true
-        view.leadingAnchor.constraint(greaterThanOrEqualToSystemSpacingAfter: contentView.leadingAnchor, multiplier: 1.0).isActive = true
-        view.trailingAnchor.constraint(greaterThanOrEqualToSystemSpacingAfter: contentView.trailingAnchor, multiplier: 1.0).isActive = true
-        view.topAnchor.constraint(greaterThanOrEqualToSystemSpacingBelow: contentView.topAnchor, multiplier: 1.0).isActive = true
-        view.bottomAnchor.constraint(greaterThanOrEqualToSystemSpacingBelow: contentView.bottomAnchor, multiplier: 1.0).isActive = true
     }
     
     func colorIcons(_ color: UIColor) {
