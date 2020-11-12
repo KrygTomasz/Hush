@@ -15,9 +15,9 @@ class PagingCollectionView: UICollectionView {
         layout = CollectionViewPagingLayout()
         layout.scrollDirection = .horizontal
         super.init(frame: frame, collectionViewLayout: layout)
+        backgroundColor = .clear
         showsVerticalScrollIndicator = false
         showsHorizontalScrollIndicator = false
-
     }
     
     required init?(coder: NSCoder) {

@@ -19,8 +19,8 @@ struct BoardViewDataMapper {
     
     static func map(state: LightState, baseColor: Color) -> BoardViewData {
         switch state {
-        case .off: return BoardViewData(color: baseColor.secondary)
-        case .on: return BoardViewData(color: baseColor.tertiary)
+        case .off: return BoardViewData(color: baseColor.secondary, borderColor: baseColor.tertiary, hintColor: baseColor.tertiary)
+        case .on: return BoardViewData(color: baseColor.tertiary, borderColor: baseColor.tertiary, hintColor: baseColor.secondary)
         }
     }
 }

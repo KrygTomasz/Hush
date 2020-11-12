@@ -20,7 +20,6 @@ final class LevelCollectionViewAdapter: NSObject, UICollectionViewDelegate, UICo
         collectionView.register(cells: LevelCellProvider.self)
         collectionView.delegate = self
         collectionView.dataSource = self
-        collectionView.backgroundColor = viewData.color.primary
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

@@ -24,6 +24,7 @@ class LevelCollectionViewCell: UICollectionViewCell {
         containerView.backgroundColor = viewData.color.secondary
         titleLabel.text = viewData.title
         titleLabel.textColor = viewData.color.tertiary
+        containerView.addBorder(color: viewData.color.tertiary)
     }
 
 }

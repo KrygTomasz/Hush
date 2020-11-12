@@ -12,6 +12,8 @@ class BoardCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var lightView: UIView!
     
+    private var hintColor: UIColor = .white
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }
@@ -30,6 +32,8 @@ class BoardCollectionViewCell: UICollectionViewCell {
     
     func configure(with viewData: BoardViewData) {
         lightView.backgroundColor = viewData.color
+        lightView.addBorder(color: viewData.borderColor)
+        hintColor = viewData.hintColor
     }
     
     func refresh(with viewData: BoardViewData) {
@@ -39,14 +43,14 @@ class BoardCollectionViewCell: UICollectionViewCell {
     }
     
     func hinted() {
-        let hintColor = UIColor.white
+        let color = hintColor
         UIView.animate(withDuration: 0.5, delay: 0.0, options: [.curveEaseInOut, .autoreverse, .repeat, .allowUserInteraction], animations: { [weak self] in
-            self?.lightView.backgroundColor = hintColor
+            self?.lightView.backgroundColor = color
         })
     }
     
     func unhinted() {
-        backgroundColor = .clear
+        lightView.layer.removeAllAnimations()
     }
 
 }

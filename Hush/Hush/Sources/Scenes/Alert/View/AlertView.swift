@@ -10,7 +10,7 @@ import UIKit
 
 typealias DismissCompletion = (() -> Void)
 
-class AlertView: GradientView {
+class AlertView: UIView {
     
     private var dismissHandler: ((_ completion: DismissCompletion?) -> Void)?
     
@@ -100,7 +100,8 @@ class AlertView: GradientView {
             add(button: secondButton, with: secondButtonData)
             set(color: alert.color, for: secondButton)
         }
-        set(gradient: .init(colors: [alert.color.tertiary, alert.color.primary]))
+        backgroundColor = alert.color.primary
+        addBorder(color: alert.color.tertiary)
     }
         
     private func add(button: UIButton, with data: AlertButtonData) {

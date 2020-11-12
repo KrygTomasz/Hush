@@ -33,7 +33,7 @@ final class StageViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = viewModel.output.color.primary
+        view.addGradientBackground(with: .init(colors: [viewModel.output.color.dynamicTertiary, viewModel.output.color.primary]))
         setupTableView()
         setupBottomBar()
     }
@@ -50,7 +50,7 @@ final class StageViewController: UIViewController {
     private func setupBackButton() {
         let configuration = UIImage.SymbolConfiguration(font: UIFont.systemFont(ofSize: Constants.imageSize))
         let image = UIImage(named: "back", in: nil, with: configuration)
-        bottomBarView.set(color: viewModel.output.color)
+        bottomBarView.set(color: viewModel.output.color, transparentBackground: false)
         bottomBarView.firstButton.setImage(image, for: .normal)
         bottomBarView.firstButton.addTarget(self, action: #selector(goBack), for: .touchUpInside)
     }

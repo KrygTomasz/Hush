@@ -55,6 +55,7 @@
 		236175A224E336830052AB01 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236175A124E336830052AB01 /* AppRouter.swift */; };
 		236175A524E3383D0052AB01 /* PulsatoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236175A424E3383D0052AB01 /* PulsatoryView.swift */; };
 		236175A724E349540052AB01 /* Circle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236175A624E349540052AB01 /* Circle.swift */; };
+		23958883255DC5210033CB1C /* UIView+Border.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23958882255DC5210033CB1C /* UIView+Border.swift */; };
 		2399630D24E467D0008A6768 /* Margin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2399630C24E467D0008A6768 /* Margin.swift */; };
 		2399631024E468A5008A6768 /* UIView+AutoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2399630F24E468A5008A6768 /* UIView+AutoLayout.swift */; };
 		2399635524E469F5008A6768 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2399635324E469F5008A6768 /* MenuViewController.swift */; };
@@ -186,6 +187,7 @@
 		236175A124E336830052AB01 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
 		236175A424E3383D0052AB01 /* PulsatoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulsatoryView.swift; sourceTree = "<group>"; };
 		236175A624E349540052AB01 /* Circle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Circle.swift; sourceTree = "<group>"; };
+		23958882255DC5210033CB1C /* UIView+Border.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Border.swift"; sourceTree = "<group>"; };
 		2399630C24E467D0008A6768 /* Margin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Margin.swift; sourceTree = "<group>"; };
 		2399630F24E468A5008A6768 /* UIView+AutoLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+AutoLayout.swift"; sourceTree = "<group>"; };
 		2399635324E469F5008A6768 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
@@ -608,6 +610,7 @@
 				23523C1A253E10C9008C6875 /* UIColor+Dynamic.swift */,
 				234CB09D253F639100E9480D /* UILabel+Styles.swift */,
 				231F51572541F6C4006802A8 /* UIView+AddCentered.swift */,
+				23958882255DC5210033CB1C /* UIView+Border.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1164,6 +1167,7 @@
 				23F14D6D253F43500034DDF6 /* StageRouter.swift in Sources */,
 				23BC0A192540E00700C9F532 /* StageData.swift in Sources */,
 				2399636524E47093008A6768 /* UITableView+Register.swift in Sources */,
+				23958883255DC5210033CB1C /* UIView+Border.swift in Sources */,
 				23F14D78253F43EB0034DDF6 /* StageViewController.swift in Sources */,
 				2399636724E471B3008A6768 /* MenuCellProvider.swift in Sources */,
 				231E04A6253C9E5A00102130 /* AlertViewModel.swift in Sources */,

@@ -20,6 +20,7 @@ class MenuCollectionViewCell: UICollectionViewCell {
         containerView.addScaledTap(onSuccess: {
             viewData.action()
         })
+        containerView.addBorder(color: viewData.color.tertiary)
     }
     
     override func awakeFromNib() {

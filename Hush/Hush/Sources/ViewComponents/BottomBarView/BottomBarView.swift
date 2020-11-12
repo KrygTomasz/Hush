@@ -54,12 +54,14 @@ class BottomBarView: UIView {
     
     // MARK: - Public configuration
     
-    func set(color: Color) {
+    func set(color: Color, transparentBackground: Bool = true) {
         firstButton.tintColor = color.secondary
         secondButton.tintColor = color.secondary
         thirdButton.tintColor = color.secondary
         fourthButton.tintColor = color.secondary
-        containerView.backgroundColor = color.primary
+        if !transparentBackground {
+            containerView.backgroundColor = color.primary
+        }
     }
     
     func addTopShadow() {

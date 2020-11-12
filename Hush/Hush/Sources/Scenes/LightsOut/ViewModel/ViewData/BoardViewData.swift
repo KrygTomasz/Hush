@@ -10,4 +10,6 @@ import UIKit
 
 struct BoardViewData {
     var color: UIColor
+    var borderColor: UIColor
+    var hintColor: UIColor
 }
