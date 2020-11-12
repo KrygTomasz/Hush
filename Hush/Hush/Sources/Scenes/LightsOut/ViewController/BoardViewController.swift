@@ -50,8 +50,8 @@ final class BoardViewController: UIViewController {
         let lightTrigger = collectionView.rx.itemSelected.asSignal().do(onNext: { _ in
             HapticFeedback.heavy()
         })
-        let hintTrigger = boardView.hintButton.rx.tap.asSignal()
-        let backTrigger = boardView.backButton.rx.tap.asSignal()
+        let hintTrigger = boardView.bottomBar.fourthButton.rx.tap.asSignal()
+        let backTrigger = boardView.bottomBar.firstButton.rx.tap.asSignal()
         
         viewModel.transform(input: .init(lightTrigger: lightTrigger,
                                          hintTrigger: hintTrigger,
@@ -85,7 +85,7 @@ final class BoardViewController: UIViewController {
         viewModel.output.color
             .drive(onNext: { [weak self] (color) in
                 self?.view.addGradientBackground(with: .init(colors: [color.dynamicPrimary, color.primary]))
-                self?.boardView.colorIcons(color.secondary)
+                self?.boardView.set(color: color)
             })
             .disposed(by: disposeBag)
     }

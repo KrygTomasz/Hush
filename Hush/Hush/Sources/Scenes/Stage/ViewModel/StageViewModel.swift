@@ -13,6 +13,7 @@ import RxCocoa
 final class StageViewModel {
     
     struct Input {
+        let backTrigger: PublishRelay<Void> = PublishRelay()
         let levelSelected: PublishRelay<BoardData> = PublishRelay()
     }
     
@@ -28,7 +29,7 @@ final class StageViewModel {
     init(route: @escaping (StageChannel) -> Void) {
         let color: Color = .random
         let levelDataProvider: (Int) -> [LevelData] = { stage in LevelDataProvider().provide(stage: stage, color: color) }
-        let stageData: [StageData] = (1...7).map { .init(color: color, levels: levelDataProvider($0)) }
+        let stageData: [StageData] = (1...10).map { .init(color: color, levels: levelDataProvider($0)) }
         output = .init(color: color,
                        stageData: .just(stageData))
         bind(route: route)
@@ -39,6 +40,13 @@ final class StageViewModel {
             .asSignal()
             .emit(onNext: { boardData in
                 route(.board(boardData))
+            })
+            .disposed(by: disposeBag)
+        
+        input.backTrigger
+            .asSignal()
+            .emit(onNext: { _ in
+                route(.back)
             })
             .disposed(by: disposeBag)
     }

@@ -9,8 +9,13 @@
 import UIKit
 
 final class StageViewController: UIViewController {
-
+    
+    private enum Constants {
+        static let imageSize: CGFloat = 64.0
+    }
+    
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var bottomBarView: BottomBarView!
     
     let viewModel: StageViewModel
     let tableAdapter: StageTableViewAdapter = StageTableViewAdapter()
@@ -30,10 +35,28 @@ final class StageViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = viewModel.output.color.primary
         setupTableView()
+        setupBottomBar()
     }
     
     private func setupTableView() {
         tableAdapter.setup(tableView: tableView, viewModel: viewModel)
+    }
+    
+    private func setupBottomBar() {
+        setupBackButton()
+        bottomBarView.addTopShadow()
+    }
+    
+    private func setupBackButton() {
+        let configuration = UIImage.SymbolConfiguration(font: UIFont.systemFont(ofSize: Constants.imageSize))
+        let image = UIImage(named: "back", in: nil, with: configuration)
+        bottomBarView.set(color: viewModel.output.color)
+        bottomBarView.firstButton.setImage(image, for: .normal)
+        bottomBarView.firstButton.addTarget(self, action: #selector(goBack), for: .touchUpInside)
+    }
+    
+    @objc private func goBack() {
+        viewModel.input.backTrigger.accept(())
     }
 
 }

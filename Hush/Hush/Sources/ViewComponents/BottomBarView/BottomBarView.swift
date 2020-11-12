@@ -12,6 +12,11 @@ class BottomBarView: UIView {
     
     // MARK: - Subviews
     
+    private lazy var containerView: UIView = {
+        let view = UIView(autoLayout: true)
+        return view
+    }()
+    
     private lazy var bottomBar: UIStackView = {
         let view = UIStackView(autoLayout: true)
         view.axis = .horizontal
@@ -19,20 +24,20 @@ class BottomBarView: UIView {
         return view
     }()
     
-    private lazy var firstView: UIView = {
-        return UIView()
+    lazy var firstButton: UIButton = {
+        return createButton()
     }()
     
-    private lazy var secondView: UIView = {
-        return UIView()
+    lazy var secondButton: UIButton = {
+        return createButton()
     }()
     
-    private lazy var thirdView: UIView = {
-        return UIView()
+    lazy var thirdButton: UIButton = {
+        return createButton()
     }()
     
-    private lazy var fourthView: UIView = {
-        return UIView()
+    lazy var fourthButton: UIButton = {
+        return createButton()
     }()
     
     // MARK: - Lifecycle
@@ -49,46 +54,74 @@ class BottomBarView: UIView {
     
     // MARK: - Public configuration
     
-    func setButtons(first: UIView? = nil,
-                    second: UIView? = nil,
-                    third: UIView? = nil,
-                    fourth: UIView? = nil) {
-        clear()
-        tryToAdd(view: first, into: firstView)
-        tryToAdd(view: second, into: secondView)
-        tryToAdd(view: third, into: thirdView)
-        tryToAdd(view: fourth, into: fourthView)
+    func set(color: Color) {
+        firstButton.tintColor = color.secondary
+        secondButton.tintColor = color.secondary
+        thirdButton.tintColor = color.secondary
+        fourthButton.tintColor = color.secondary
+        containerView.backgroundColor = color.primary
+    }
+    
+    func addTopShadow() {
+        containerView.layer.shadowColor = UIColor.black.cgColor
+        containerView.layer.shadowOpacity = 0.3
+        containerView.layer.shadowOffset = .init(width: 0, height: -9)
+        containerView.layer.shadowRadius = 5
     }
     
     // MARK: - Helper setup
     
     private func commonSetup() {
         backgroundColor = .clear
-        addSubview(bottomBar)
-        prepareBottomBar()
+        addSubview(containerView)
+        constraintContainerView()
+        containerView.addSubview(bottomBar)
+        constraintBottomBar()
+        prepareBottomBarButtons()
+    }
+    
+    private func constraintContainerView() {
+        containerView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
+        containerView.topAnchor.constraint(equalTo: topAnchor).isActive = true
+        containerView.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
+        containerView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -.wide).isActive = true
+    }
+    
+    private func constraintBottomBar() {
         bottomBar.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
         bottomBar.topAnchor.constraint(equalTo: topAnchor).isActive = true
         bottomBar.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
         bottomBar.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -.wide).isActive = true
     }
     
-    private func prepareBottomBar() {
-        bottomBar.addArrangedSubview(firstView)
-        bottomBar.addArrangedSubview(secondView)
-        bottomBar.addArrangedSubview(thirdView)
-        bottomBar.addArrangedSubview(fourthView)
-    }
-    
-    private func clear() {
-        firstView.subviews.forEach { $0.removeFromSuperview() }
-        secondView.subviews.forEach { $0.removeFromSuperview() }
-        thirdView.subviews.forEach { $0.removeFromSuperview() }
-        fourthView.subviews.forEach { $0.removeFromSuperview() }
+    private func prepareBottomBarButtons() {
+        bottomBar.addArrangedSubview(firstButton)
+        bottomBar.addArrangedSubview(secondButton)
+        bottomBar.addArrangedSubview(thirdButton)
+        bottomBar.addArrangedSubview(fourthButton)
+        firstButton.heightAnchor.constraint(equalToConstant: Constants.buttonHeight).isActive = true
+        secondButton.heightAnchor.constraint(equalTo: firstButton.heightAnchor).isActive = true
+        thirdButton.heightAnchor.constraint(equalTo: firstButton.heightAnchor).isActive = true
+        fourthButton.heightAnchor.constraint(equalTo: firstButton.heightAnchor).isActive = true
     }
     
     private func tryToAdd(view: UIView?, into parentView: UIView) {
         guard let view = view else { return }
         parentView.addCentered(view: view)
+    }
+    
+    private func createButton() -> UIButton {
+        let button = UIButton(autoLayout: true)
+        button.backgroundColor = .clear
+        button.setTitle("", for: .normal)
+        button.imageView?.contentMode = .scaleAspectFit
+        button.addScaledTap()
+        return button
+    }
+    
+    private enum Constants {
+        static let buttonHeight: CGFloat = 80
+        static let imageSize: CGFloat = 64
     }
     
 }

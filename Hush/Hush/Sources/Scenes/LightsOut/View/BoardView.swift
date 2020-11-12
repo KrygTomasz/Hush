@@ -47,16 +47,6 @@ class BoardView: UIView {
         return label
     }()
     
-    lazy var backButton: UIButton = {
-        let button = createButton(imageName: "back")
-        return button
-    }()
-    
-    lazy var hintButton: UIButton = {
-        let button = createButton(imageName: "question")
-        return button
-    }()
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
         commonSetup()
@@ -92,7 +82,8 @@ class BoardView: UIView {
     }
     
     private func prepareBottomBar() {
-        bottomBar.setButtons(first: backButton, fourth: hintButton)
+        prepare(button: bottomBar.firstButton, imageName: "back")
+        prepare(button: bottomBar.fourthButton, imageName: "question")
     }
     
     private func prepareTopBar() {
@@ -107,8 +98,7 @@ class BoardView: UIView {
         topBar.addArrangedSubview(thirdView)
     }
     
-    private func createButton(imageName: String) -> UIButton {
-        let button = UIButton(autoLayout: true)
+    private func prepare(button: UIButton, imageName: String) {
         button.backgroundColor = .clear
         button.setTitle("", for: .normal)
         let configuration = UIImage.SymbolConfiguration(font: UIFont.systemFont(ofSize: Constants.imageSize))
@@ -116,12 +106,10 @@ class BoardView: UIView {
         button.setImage(image, for: .normal)
         button.imageView?.contentMode = .scaleAspectFit
         button.addScaledTap()
-        return button
     }
     
-    func colorIcons(_ color: UIColor) {
-        scoreLabel.textColor = color
-        hintButton.tintColor = color
-        backButton.tintColor = color
+    func set(color: Color) {
+        scoreLabel.textColor = color.secondary
+        bottomBar.set(color: color)
     }
 }

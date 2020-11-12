@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StageViewController" customModule="Hush" customModuleProvider="target">
             <connections>
+                <outlet property="bottomBarView" destination="WsL-Hr-H90" id="T2G-oY-2nz"/>
                 <outlet property="tableView" destination="NY6-Wg-wYJ" id="2x6-UX-D7B"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -21,19 +22,26 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NY6-Wg-wYJ">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="768"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
+                <view contentMode="scaleToFill" placeholderIntrinsicWidth="414" placeholderIntrinsicHeight="128" translatesAutoresizingMaskIntoConstraints="NO" id="WsL-Hr-H90" customClass="BottomBarView" customModule="Hush" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="768" width="414" height="128"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="NY6-Wg-wYJ" secondAttribute="bottom" id="5tN-Ah-lmu"/>
                 <constraint firstItem="NY6-Wg-wYJ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="8S4-IG-9GD"/>
                 <constraint firstAttribute="trailing" secondItem="NY6-Wg-wYJ" secondAttribute="trailing" id="DEU-1U-eIk"/>
+                <constraint firstAttribute="bottom" secondItem="WsL-Hr-H90" secondAttribute="bottom" id="E8i-lI-RJq"/>
                 <constraint firstItem="NY6-Wg-wYJ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="NoM-HJ-pXg"/>
+                <constraint firstItem="WsL-Hr-H90" firstAttribute="top" secondItem="NY6-Wg-wYJ" secondAttribute="bottom" id="Sx8-Wt-Ndh"/>
+                <constraint firstAttribute="trailing" secondItem="WsL-Hr-H90" secondAttribute="trailing" id="bq5-pu-yPV"/>
+                <constraint firstItem="WsL-Hr-H90" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="uLn-aZ-TK9"/>
             </constraints>
-            <point key="canvasLocation" x="-146" y="-21"/>
+            <point key="canvasLocation" x="-146.37681159420291" y="-21.428571428571427"/>
         </view>
     </objects>
     <resources>
