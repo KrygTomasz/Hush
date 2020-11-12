@@ -10,26 +10,11 @@ import Foundation
 
 struct LevelDataProvider {
     func provide(stage: Int, color: Color) -> [LevelData] {
-        let modifier = stage - 1
-        let boardData: [BoardData] = [.init(size: .init(height: 3 + modifier, width: 3 + modifier),
-                                            initialState: .fixed([.init(x: 1, y: 1)])),
-                                      .init(size: .init(height: 3 + modifier, width: 3 + modifier),
-                                            initialState: .fixed([.init(x: 1, y: 0),
-                                                                  .init(x: 0, y: 2)])),
-                                      .init(size: .init(height: 3 + modifier, width: 3 + modifier),
-                                            initialState: .fixed([.init(x: 0, y: 0),
-                                                                  .init(x: 2, y: 2),
-                                                                  .init(x: 2, y: 0),
-                                                                  .init(x: 0, y: 2)])),
-                                      .init(size: .init(height: 3 + modifier, width: 3 + modifier),
-                                            initialState: .fixed([.init(x: 0, y: 0),
-                                                                  .init(x: 1, y: 1),
-                                                                  .init(x: 2, y: 2)])),
-                                      .init(size: .init(height: 3 + modifier, width: 4 + modifier),
-                                            initialState: .fixed([.init(x: 1, y: 1),
-                                                                  .init(x: 3, y: 2),
-                                                                  .init(x: 0, y: 1)]))
-        ]
+        let stageModifier = stage - 1
+        let boardData = (0...9).map { level in
+            return BoardData(size: .init(height: 3 + stageModifier, width: 3 + level),
+                             initialState: .random(Int(stage+level) * 3/4 + 1))
+        }
         return boardData.enumerated().map { LevelData.init(level: $0.offset + 1, board: $0.element, color: color) }
     }
 }
